@@ -116,20 +116,21 @@ a {
 }
 
 .introanim {
-    margin: 5vh 5vw;
+    margin: 0 5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     font-family: 'Cutive Mono';
-    font-size: 3vh;
+    font-size: 2vw;
+    height: 100vh;
 }
 
 .intro1 {
     overflow: hidden;
     width: 0;
 	white-space: nowrap;
-	border-right: 5px solid transparent;
+	border-right: 0.2em solid transparent;
     animation: 
     typing 1.5s steps(15, end),
     cursor .75s step-end 2;
@@ -141,7 +142,6 @@ a {
     overflow: hidden;
     width: 0;
 	white-space: nowrap;
-	border-right: 5px solid transparent;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
     animation-delay: 3s;
@@ -150,7 +150,7 @@ a {
     overflow: hidden;
     width: 0;
 	white-space: nowrap;
-	border-right: 5px solid transparent;
+	border-right: 0.2em solid transparent;
     animation: 
     typing 3s steps(30, end),
     cursor .75s step-end 4;
@@ -162,7 +162,6 @@ a {
     overflow: hidden;
     width: 0;
 	white-space: nowrap;
-	border-right: 5px solid transparent;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
     animation-delay: 7.5s;
@@ -172,7 +171,7 @@ a {
     overflow: hidden;
     width: 0;
 	white-space: nowrap;
-	border-right: 5px solid transparent;
+	border-right: 0.2em solid transparent;
     animation: 
     typing 3s steps(30, end),
     cursor .75s step-end 4;
@@ -184,7 +183,6 @@ a {
     overflow: hidden;
     width: 0;
 	white-space: nowrap;
-	border-right: 5px solid transparent;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
     animation-delay: 12s;
@@ -194,18 +192,13 @@ a {
     overflow: hidden;
     width: 0;
 	white-space: nowrap;
-	border-right: 5px solid transparent;
+	border-right: 0.2em solid transparent;
     animation: 
-    typing 1.5s steps(15, end),
+    typing 3s steps(30, end),
     cursor .75s step-end 2;
     animation-delay: 12.5s;
     animation-fill-mode: forwards;
 }
-/* 		
-animation: 
-    typing 4s steps(50, end),
-    cursor .75s step-end 4;
-*/
 
 @keyframes typing {
     from { width: 0 }
@@ -213,6 +206,6 @@ animation:
   }
   
 @keyframes cursor {
-    from, to { border-color: transparent }
-    50% { border-color: #4c0e4f; }
+    from, to { border-color: transparent; }
+    50% { border-color: inherit; }
   }
