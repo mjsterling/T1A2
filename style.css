@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Solway&display=swap');
-
-body {
-    background: black;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 
 a {
     color: inherit;
-    text-decoration: inherit;
 }
 
 .menubar {
@@ -22,10 +18,19 @@ a {
     background: #4c0e4f;
 }
 
-.menubar:last-child {
-    align-self: flex-end;
+#darkmodebutton input {
+    position: fixed;
+    top: 1.5vh;
+    left: 1.5vh;
+    max-height: 4vh;
+    max-width: 4vh;
+    border-radius: 20%;
+    border: 2px solid white;
 }
 
+#enableDarkButton {
+    z-index: 1;
+}
 .profilepic {
     content: url(assets/ppic.jpg);
     width: 10vw;
@@ -87,8 +92,10 @@ a {
     max-width: 5vh;
 }
 
-.body-flex-container {
+#body-flex-container {
     position: fixed;
+    background: white;
+    color: black;
     display: inline-flex;
     flex-direction: row;
     top: 0;
@@ -106,5 +113,106 @@ a {
 .body-content {
     flex: 0 0 auto;
     width: 80vw;
-    color: white;
 }
+
+.introanim {
+    margin: 5vh 5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Cutive Mono';
+    font-size: 3vh;
+}
+
+.intro1 {
+    overflow: hidden;
+    width: 0;
+	white-space: nowrap;
+	border-right: 5px solid transparent;
+    animation: 
+    typing 1.5s steps(15, end),
+    cursor .75s step-end 2;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.term2 {
+    overflow: hidden;
+    width: 0;
+	white-space: nowrap;
+	border-right: 5px solid transparent;
+    animation: typing 0s steps(1, end);
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+.intro2 {
+    overflow: hidden;
+    width: 0;
+	white-space: nowrap;
+	border-right: 5px solid transparent;
+    animation: 
+    typing 3s steps(30, end),
+    cursor .75s step-end 4;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+.term3 {
+    overflow: hidden;
+    width: 0;
+	white-space: nowrap;
+	border-right: 5px solid transparent;
+    animation: typing 0s steps(1, end);
+    animation-fill-mode: forwards;
+    animation-delay: 7.5s;
+}
+
+.intro3 {
+    overflow: hidden;
+    width: 0;
+	white-space: nowrap;
+	border-right: 5px solid transparent;
+    animation: 
+    typing 3s steps(30, end),
+    cursor .75s step-end 4;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+.term4 {
+    overflow: hidden;
+    width: 0;
+	white-space: nowrap;
+	border-right: 5px solid transparent;
+    animation: typing 0s steps(1, end);
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+}
+
+.intro4 {
+    overflow: hidden;
+    width: 0;
+	white-space: nowrap;
+	border-right: 5px solid transparent;
+    animation: 
+    typing 1.5s steps(15, end),
+    cursor .75s step-end 2;
+    animation-delay: 12.5s;
+    animation-fill-mode: forwards;
+}
+/* 		
+animation: 
+    typing 4s steps(50, end),
+    cursor .75s step-end 4;
+*/
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+@keyframes cursor {
+    from, to { border-color: transparent }
+    50% { border-color: #4c0e4f; }
+  }

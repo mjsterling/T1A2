@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="darkmode.js"></script>
     <title>Matthew Sterling - full-stack developer</title>
 </head>
 <body>
     <div class="menubar">
+        <div id="darkmodebutton">
+            <input id="enableDarkButton" type="image" src="assets/lightmodeicon.webp" onclick="enableDarkMode()">
+            <input id="disableDarkButton" type="image" src="assets/darkmodeicon.webp" onclick="disableDarkMode()">
+        </div>
         <div class="profilepic">
         </div>
         <div class="mebar">
@@ -38,14 +43,23 @@
             </div>
         </nav>
     </div>
-    <div class="body-flex-container">
+    <div id="body-flex-container">
         <div class="scrolling-wrapper">
             <div class="body-content" id="home">
-                <h1>Hi! I'm Matthew Sterling.</h1>
-                <p class="missionstatement">
-                    I'm a web development student at Coder Academy Melbourne.<br />
-                    I want to build apps that make people's lives easier.
-                </p>
+                <div class="introanim">
+                    <div id="introterms">
+                        <p class="term1">matthew@matthew:~$&nbsp;</p>
+                        <p class="term2">matthew@matthew:~$&nbsp;</p>
+                        <p class="term3">matthew@matthew:~$&nbsp;</p>
+                        <p class="term4">matthew@matthew:~$&nbsp;</p>
+                    </div>
+                    <div id="introlines">
+                        <p class="intro1">Hi! I'm Matthew.</p>
+                        <p class="intro2">I'm a dev student at Coder Academy.</p>
+                        <p class="intro3">I want to build apps that change lives.</p>
+                        <p class="intro4">View my work <a href="#projects">here</a>.</p>
+                    </div>
+                </div>
             </div>
             <div class="body-content" id="aboutme">
                 Stuff about me goes here.
