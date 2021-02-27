@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Solway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+/*************** fonts **************/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Cutive+Mono&family=Nanum+Myeongjo&family=Poiret+One&display=swap');
+
+/************* global parameters ***************/
+
+
 
 a {
     color: inherit;
 }
+
+nav a {
+    text-decoration: inherit;
+}
+
+
+/***************** navbar *****************/
 
 .menubar {
     position: fixed;
@@ -22,10 +33,11 @@ a {
     position: fixed;
     top: 1.5vh;
     left: 1.5vh;
-    max-height: 4vh;
-    max-width: 4vh;
-    border-radius: 20%;
+    max-height: 2.5vw;
+    max-width: 2.5vw;
+    border-radius: 100%;
     border: 2px solid white;
+    background-color: white;
 }
 
 #enableDarkButton {
@@ -37,24 +49,29 @@ a {
     border-radius: 50%;
     border: 5px solid white;
     margin: 0 auto;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
+    background-color: white;
 }
 
 .mebar {
-    font-family: 'Solway';
     text-align: center;
     color: white;
     margin: 0 auto;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 #mename {
-    font-size: 3vh;
+    font-size: 4.2vh;
     margin-bottom: 2vh;
+    font-family: 'Poiret One';
+    font-weight: bold;
+    letter-spacing: 0.1vh;
+    color: white;
 }
 
 #metitle {
-    font-size: 2vh;
+    font-family: 'Open Sans';
+    font-size: 2.2vh;
 }
 
 .inpage {
@@ -68,7 +85,7 @@ a {
     font-weight: bold;
     color: white;
     width: 100%;
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
 }
 
 .inpagelink {
@@ -82,6 +99,7 @@ a {
 
 .medialinks {
     display: flex;
+    justify-self: flex-end;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
@@ -92,31 +110,38 @@ a {
     max-width: 5vh;
 }
 
+/************************ body container *******************/
+
 #body-flex-container {
     position: fixed;
-    background: white;
+    background: transparent;
     color: black;
     display: inline-flex;
     flex-direction: row;
+    overflow: hidden;
     top: 0;
     left: 20vw;
     width: 80vw;
-    height: 100vw;
+    padding: 0 5vw;
 }
 
 .scrolling-wrapper {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 .body-content {
     flex: 0 0 auto;
+    font-family: 'Open Sans';
     width: 80vw;
 }
 
+/**************** landing page ****************/
+
 .introanim {
-    margin: 0 5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -132,7 +157,7 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 1.5s steps(15, end),
+    typing 1s steps(15, end),
     cursor .75s step-end 2;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
@@ -144,7 +169,7 @@ a {
 	white-space: nowrap;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 .intro2 {
     overflow: hidden;
@@ -152,9 +177,9 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 3s steps(30, end),
-    cursor .75s step-end 4;
-    animation-delay: 3.5s;
+    typing 2s steps(25, end),
+    cursor .75s step-end 3;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
 }
 
@@ -164,7 +189,7 @@ a {
 	white-space: nowrap;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
-    animation-delay: 7.5s;
+    animation-delay: 5s;
 }
 
 .intro3 {
@@ -173,9 +198,9 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 3s steps(30, end),
-    cursor .75s step-end 4;
-    animation-delay: 8s;
+    typing 2s steps(25, end),
+    cursor .75s step-end 3;
+    animation-delay: 5.5s;
     animation-fill-mode: forwards;
 }
 
@@ -185,7 +210,7 @@ a {
 	white-space: nowrap;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
-    animation-delay: 12s;
+    animation-delay: 8s;
 }
 
 .intro4 {
@@ -194,18 +219,81 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 3s steps(30, end),
-    cursor .75s step-end 2;
-    animation-delay: 12.5s;
+    typing 2s steps(25, end),
+    cursor .75s step-end 1;
+    animation-delay: 8.5s;
     animation-fill-mode: forwards;
 }
 
+/* typing effect */
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
-  }
-  
+}
+
+  /*cursor blink effect
+   (only works if transparent border set on anim target) */
 @keyframes cursor {
     from, to { border-color: transparent; }
     50% { border-color: inherit; }
-  }
+}
+
+/******************** other pages ***********************/
+
+
+
+/************ contact form **************/
+#contact {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 2vh;
+    width: 40vw;
+}
+
+form input {
+    height: 4vh;
+    font-size: 2vh;
+}
+
+#conmessage {
+    height: 12vh;
+}
+
+#cv {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+li {
+    font-size: 2vh;
+}
+h2 {
+    font-size: 3vh;
+}
+h3 {
+    font-size: 2.5vh;
+}
+
+#submit {
+    color: white;
+    background: #4c0e4f;
+    height: 4vh;
+    width: 10vw;
+    border: 3px solid #4c0e4f;
+}
+
+#submit:hover {
+    color: #4c0e4f;
+    background: white;
+}

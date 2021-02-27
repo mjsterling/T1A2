@@ -8,7 +8,7 @@
     <script type="text/javascript" src="darkmode.js"></script>
     <title>Matthew Sterling - full-stack developer</title>
 </head>
-<body>
+<body id="body">
     <div class="menubar">
         <div id="darkmodebutton">
             <input id="enableDarkButton" type="image" src="assets/lightmodeicon.webp" onclick="enableDarkMode()">
@@ -28,8 +28,8 @@
             <a href="#home"><div class="inpagelink">home</div></a>
             <a href="#aboutme"><div class="inpagelink">about me</div></a>
             <a href="#projects"><div class="inpagelink">projects</div></a>
-            <a href="#contact"><div class="inpagelink">contact</div></a>
             <a href="#cv"><div class="inpagelink">view my cv</div></a>
+            <a href="#contact"><div class="inpagelink">contact</div></a>
         </nav>
         <nav class="medialinks">
             <div class="ml">
@@ -67,11 +67,40 @@
             <div class="body-content" id="projects">
                 List of my projects.
             </div>
-            <div class="body-content" id="contact">
-                Contact form.
-            </div>
             <div class="body-content" id="cv">
-                Markdown of my CV?
+                <h2>Occupation History</h2>
+                <h3>2021-Present - Fast Track Boot Camp, Coder Academy Melbourne</h3>
+                <ul>
+                    <li>Acquired skills in HTML, CSS. Yet to learn Javascript, Ruby, React, node.js</li>
+                    <li>Made a portfolio website!</li>
+                </ul>
+                <h3>2018-2020 - Resourcing Specialist, Programmed Skilled Workforce</h3>
+                <ul>
+                    <li>Provided support to 160 field staff</li>
+                    <li>Digitised and modernised entire branch workflow and successfully trained a technology-resistant team of 6 in use of digital systems, <br>
+                        which facilitated a seamless transition to working from home at the outbreak of COVID-19.</li>
+                </ul>
+            </div>
+            <div class="body-content" id="contact">
+                <h2>Contact</h2>
+                <h3>Email: <a href="mailto:mjsterling93@gmail.com">mjsterling93@gmail.com</a></h3>
+                <h3>Phone: <a href="tel: +61421864667">0421 864 667</a></h3>
+                <form action="contactform.php" method="POST" id="contactform">
+                    <p>Alternatively, send me a message using the below form and I'll be in touch as soon as possible:</p>
+                    <label for="conname">Your Name:</label>
+                    <input id="conname" type="text" />
+                    <br />
+                    <label for="conemail">Your Email:</label>                  
+                    <input id="conemail" type="text" />
+                    <br />
+                    <label for="consubject">Subject: </label>
+                    <input id="consubject" type="text" />
+                    <br />
+                    <label for="conmessage">Type your message:</label>
+                    <input id="conmessage" type="textarea" />
+                    <br />
+                    <input type="submit" value="SUBMIT" id="submit">
+                </form>
             </div>
         </div>
     </div>
