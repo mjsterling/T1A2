@@ -5,7 +5,8 @@
 /************* global parameters ***************/
 
 body {
-    background: #0c0c0c;
+    background: url(assets/bg2.png);
+    background-size: 100vw;
     margin: 0;
 }
 
@@ -106,7 +107,7 @@ a {
 
 
     #menubutton {
-        max-height: 8vh;
+        max-height: 6vh;
         max-width: 10vw;
         border-radius: 50%;
         border: 2px solid white;
@@ -126,7 +127,7 @@ a {
 
     .mllogo {
         margin: 0 3vw;
-        max-height: 8vh;
+        max-height: 6vh;
         max-width: 10vw;
         border-radius: 20%;
         border: 2px solid white;
@@ -136,7 +137,7 @@ a {
 
 
     #darkbutton {
-        max-height: 8vh;
+        max-height: 6vh;
         max-width: 10vw;
         border-radius: 50%;
         transition: 0.5s;
@@ -213,7 +214,7 @@ a {
     flex: 0 0 auto;
     font-family: 'Open Sans';
     width: 100%;
-    padding: 5%;
+    padding: 10% 5%;
     height: 100%;
     box-sizing: border-box;
 }

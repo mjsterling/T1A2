@@ -6,7 +6,7 @@ function toggleDarkMode() {
   let dmb = document.getElementById("darkbutton");
   if (dmtoggle == false) {
     bfc.style.color = "white";
-    bfc.style.background = "#171717";
+    bfc.style.background = "#0c0c0c";
     dmb.style.filter = "invert(1)";
     dmtoggle = true;   
     }
@@ -23,13 +23,13 @@ function toggleMenu() {
   let bfc = document.getElementById("body-flex-container"),
       menubtn = document.getElementById("menubutton");
   if (menutoggle == false) {
-    bfc.style.height = "64vh";
-    bfc.style.top = "24vh";
+    bfc.style.height = "64%";
+    bfc.style.top = "24%";
     menubtn.style.filter = "invert(1)";
     menutoggle = true;
   } else {
-    bfc.style.height = "86vh";
-    bfc.style.top = "11vh";
+    bfc.style.height = "86%";
+    bfc.style.top = "11%";
 
     menubtn.style.filter = "invert(0)";
     menutoggle = false;
