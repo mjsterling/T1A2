@@ -6,7 +6,7 @@ function toggleDarkMode() {
   let dmb = document.getElementById("darkbutton");
   if (dmtoggle == false) {
     bfc.style.color = "white";
-    bfc.style.background = "#0c0c0c";
+    bfc.style.background = "#171717";
     dmb.style.filter = "invert(1)";
     dmtoggle = true;   
     }
@@ -28,8 +28,8 @@ function toggleMenu() {
     menubtn.style.filter = "invert(1)";
     menutoggle = true;
   } else {
-    bfc.style.height = "88vh";
-    bfc.style.top = "10vh";
+    bfc.style.height = "86vh";
+    bfc.style.top = "11vh";
 
     menubtn.style.filter = "invert(0)";
     menutoggle = false;
