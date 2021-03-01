@@ -5,73 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="darkmode.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Matthew Sterling - full-stack developer</title>
 </head>
 <body id="body">
-    <div class="menubar">
-        <div id="darkmodebutton">
-            <input id="enableDarkButton" type="image" src="assets/lightmodeicon.webp" onclick="enableDarkMode()">
-            <input id="disableDarkButton" type="image" src="assets/darkmodeicon.webp" onclick="disableDarkMode()">
-        </div>
-        <div class="profilepic">
-        </div>
-        <div class="mebar">
-            <div id="mename">
-                Matthew Sterling
+        <div class="menubar">
+            <div class="profilepic">
             </div>
-            <div id="metitle">
-                Student full-stack developer
-            </div>
+            <a href="#home">
+                <div class="mebar">
+                    <div id="mename">
+                        Matthew Sterling
+                    </div>
+                    <div id="metitle">
+                        Student full-stack developer
+                    </div>
+                </div>
+            </a>
+            <input type="image" src="assets/menubtn.png" id="menubutton" onclick="toggleMenu()">
         </div>
-        <nav class="inpage">
+        <nav id="inpage">
             <a href="#home"><div class="inpagelink">home</div></a>
-            <a href="#aboutme"><div class="inpagelink">about me</div></a>
+            <a href="#about"><div class="inpagelink">about</div></a>
             <a href="#projects"><div class="inpagelink">projects</div></a>
-            <a href="#cv"><div class="inpagelink">view my cv</div></a>
+            <a href="#cv"><div class="inpagelink">resum&Eacute;</div></a>
             <a href="#contact"><div class="inpagelink">contact</div></a>
         </nav>
-        <nav class="medialinks">
-            <div class="ml">
-                <a href="https://twitter.com/mjsterling93"><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"></a>
-            </div>
-            <div class="ml">
-                <a href="https://www.linkedin.com/in/matthew-sterling-055911162"><img class="mllogo" src="assets/linkedinlogo.png" alt="LinkedIn"></a>
-            </div>
-            <div class="ml">
-                <a href="https://github.com/mjsterling"><img class="mllogo" src="assets/githublogo.webp" alt="Github"></a>
-            </div>
-        </nav>
-    </div>
     <div id="body-flex-container">
         <div class="scrolling-wrapper">
             <div class="body-content" id="home">
                 <div class="introanim">
                     <div id="introterms">
-                        <p class="term1">matthew@matthew:~$&nbsp;</p>
-                        <p class="term2">matthew@matthew:~$&nbsp;</p>
-                        <p class="term3">matthew@matthew:~$&nbsp;</p>
-                        <p class="term4">matthew@matthew:~$&nbsp;</p>
+                        <p class="term1">m@s:~$&nbsp;</p>
+                        <p class="term2">m@s:~$&nbsp;</p>
+                        <p class="term3">m@s:~$&nbsp;</p>
+                        <p class="term4">m@s:~$&nbsp;</p>
+                        <p class="term5">m@s:~$&nbsp;</p>
                     </div>
                     <div id="introlines">
                         <p class="intro1">Hi! I'm Matthew.</p>
-                        <p class="intro2">I'm a dev student at Coder Academy.</p>
-                        <p class="intro3">I want to build apps that change lives.</p>
-                        <p class="intro4">View my work <a href="#projects">here</a>.</p>
+                        <p class="intro2">I'm a student at Coder Academy.</p>
+                        <p class="intro3">I want to build apps that</p>
+                        <p class="intro4">change lives.</p>
+                        <p class="intro5">View my work <a href="#projects"><u>here</u></a>.</p>
                     </div>
                 </div>
             </div>
-            <div class="body-content" id="aboutme">
-                Stuff about me goes here.
+            <div class="body-content" id="about">
+                <h2>About Me</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius nisi repellat officiis, quod eaque non vero natus facilis corrupti ex incidunt, numquam labore veniam, accusantium assumenda cupiditate. Dolor, voluptatum sit.</p>
             </div>
             <div class="body-content" id="projects">
-                List of my projects.
+                <h2>Projects</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius nisi repellat officiis, quod eaque non vero natus facilis corrupti ex incidunt, numquam labore veniam, accusantium assumenda cupiditate. Dolor, voluptatum sit.</p>
+            
             </div>
             <div class="body-content" id="cv">
                 <h2>Occupation History</h2>
                 <h3>2021-Present - Fast Track Boot Camp, Coder Academy Melbourne</h3>
                 <ul>
-                    <li>Acquired skills in HTML, CSS. Yet to learn Javascript, Ruby, React, node.js</li>
+                    <li>Acquired skills in HTML, CSS, and Javascript. Yet to learn Ruby, React, node.js</li>
                     <li>Made a portfolio website!</li>
                 </ul>
                 <h3>2018-2020 - Resourcing Specialist, Programmed Skilled Workforce</h3>
@@ -103,6 +96,24 @@
                 </form>
             </div>
         </div>
+    </div>
+    <div class="bottombar">
+        <div id="darkmodebutton">
+            <input id="enableDarkButton" type="image" src="assets/lightmodeicon.webp" onclick="enableDarkMode()">
+            <input id="disableDarkButton" type="image" src="assets/darkmodeicon.webp" onclick="disableDarkMode()">
+        </div>
+        <nav class="medialinks">
+            <div class="ml">
+                <a href="https://twitter.com/mjsterling93"><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"></a>
+            </div>
+            <div class="ml">
+                <a href="https://www.linkedin.com/in/matthew-sterling-055911162"><img class="mllogo" src="assets/linkedinlogo.png" alt="LinkedIn"></a>
+            </div>
+            <div class="ml">
+                <a href="https://github.com/mjsterling"><img class="mllogo" src="assets/githublogo.webp" alt="Github"></a>
+            </div>
+        </nav>
+        <div></div>
     </div>
 </body>
 </html>

@@ -1,5 +1,7 @@
+var menutoggle = false;
+
 function enableDarkMode() {
-    var bfc = document.getElementById("body-flex-container");
+    let bfc = document.getElementById("body-flex-container");
         bfc.style.background = ("#ededed");
         bfc.style.color = ("#2e2e2e");
     setTimeout(() => {
@@ -35,7 +37,7 @@ function enableDarkMode() {
 }
 
 function disableDarkMode() {
-    var bfc = document.getElementById("body-flex-container");
+    let bfc = document.getElementById("body-flex-container");
         bfc.style.background = ("#2e2e2e");
         bfc.style.color = ("#ededed");
     setTimeout(() => {
@@ -68,4 +70,23 @@ function disableDarkMode() {
     }, 60);
     document.getElementById("disableDarkButton").style.zIndex = "1";
     document.getElementById("enableDarkButton").style.zIndex = "2";
+}
+
+function toggleMenu() {
+    let inpage = document.getElementById("inpage");
+    let bfc = document.getElementById("body-flex-container");
+
+    if (menutoggle == false) {
+        inpage.style.zIndex = "1";
+        menutoggle = true;
+        bfc.style.top = "18vh";
+        bfc.style.height = "74vh";
+    }
+    
+    else {
+        inpage.style.zIndex = "-1";
+        menutoggle = false;
+        bfc.style.top = "12vh";
+        bfc.style.height = "80vh";
+    }
 }
