@@ -5,8 +5,11 @@
 /************* global parameters ***************/
 
 body {
-    margin: 0;
     background: #0c0c0c;
+    height: 100vh;
+    height: fill-available;
+    height: -webkit-fill-available;
+    width: 100vw;
 
 }
 
@@ -45,7 +48,7 @@ a {
     left: 0;
     top: 0;
     width: 100vw;
-    height: 8vh;
+    height: 8%;
     flex-wrap: nowrap;
     background: #39046e;
     color: white;
@@ -124,6 +127,7 @@ a {
         justify-content: center;
         flex-wrap: nowrap;
     }
+
     .mllogo {
         margin: 0 3vw;
         max-height: 8vh;
@@ -132,7 +136,6 @@ a {
         border: 2px solid white;
         box-sizing: border-box;
         background: white;
-
     }
 
 
