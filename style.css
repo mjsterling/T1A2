@@ -6,6 +6,8 @@
 
 body {
     margin: 0;
+    background: #0c0c0c;
+
 }
 
 a {
@@ -16,7 +18,7 @@ a {
 }
 
 
-/***************** navbar *****************/
+/***************** navbars *****************/
 
 /* @media only screen and (min-width: 900px) {
 .menubar {
@@ -34,135 +36,142 @@ a {
 }
 } */
 
-.menubar {
+.topbar {
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     left: 0;
     top: 0;
     width: 100vw;
-    height: 12vh;
+    height: 8vh;
     flex-wrap: nowrap;
     background: #4c0e4f;
-    border-bottom: 1px solid #4c0e4f;
+    color: white;
+    text-align: center;
 }
+
+    #mename {
+        font-size: 8vw;
+        font-family: 'Poiret One';
+        font-weight: bold;
+        color: white;
+        height: 100%;
+    }
+
+
+#sidebar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    font-size: 2.5vh;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: white;
+    width: 100vw;
+    padding-top: 2vh;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Poiret One';
+}
+
+    .sidebarlink {
+        width: 35vw;
+        height: 4vh;
+        padding: 1vh 3vw;
+        color: white;
+    }
+
+    #menuoverlay {
+        position: fixed;
+        top: 22vh;
+        left: 0;
+        height: 66vh;
+        width: 100vw;
+        z-index: -1;
+    }
+
+    .sidebarlink:active {
+        background: white;
+        color: #4c0e4f;
+    }
 
 .bottombar {
     display: flex;
     position: fixed;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     left: 0;
-    bottom: 0;
+    bottom: 3vh;
     width: 100vw;
-    height: 8vh;
-    flex-wrap: nowrap;
-    background: #4c0e4f;
-    border-top: 1px solid #4c0e4f;
-}
-
-#darkmodebutton input {
-    position: fixed;
-    bottom: 1.25vh;
-    left: 3vw;
-    max-height: 5vh;
-    max-width: 10vw;
-    border-radius: 50%;
-    border: 2px solid white;
-    background-color: white;
-}
-
-#enableDarkButton {
-    z-index: 1;
+    height: 88vh;    flex-wrap: nowrap;
+    background: #0c0c0c;
+    box-sizing: border-box;
 }
 
 
+    #menubutton {
+        max-height: 8vh;
+        max-width: 10vw;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-sizing: border-box;
+        background: #0c0c0c;
+        transition: 0.5s;
+        z-index: 3;
+    }
+
+    .medialinks {
+        display: flex;
+        justify-self: flex-end;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .mllogo {
+        margin: 0 1.5vw;
+        max-height: 8vh;
+        max-width: 10vw;
+        border-radius: 20%;
+        border: 2px solid white;
+        box-sizing: border-box;
+        background: white;
+
+    }
+
+
+    #darkbutton {
+        max-height: 8vh;
+        max-width: 10vw;
+        border-radius: 50%;
+        transition: 0.5s;
+        box-sizing: border-box;
+        background: #0c0c0c;
+        border: 2px solid white;
+        z-index: 3;
+    }
+    
 .profilepic {
     content: url(assets/ppic.jpg);
-    max-height: 8vh;
-    max-width: 12vw;
+    max-height: 40vh;
+    max-width: 30vw;
+    margin: 0 auto;
     border-radius: 50%;
-    border: 2px solid white;
-    margin: 0 4vw 0 2vw;
-    background-color: white;
-}
-
-.mebar {
-    text-align: center;
-    color: white;
-    flex-wrap: wrap;
-}
-
-#mename {
-    font-size: 6vw;
-    font-family: 'Poiret One';
-    font-weight: bold;
-    letter-spacing: 0.1vh;
-    color: white;
-}
-
-#metitle {
-    font-family: 'Open Sans';
-    font-size: 4vw;
-
-}
-
-#menubutton {
-    max-height: 8vh;
-    max-width: 12vw;
-    margin: 0 2vw 0 4vw;
-    z-index: 1;
-}
-
-#inpage {
-    position: fixed;
-    right: 0;
-    top: 12vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Open Sans';
-    text-decoration: none;
-    font-size: 2vh;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    width: 100vw;
-    height: 6vh;
-    z-index: -1;
-    background: #4c0e4f;
-    text-align: center;
+    border: 5px solid #4c0e4f;
+    background-color: #4c0e4f;
 }
 
 
-.inpagelink {
-    width: 20vw;
-    height: 2vh;
-    padding: 2vh 0;
-    background: #4c0e4f;
-}
 
-.inpagelink:hover {
-    background: white;
-    color: #4c0e4f;
-}
 
-.medialinks {
-    display: flex;
-    justify-self: flex-end;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap;
-}
-.mllogo {
-    margin: 1vh;
-    max-height: 8vh;
-    max-width: 8vw;
-}
+
+
+
 
 
 
@@ -172,7 +181,7 @@ a {
 #body-flex-container {
     position: fixed;
     background: transparent;
-    color: black;
+    color: #0c0c0c;
     display: 
     inline-flex;
     flex-direction: row;
@@ -191,11 +200,15 @@ a {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    top: 12vh;
-    height: 80vh;
+    top: 10vh;
+    height: 88vh;
     left: 0;
-    width: 100vw;
-    z-index: 0;
+    width: 90vw;
+    transition: 0.5s;
+    margin: 0 5vw;
+    box-sizing: border-box;
+    border-radius: 3vh;
+    z-index: 1;
 }
 
 .scrolling-wrapper {
@@ -210,12 +223,19 @@ a {
     flex: 0 0 auto;
     font-family: 'Open Sans';
     width: 88vw;
+    padding: 3vh 5vw;
     height: 100%;
-    padding: 0 6vw;
+    box-sizing: border-box;
 }
 
 /**************** landing page ****************/
 
+#home {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
 .introanim {
     display: flex;
     flex-direction: row;
@@ -223,7 +243,7 @@ a {
     justify-content: flex-start;
     font-family: 'Cutive Mono';
     height: 100%;
-    font-size: 3.8vw;
+    font-size: 4.6vw;
 }
 
 .intro1 {
