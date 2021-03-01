@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    background: #0c0c0c;
+    background: #2d3f4d;
 
 }
 
@@ -53,7 +53,7 @@ a {
 }
 
     #mename {
-        font-size: 8vw;
+        font-size: 7vw;
         font-family: 'Poiret One';
         font-weight: bold;
         color: white;
@@ -81,9 +81,10 @@ a {
 
     .sidebarlink {
         width: 35vw;
-        height: 4vh;
+        height: 3vh;
         padding: 1vh 3vw;
         color: white;
+        border-radius: 2vh;
     }
 
     #menuoverlay {
@@ -97,7 +98,7 @@ a {
 
     .sidebarlink:active {
         background: white;
-        color: #4c0e4f;
+        color: #0c0c0c;
     }
 
 .bottombar {
@@ -110,7 +111,6 @@ a {
     bottom: 3vh;
     width: 100vw;
     height: 88vh;    flex-wrap: nowrap;
-    background: #0c0c0c;
     box-sizing: border-box;
 }
 
@@ -243,7 +243,7 @@ a {
     justify-content: flex-start;
     font-family: 'Cutive Mono';
     height: 100%;
-    font-size: 4.6vw;
+    font-size: 5vw;
 }
 
 .intro1 {
@@ -252,8 +252,8 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 1s steps(20, end),
-    cursor .5s step-end 2;
+    typing 1.5s steps(20, end),
+    cursor .75s step-end 2;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
@@ -264,7 +264,7 @@ a {
 	white-space: nowrap;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
-    animation-delay: 1.75s;
+    animation-delay: 2.5s;
 }
 .intro2 {
     overflow: hidden;
@@ -272,9 +272,9 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 1.5s steps(30, end),
-    cursor .5s step-end 3;
-    animation-delay: 2s;
+    typing 1.5s steps(20, end),
+    cursor .75s step-end 2;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
 }
 
@@ -284,7 +284,7 @@ a {
 	white-space: nowrap;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
-    animation-delay: 3.75s;
+    animation-delay: 5s;
 }
 
 .intro3 {
@@ -293,9 +293,9 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 1.5s steps(30, end),
-    cursor .5s step-end 2;
-    animation-delay: 4s;
+    typing 1.5s steps(20, end),
+    cursor .75s step-end 2;
+    animation-delay: 5.5s;
     animation-fill-mode: forwards;
 }
 
@@ -305,7 +305,7 @@ a {
 	white-space: nowrap;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
-    animation-delay: 5s;
+    animation-delay: 7s;
     opacity: 0;
 }
 
@@ -315,9 +315,9 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 1.5s steps(30, end),
-    cursor .5s step-end 1;
-    animation-delay: 5.25s;
+    typing 1.5s steps(20, end),
+    cursor .75s step-end 2;
+    animation-delay: 7s;
     animation-fill-mode: forwards;
 }
 .term5 {
@@ -326,7 +326,7 @@ a {
 	white-space: nowrap;
     animation: typing 0s steps(1, end);
     animation-fill-mode: forwards;
-    animation-delay: 6s;
+    animation-delay: 9s;
 }
 
 
@@ -336,9 +336,9 @@ a {
 	white-space: nowrap;
 	border-right: 0.2em solid transparent;
     animation: 
-    typing 1.5s steps(30, end),
-    cursor .5s step-end 2;
-    animation-delay: 6.25s;
+    typing 1.5s steps(20, end),
+    cursor .75s step-end 2;
+    animation-delay: 9.5s;
     animation-fill-mode: forwards;
 }
 
