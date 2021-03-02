@@ -14,7 +14,7 @@ body {
     height: 100vh;
     content: url(../assets/bg2.png);
     z-index: -1;
-    filter: invert(0.8);
+    filter: invert(1);
     transition: 0.5s;
 }
 
