@@ -1,0 +1,178 @@
+@media only screen and (max-width:768px) {
+    .topbar {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        left: 5%;
+        top: 2%;
+        width: 90%;
+        height: 8%;
+        flex-wrap: nowrap;
+        background: #33095e;
+        color: white;
+        text-align: center;
+        border-radius: 4vh;
+        border: 2px solid;
+        border-color: #fff;
+        box-sizing: border-box;
+    }
+    
+        #mename {
+            font-size: 7vw;
+            font-family: 'Poiret One';
+            font-weight: bold;
+            color: white;
+            height: 100%;
+        }
+    
+    
+    #sidebar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+        font-family: 'Open Sans';
+        text-decoration: none;
+        font-size: 2.5vh;
+        text-transform: capitalize;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        width: 100vw;
+        text-align: center;
+        box-sizing: border-box;
+        font-family: 'Poiret One';
+        transition: 0.5s;
+    }
+    
+        .sidebarlink {
+            background: #33095e;
+            color: white;
+            width: 35vw;
+            height: 4vh;
+            padding: 0.2vh 0;
+            margin: 1vh 1vw;
+            border-radius: 2vh;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+    
+        .sidebarlink:hover {
+            text-shadow: 0 0 3px white;
+        }
+    
+        .sidebarlink:active {
+            background: white;
+            color: #33095e;
+            border-color: #33095e;
+        }
+    
+    .bottombar {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 0;
+        top: 11%;
+        width: 100%;
+        height: 87%;
+        flex-wrap: nowrap;
+        box-sizing: border-box;
+    }
+    
+    
+        #menubutton {
+            max-height: 6vh;
+            max-width: 10vw;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-sizing: border-box;
+            background: #0c0c0c;
+            transition: 0.5s;
+            z-index: 3;
+        }
+    
+        .medialinks {
+            height: 7%;
+            width: 40%;
+            border-radius: 3.5vh;
+            display: flex;
+            justify-self: flex-end;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: nowrap;
+            background: #33095e;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+    
+        .mllogo {
+            max-height: 4vh;
+            max-width: 10vw;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 2px solid white;
+            background: white;
+        }
+    
+    
+        #darkbutton {
+            max-height: 6vh;
+            max-width: 10vw;
+            border-radius: 50%;
+            transition: 0.5s;
+            box-sizing: border-box;
+            background: #0c0c0c;
+            border: 2px solid white;
+            z-index: 3;
+        }
+
+
+
+
+    
+    #body-flex-container {
+        position: fixed;
+        background: white;
+        color: #0c0c0c;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        top: 12%;
+        height: 86%;
+        left: 5%;
+        width: 90%;
+        transition: 0.5s;
+        box-sizing: border-box;
+        border: 2px solid;
+        border-color: #33095e;
+        border-radius: 3vh;
+        z-index: 1;
+    }
+    
+        .scrolling-wrapper {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            justify-content: center;
+        }
+    
+        .body-content {
+            flex: 0 0 auto;
+            font-family: 'Open Sans';
+            padding: 3% 5%;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    
+    }
+    
+    
+    
