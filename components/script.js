@@ -7,6 +7,7 @@ function toggleDarkMode() {
   let bkg = document.getElementById("background");
   let ppic = document.getElementById("profilepic");
   let menucont = document.getElementsByClassName("menucont");
+  let mll = document.getElementsByClassName("mllogo");
 
   if (dmtoggle == false) {
     bfc.style.color = "white";
@@ -21,6 +22,10 @@ function toggleDarkMode() {
       menucont[i].style.background = "#33095e";
       menucont[i].style.color = "white";
       menucont[i].style.borderColor = "white";
+    }
+    for (i = 0; i < mll.length; i++) {
+      mll[i].style.background = "white";
+      mll[i].style.borderColor = "white";
     }
     dmtoggle = true;
     }
@@ -39,6 +44,10 @@ function toggleDarkMode() {
       menucont[i].style.color = "#33095e";
       menucont[i].style.borderColor = "#33095e";
     }
+    for (i = 0; i < mll.length; i++) {
+      mll[i].style.background = "#33095e";
+      mll[i].style.borderColor = "#33095e";
+    }
     dmtoggle = false;   
     }
 }
@@ -47,7 +56,7 @@ function toggleMenu() {
   let bfc = document.getElementById("body-flex-container"),
       menubtn = document.getElementById("menubutton");
   if (menutoggle == false) {
-    bfc.style.height = "66%";
+    bfc.style.height = "67%";
     bfc.style.top = "24%";
     menubtn.style.filter = "invert(0)";
     menutoggle = true;

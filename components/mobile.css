@@ -98,11 +98,10 @@
         }
     
         .medialinks {
-            height: 7%;
+            height: 6%;
             width: 40%;
             border-radius: 3.5vh;
             display: flex;
-            justify-self: flex-end;
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
@@ -115,8 +114,10 @@
             max-width: 10vw;
             border-radius: 50%;
             box-sizing: border-box;
-            border: 2px solid #0c0c0c;
-            background: #0c0c0c;
+            border: 2px solid #33095e;
+            background: #33095e;
+            margin-top: 16.667%;
+            transition: 0.5s;
         }
     
     
