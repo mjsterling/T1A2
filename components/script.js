@@ -54,10 +54,10 @@ window.addEventListener('mouseup', (e) => {
   dy = e.clientY;
   console.log(dy);
   if (swiping == true) {
-    if (dy > y && menutoggle == true) {
+    if (y > dy && (y - dy) > 50 && menutoggle == false) {
     toggleMenu();
   }
-    if(dy < y && menutoggle == false) {
+    if(dy > y && (dy - y) > 50 && menutoggle == true) {
     toggleMenu();
 }
   }
@@ -68,19 +68,19 @@ window.addEventListener('mouseup', (e) => {
 
 window.addEventListener('touchstart', (e) => {
   y = e.touches[0].clientY;
-    console.log(y);
+    console.log("y =", y);
   swiping = true;
 });
 
 window.addEventListener('touchend', (e) => {
   dy = e.changedTouches[0].clientY;
-  console.log(dy);
+  console.log("dy =", dy);
 
   if (swiping == true) {
-    if (dy > y && menutoggle == true) {
+    if (y > dy && (y - dy) > 50 && menutoggle == false) {
     toggleMenu();
   }
-    if(dy < y && menutoggle == false) {
+    if(dy > y && (dy - y) > 50 && menutoggle == true) {
     toggleMenu();
 }
   }
