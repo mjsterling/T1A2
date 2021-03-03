@@ -29,7 +29,10 @@ function onloadFunc() {
   navbar = document.getElementById("navbar");
   setTimeout(() => {
     navbar.style.top = "2%";
-  }, 500);
+  }, 200);
+  setTimeout(() => {
+    bfc.style.top = "16%";
+  }, 100);
 }
 
 function toggleDarkMode() {
