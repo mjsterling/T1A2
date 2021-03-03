@@ -14,3 +14,7 @@ a {
   font-family: inherit;
   font-size: inherit;
 }
+
+.bold {
+    font-weight: bold;
+}

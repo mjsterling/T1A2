@@ -73,25 +73,29 @@
 
   .namebar {
         width: 100%;
+        height: 16%;
         text-align: center;
         font-family: "Poiret One";
         font-weight: bold;
         letter-spacing: 0.06rem;
-        align-self: flex-start;
-    }
-
-    .namebar p {
-        margin: 1.5vh 0 0 0;
     }
 
     #myname {
-        font-size: 2rem;
+        font-size: 5vh;
+        margin-top: 2vh;
+        text-shadow: 0 0 1px;
+    }
+
+    .namebar p { 
+               margin: 0;
+
     }
 
     #mytitle {
-        font-size: 1.3rem;
-        font-family: 'Open Sans';
-        font-weight: normal;
+        margin-top: 0.5vh;
+        font-size: 2.5vh;
+        font-family: 'Poiret One';
+        font-weight: bold;
         letter-spacing: 0;
     }
 
@@ -118,7 +122,7 @@
   }
 
     .currentpg {
-        text-shadow: 0 0 2px;
+        text-shadow: 0 0 1px;
     }
 
     .pglink {
