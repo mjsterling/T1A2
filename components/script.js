@@ -10,13 +10,18 @@ var menutoggle,
   menubtn1,
   menubtn2,
   navbar,
-  bfctop;
+  dy,
+  y,
+  swiping;
+
 window.onload = onloadFunc;
 // window.onresize = windowDOMreset;
 
 function onloadFunc() {
   menutoggle = false;
   dmtoggle = false;
+  y = 0;
+  dy = 0;
   bfc = document.getElementById("body-flex-container");
   db = document.getElementById("darkbutton");
   bkg = document.getElementById("background");
@@ -37,6 +42,51 @@ function onloadFunc() {
     navbar.style.top = "2%";
   }, 200);
 }
+
+
+window.addEventListener('mousedown', (a) => {
+  y = a.clientY;
+  swiping = true;
+  console.log(y);
+});
+
+window.addEventListener('mouseup', (c) => {
+  dy = c.clientY;
+  console.log(dy);
+  if (swiping == true) {
+    if (dy > y && menutoggle == true) {
+    toggleMenu();
+  }
+    if(dy < y && menutoggle == false) {
+    toggleMenu();
+}
+  }
+  swiping = false;
+  y = 0;
+  dy = 0;
+});
+
+window.addEventListener('touchdown', (a) => {
+  y = a.clientY;
+  swiping = true;
+  console.log(y);
+});
+
+window.addEventListener('touchup', (b) => {
+  dy = b.clientY;
+  console.log(dy);
+    if (swiping == true) {
+      if (dy > y  && menutoggle == true) {
+      toggleMenu();
+    }
+      if(dy < y  && menutoggle == false) {
+      toggleMenu();
+  }
+    }
+swiping = false;
+y = 0;
+dy = 0;
+});
 
 function toggleDarkMode() {
   if (dmtoggle == false) {
