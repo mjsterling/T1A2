@@ -27,9 +27,8 @@ function onloadFunc() {
   menubtn1 = document.getElementById("menubutton1");
   menubtn2 = document.getElementById("menubutton2");
   navbar = document.getElementById("navbar");
-  if (localStorage.getItem('dmstore') == "true") {
+  if (localStorage.getItem('darkmode') == "true") {
     toggleDarkMode();
-    localStorage.removeItem('dmstore');
   }  
   setTimeout(() => {
     bfc.style.top = "16%";
@@ -63,7 +62,7 @@ function toggleDarkMode() {
       mll[i].style.borderColor = "white";
     }
     dmtoggle = true;
-    localStorage.setItem('dmstore', 'true');
+    localStorage.setItem('darkmode', 'true');
   } else {
     bfc.style.background = "white";
     bfc.style.color = "#0c0c0c";
@@ -87,7 +86,7 @@ function toggleDarkMode() {
       mll[i].style.borderColor = "#33095e";
     }
     dmtoggle = false;
-    localStorage.setItem('dmstore', 'false');
+    localStorage.removeItem ('darkmode')
   }
 }
 

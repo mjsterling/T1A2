@@ -18,3 +18,7 @@ a {
 .bold {
     font-weight: bold;
 }
+
+.underline {
+    text-decoration: underline;
+}
