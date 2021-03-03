@@ -103,7 +103,7 @@
     border-radius: 3vh;
     padding: 1vh 1vw;
     text-align: center;
-    transition: top 0.5s;
+    transition: top 0.5s, border-color 0.5s, background-color 0.5s, color 0.5s;
   }
 
   .namebar {
