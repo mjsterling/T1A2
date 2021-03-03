@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="components/style.css" />
     <script type="text/javascript" src="components/script.js"></script>
-    <title>Matthew Sterling - full-stack developer</title>
+    <title>Matthew Sterling - student full-stack developer</title>
   </head>
   <body id="body">
     <div id="background"></div>
@@ -22,10 +22,8 @@
       src="assets/lightmodeicon.webp"
       onclick="toggleDarkMode()"
     />
-    <div id="body-flex-container">
-      <div class="scrolling-wrapper">
-        <div class="body-content" id="home">
-          <div id="mprofilepic"></div>
+    <article id="body-flex-container">
+       <div id="mprofilepic"></div>
           <div class="bold introanim">
             <div id="introterms">
               <p class="term1">:~$&nbsp;</p>
@@ -45,8 +43,8 @@
               </p>
             </div>
           </div>
-        </div>
-        <div class="body-content" id="projects">
+        </article>
+        <!-- <div class="body-content" id="projects">
           <h2>Projects</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius nisi
@@ -104,10 +102,8 @@
             <input id="conmessage" type="textarea" />
             <br />
             <input type="submit" value="SUBMIT" id="submit" />
-          </form>
+          </form> -->
         </div>
-      </div>
-    </div>
     <nav class="navbar menucont">
       <section id="dprofilepic"></section>
       <section class="namebar">
@@ -118,10 +114,11 @@
       </section>
       <section class="navlinks">
         <section class="pglinks">
-          <a href="#home"><div class="currentpg pglink">home</div></a>
-          <a href="#projects"><div class="pglink">projects</div></a>
-          <a href="#cv"><div class="pglink">resum&eacute;</div></a>
-          <a href="#contact"><div class="pglink">contact</div></a>
+          <div class="currentpg pglink"><a href="index.html">home</a></div>
+          <div class="pglink"><a href="/components/aboutme.html">bio</a></div>
+          <div class="pglink"><a href="/components/resume.html">resum&eacute;</a></div>
+          <div class="pglink"><a href="/components/contact.html">contact</a></div>
+          <div class="pglink"><a href="/components/blog.html">blog</a></div>
         </section>
         <section class="medialinks">
           <a href="https://twitter.com/mjsterling93"
