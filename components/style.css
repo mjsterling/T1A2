@@ -1,26 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Cutive+Mono&family=Nanum+Myeongjo&family=Poiret+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Cutive+Mono&family=Nanum+Myeongjo&family=Poiret+One&display=swap");
 
 @import "mobile.css";
+@import "desktop.css";
 @import "body-content.css";
 
 body {
-    margin: 0;
-}
-
-#background {
-    background: white;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    content: url(../assets/bg2.png);
-    z-index: -1;
-    filter: invert(1);
-    transition: 0.5s;
+  margin: 0;
 }
 
 a {
-    color: inherit;
-    text-decoration: inherit;
-    font-family: inherit;
-    font-size: inherit;
+  color: inherit;
+  text-decoration: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }

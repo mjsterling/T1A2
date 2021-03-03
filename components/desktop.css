@@ -1,7 +1,7 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 769px) {
   #background {
     background-color: #0c0c0c;
-    background-image: url("../assets/bgmob.png");
+    background-image: url("../assets/bgdesk.png");
     background-attachment: cover;
     background-repeat: no-repeat;
     position: fixed;
@@ -17,7 +17,7 @@
   .menucont {
     background: white;
     color: #33095e;
-    border: 2px solid;
+    border: 4px solid;
     border-color: #33095e;
     transition: border-color 0.5s, background-color 0.5s, color 0.5s;
   }
@@ -26,64 +26,42 @@
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    left: 5%;
-    top: 2%;
-    width: 90%;
-    height: 8%;
+    left: 2%;
+    top: 6%;
+    width: 96%;
+    height: 8vh;
     flex-wrap: nowrap;
     text-align: center;
-    border-radius: 4vh;
+    border-radius: 6vh;
     box-sizing: border-box;
-  }
-
-  #topph {
-    display: none;
   }
 
   #mename {
-    font-size: 7vw;
+    font-size: 3rem;
     font-family: "Poiret One";
-    letter-spacing: 0.03rem;
     font-weight: bold;
     height: 100%;
+    letter-spacing: 0.05rem;
   }
 
-  #sidebar {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-    font-family: "Poiret One";
-    text-decoration: none;
-    font-size: 2.5vh;
-    text-transform: capitalize;
-    font-weight: bold;
-    letter-spacing: 0.03rem;
-    width: 100vw;
-    text-align: center;
+  #menubutton {
+    display: none;
+  }
+
+  #darkbutton {
+    position: fixed;
+    top: 7%;
+    right: 6%;
+    max-height: 6vh;
+    border-radius: 50%;
+    transition: filter 0.5s;
     box-sizing: border-box;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
-  }
-
-  .sidebarlink {
-    width: 35vw;
-    height: 4vh;
-    padding: 0.2vh 0;
-    margin: 1vh 1vw;
-    border-radius: 2vh;
-    box-sizing: border-box;
-  }
-
-  .sidebarlink:hover {
-    text-shadow: 0 0 3px white;
-  }
-
-  .sidebarlink:active {
-    background: white;
-    color: #33095e;
-    border-color: #33095e;
+    background: black;
+    border: 4px solid white;
+    filter: invert(1);
+    z-index: 3;
   }
 
   .bottombar {
@@ -93,59 +71,96 @@
     justify-content: space-between;
     align-items: center;
     left: 0;
-    top: 11%;
-    width: 100%;
-    height: 87%;
+    top: 20%;
+    height: 78%;
+    width: 20%;
     flex-wrap: nowrap;
+    margin: 0;
+    padding: 0 2%;
     box-sizing: border-box;
   }
 
-  #menubutton {
-    max-height: 6vh;
-    max-width: 10vw;
-    border-radius: 50%;
-    border: 2px solid white;
+  #sidebar {
+    position: fixed;
+    left: 2%;
+    top: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: space-between;
+    font-family: "Open Sans";
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-align: center;
     box-sizing: border-box;
-    background: black;
-    transition: filter 0.5s;
+    font-family: "Poiret One";
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+    width: 16vw;
+    height: 40%;
+  }
+
+  .sidebarlink {
+    width: 100%;
+    padding: 0.2rem 0;
+    border-radius: 3vh;
+    box-sizing: border-box;
+    margin: 5% 0;
+    height: 6vh;
+  }
+
+  .sidebarlink:hover {
+    text-shadow: 0 0 2px;
+  }
+
+  .sidebarlink:active {
     filter: invert(1);
-    z-index: 3;
   }
 
   .medialinks {
-    height: 7vh;
-    width: 50%;
-    border-radius: 3.5vh;
+    position: fixed;
+    width: 16vw;
+    left: 2%;
+    bottom: 2%;
+    border-radius: 4vh;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: nowrap;
     box-sizing: border-box;
-    padding: 0;
+    padding: 1vh 1vw;
   }
 
   .mllogo {
-    max-height: 5vh;
+    max-height: 4vh;
+    max-width: 8vw;
     border-radius: 50%;
     box-sizing: border-box;
     border: 2px solid #33095e;
     background: #33095e;
     transition: border-color 0.5s, background-color 0.5s, color 0.5s;
     padding: 0;
-    margin: auto 0;
+    margin: 0 0.2vw;
   }
 
-  #darkbutton {
-    max-height: 6vh;
-    max-width: 10vw;
-    border-radius: 50%;
-    transition: filter 0.5s;
+  #mprofilepic {
+    display: none;
+  }
+
+  #dprofilepic {
+    position: fixed;
+    top: 20%;
+    left: 3%;
+    content: url(../assets/ppic.jpg);
     box-sizing: border-box;
-    background: black;
-    border: 2px solid white;
-    filter: invert(1);
-    z-index: 3;
+    border: 4px solid #33095e;
+    background-color: #33095e;
+    border-radius: 50%;
+    max-width: 14vw;
+    margin: 0 auto;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
   }
 
   #body-flex-container {
@@ -155,13 +170,13 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    top: 12%;
-    height: 86%;
-    left: 5%;
-    width: 90%;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s;
+    top: 20%;
+    height: 78%;
+    left: 20%;
+    width: 78%;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
     box-sizing: border-box;
-    border: 2px solid;
+    border: 4px solid;
     border-color: #33095e;
     border-radius: 3vh;
     z-index: 1;
@@ -186,22 +201,6 @@
     align-items: center;
   }
 
-  #dprofilepic {
-    display: none;
-  }
-
-  #mprofilepic {
-    content: url(../assets/ppic.jpg);
-    max-width: 35vw;
-    max-height: 35vh;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
-    box-sizing: border-box;
-    border: 3px solid #33095e;
-    background-color: #33095e;
-    border-radius: 50%;
-    margin: 10% 0;
-  }
-
   .introanim {
     display: flex;
     flex-direction: row;
@@ -209,6 +208,6 @@
     font-family: "Cutive Mono";
     height: 100%;
     width: 100%;
-    font-size: 4.8vw;
+    font-size: 3vw;
   }
 }
