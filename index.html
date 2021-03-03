@@ -10,24 +10,18 @@
   </head>
   <body id="body">
     <div id="background"></div>
-    <div class="menucont" id="topbar">
-      <div id="topph"></div>
-      <input
-        type="image"
-        src="assets/menubtn.png"
-        id="menubutton"
-        onclick="toggleMenu()"
-      />
-      <a href="#home">
-        <div id="mename">Matthew Sterling</div>
-      </a>
-      <input
-        id="darkbutton"
-        type="image"
-        src="assets/lightmodeicon.webp"
-        onclick="toggleDarkMode()"
-      />
-    </div>
+    <input
+      type="image"
+      src="assets/menubtn.png"
+      id="menubutton"
+      onclick="toggleMenu()"
+    />
+    <input
+      id="darkbutton"
+      type="image"
+      src="assets/lightmodeicon.webp"
+      onclick="toggleDarkMode()"
+    />
     <div id="body-flex-container">
       <div class="scrolling-wrapper">
         <div class="body-content" id="home">
@@ -114,31 +108,33 @@
         </div>
       </div>
     </div>
-    <div class="bottombar">
-      <div id="dprofilepic"></div>
-      <nav id="sidebar">
-        <a href="#home"><div class="menucont sidebarlink">home</div></a>
-        <a href="#projects"><div class="menucont sidebarlink">projects</div></a>
-        <a href="#cv"><div class="menucont sidebarlink">resum&eacute;</div></a>
-        <a href="#contact"><div class="menucont sidebarlink">contact</div></a>
-      </nav>
-      <nav class="medialinks menucont">
-        <div class="ml">
+    <nav class="navbar menucont">
+      <section id="dprofilepic"></section>
+      <section class="namebar">
+        <a href="#home">
+          <p id="myname">Matthew Sterling</p>
+        </a>
+        <p id="mytitle">Student full-stack developer</p>
+      </section>
+      <section class="navlinks">
+        <section class="pglinks">
+          <a href="#home"><div class="pglink">home</div></a>
+          <a href="#projects"><div class="pglink">projects</div></a>
+          <a href="#cv"><div class="pglink">resum&eacute;</div></a>
+          <a href="#contact"><div class="pglink">contact</div></a>
+        </section>
+        <section class="medialinks">
           <a href="https://twitter.com/mjsterling93"
             ><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"
           /></a>
-        </div>
-        <div class="ml">
           <a href="https://www.linkedin.com/in/matthew-sterling-055911162"
             ><img class="mllogo" src="assets/linkedinlogo.png" alt="LinkedIn"
           /></a>
-        </div>
-        <div class="ml">
           <a href="https://github.com/mjsterling"
             ><img class="mllogo" src="assets/githublogo.webp" alt="Github"
           /></a>
-        </div>
-      </nav>
-    </div>
+        </section>
+      </section>
+    </nav>
   </body>
 </html>

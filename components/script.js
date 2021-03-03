@@ -1,4 +1,14 @@
-var menutoggle, dmtoggle, bfc, db, bkg, dppic, mppic, menucont, mll, menubtn, bfctop;
+var menutoggle,
+  dmtoggle,
+  bfc,
+  db,
+  bkg,
+  dppic,
+  mppic,
+  menucont,
+  mll,
+  menubtn,
+  bfctop;
 window.onload = updateVars;
 window.onresize = windowDOMreset;
 
@@ -63,38 +73,43 @@ function toggleDarkMode() {
 
 function toggleMenu() {
   if (menutoggle == false) {
-    bfc.style.height = "65%";
-    bfc.style.top = "24%";
+    bfc.style.top = "2%";
     menubtn.style.filter = "invert(0)";
     menutoggle = true;
   } else {
-    bfc.style.height = "86%";
-    bfc.style.top = "12%";
+    bfc.style.top = "16%";
     menubtn.style.filter = "invert(1)";
     menutoggle = false;
   }
 }
 
-function windowDOMreset() {
-  if (window.innerWidth >= 769 && bfc.style.top !== "20%") {
-    bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
-    bfc.style.top = "20%";
-    bfc.style.height = "78%";
-    setTimeout(() =>
-    { bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s"; },
-    500);
-    menubtn.style.filter = "invert(1)";
-    menutoggle = false;
-  }
+// function windowDOMreset() {
+//   if (window.innerWidth >= 769 && bfc.style.top !== "20%") {
+//     bfc.style.transition =
+//       "border-color 0.5s, background-color 0.5s, color 0.5s";
+//     bfc.style.top = "20%";
+//     bfc.style.height = "78%";
+//     setTimeout(() => {
+//       bfc.style.transition =
+//         "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s";
+//     }, 500);
+//     menubtn.style.filter = "invert(1)";
+//     menutoggle = false;
+//   }
 
-  if (window.innerWidth <= 768 && menutoggle == false && bfc.style.top !== "12%") {
-    bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
-    bfc.style.top = "12%";
-    bfc.style.height = "86%";
-    setTimeout(() =>
-      { bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s"; },
-      500);
-    menubtn.style.filter = "invert(1)";
-    menutoggle = false;
-  }
-}
+//   if (
+//     window.innerWidth <= 768 &&
+//     menutoggle == false &&
+//     bfc.style.top !== "2%"
+//   ) {
+//     bfc.style.transition =
+//       "border-color 0.5s, background-color 0.5s, color 0.5s";
+//     bfc.style.top = "2%";
+//     setTimeout(() => {
+//       bfc.style.transition =
+//         "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s";
+//     }, 500);
+//     menubtn.style.filter = "invert(1)";
+//     menutoggle = false;
+//   }
+// }

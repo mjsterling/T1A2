@@ -22,86 +22,12 @@
     transition: border-color 0.5s, background-color 0.5s, color 0.5s;
   }
 
-  #topbar {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    left: 5%;
-    top: 2%;
-    width: 90%;
-    height: 8%;
-    flex-wrap: nowrap;
-    text-align: center;
-    border-radius: 4vh;
-    box-sizing: border-box;
-  }
-
-  #topph {
-    display: none;
-  }
-
-  #mename {
-    font-size: 7vw;
-    font-family: "Poiret One";
-    letter-spacing: 0.03rem;
-    font-weight: bold;
-    height: 100%;
-  }
-
-  #sidebar {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-    font-family: "Poiret One";
-    text-decoration: none;
-    font-size: 2.5vh;
-    text-transform: capitalize;
-    font-weight: bold;
-    letter-spacing: 0.03rem;
-    width: 100vw;
-    text-align: center;
-    box-sizing: border-box;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
-  }
-
-  .sidebarlink {
-    width: 35vw;
-    height: 4vh;
-    padding: 0.2vh 0;
-    margin: 1vh 1vw;
-    border-radius: 2vh;
-    box-sizing: border-box;
-  }
-
-  .sidebarlink:hover {
-    text-shadow: 0 0 3px white;
-  }
-
-  .sidebarlink:active {
-    background: white;
-    color: #33095e;
-    border-color: #33095e;
-  }
-
-  .bottombar {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    left: 0;
-    top: 11%;
-    width: 100%;
-    height: 87%;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-  }
-
+  
   #menubutton {
-    max-height: 6vh;
+    position: fixed;
+    right: 8%;
+    bottom: 4%;
+    max-height: 4vh;
     max-width: 10vw;
     border-radius: 50%;
     border: 2px solid white;
@@ -112,10 +38,106 @@
     z-index: 3;
   }
 
+
+  #darkbutton {
+    position: fixed;
+    left: 8%;
+    bottom: 4%;
+    max-height: 4vh;
+    max-width: 10vw;
+    border-radius: 50%;
+    transition: filter 0.5s;
+    box-sizing: border-box;
+    background: black;
+    border: 2px solid white;
+    filter: invert(1);
+    z-index: 1;
+  }
+
+  .navbar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    left: 5%;
+    top: 2%;
+    width: 90%;
+    height: 96%;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    border-radius: 3vh;
+    padding: 1vh 1vw;
+    text-align: center;
+    }
+
+  .namebar {
+        width: 100%;
+        text-align: center;
+        font-family: "Poiret One";
+        font-weight: bold;
+        letter-spacing: 0.06rem;
+        align-self: flex-start;
+    }
+
+    .namebar p {
+        margin: 1.5vh 0 0 0;
+    }
+
+    #myname {
+        font-size: 2rem;
+    }
+
+    #mytitle {
+        font-size: 1.3rem;
+        font-family: 'Open Sans';
+        font-weight: normal;
+        letter-spacing: 0;
+    }
+
+.navlinks {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 11%;
+    align-items: center;
+}
+
+  .pglinks {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Poiret One";
+    text-decoration: none;
+    font-size: 5vw;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+    .pglink {
+        width: 20vw;
+        margin: 0.5vh 0;
+        border-radius: 2vh;
+        box-sizing: border-box;
+        transition: color 0.5s;
+    }
+
+    .pglink:hover {
+        text-shadow: 0 0 3px white;
+    }
+
+    .pglink:active {
+        background: white;
+        color: #33095e;
+        border-color: #33095e;
+    }
+
+
   .medialinks {
-    height: 7vh;
-    width: 50%;
-    border-radius: 3.5vh;
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -126,7 +148,7 @@
   }
 
   .mllogo {
-    max-height: 5vh;
+    max-height: 4vh;
     border-radius: 50%;
     box-sizing: border-box;
     border: 2px solid #33095e;
@@ -136,17 +158,6 @@
     margin: auto 0;
   }
 
-  #darkbutton {
-    max-height: 6vh;
-    max-width: 10vw;
-    border-radius: 50%;
-    transition: filter 0.5s;
-    box-sizing: border-box;
-    background: black;
-    border: 2px solid white;
-    filter: invert(1);
-    z-index: 3;
-  }
 
   #body-flex-container {
     position: fixed;
@@ -155,11 +166,11 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    top: 12%;
-    height: 86%;
+    top: 16%;
+    height: 82%;
     left: 5%;
     width: 90%;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s;
     box-sizing: border-box;
     border: 2px solid;
     border-color: #33095e;
@@ -170,7 +181,7 @@
   .scrolling-wrapper {
     flex-direction: column;
     flex-wrap: nowrap;
-    overflow-y: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     justify-content: center;
   }
