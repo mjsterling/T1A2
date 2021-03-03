@@ -22,7 +22,7 @@
     transition: border-color 0.5s, background-color 0.5s, color 0.5s;
   }
 
-  #menubutton1 {
+  /* #menubutton1 {
     position: absolute;
     right: 3%;
     bottom: 2%;
@@ -35,9 +35,20 @@
     transition: 0.5s;
     filter: invert(1);
     z-index: 3;
+  } */
+
+    #menubutton1 {
+    position: absolute;
+    right: 47.5%;
+    bottom: 2%;
+    max-width: 5vw;
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 3;
   }
 
   #menubutton2 {
+      display: none;
     position: absolute;
     right: 3%;
     bottom: 2%;
@@ -64,8 +75,8 @@
 
   #darkbutton {
     position: absolute;
-    left: 3%;
-    bottom: 2%;
+    right: 3%;
+    top: 2%;
     max-height: 4vh;
     max-width: 10vw;
     border-radius: 50%;
@@ -228,7 +239,7 @@
     justify-content: flex-start;
     font-family: "Cutive Mono";
     text-align: justify;
-    font-size: 4.8vw;
+    font-size: 4.5vw;
     width: 100%;
     height: 50%;
   }

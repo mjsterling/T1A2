@@ -8,7 +8,6 @@ var menutoggle,
   menucont,
   mll,
   menubtn1,
-  menubtn2,
   navbar,
   dy,
   y,
@@ -100,8 +99,7 @@ function toggleDarkMode() {
     dppic.style.background = "white";
     mppic.style.borderColor = "white";
     mppic.style.background = "white";
-    menubtn1.style.filter = "invert(0)";
-    menubtn2.style.filter = "invert(0)";
+    menubtn1.style.filter = "invert(1)";
     let i;
     for (i = 0; i < menucont.length; i++) {
       menucont[i].style.background = "#33095e";
@@ -124,8 +122,7 @@ function toggleDarkMode() {
     dppic.style.background = "#33095e";
     mppic.style.borderColor = "#33095e";
     mppic.style.background = "#33095e";
-    menubtn1.style.filter = "invert(1)";
-    menubtn2.style.filter = "invert(1)";
+    menubtn1.style.filter = "invert(0)";
     let i;
     for (i = 0; i < menucont.length; i++) {
       menucont[i].style.background = "white";
@@ -145,18 +142,12 @@ function toggleMenu() {
   if (menutoggle == false) {
     bfc.style.top = "2%";
     navbar.style.top = "16%";
-    menubtn1.style.opacity = "0";
-    menubtn1.style.zIndex = "-3";
-    menubtn2.style.zIndex = "3";
-    menubtn2.style.opacity = "1";
+    menubtn1.style.transform = "rotateX(180deg)";
     menutoggle = true;
   } else {
     bfc.style.top = "16%";
     navbar.style.top = "2%";
-    menubtn1.style.zIndex = "3";
-    menubtn1.style.opacity = "1";
-    menubtn2.style.opacity = "0";
-    menubtn2.style.zIndex = "-3";
+    menubtn1.style.transform = "none";
     menutoggle = false;
   }
 }
