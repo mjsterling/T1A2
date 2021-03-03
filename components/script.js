@@ -7,12 +7,14 @@ var menutoggle,
   mppic,
   menucont,
   mll,
-  menubtn,
+  menubtn1,
+  menubtn2,
+  navbar,
   bfctop;
-window.onload = updateVars;
+window.onload = onloadFunc;
 window.onresize = windowDOMreset;
 
-function updateVars() {
+function onloadFunc() {
   menutoggle = false;
   dmtoggle = false;
   bfc = document.getElementById("body-flex-container");
@@ -22,7 +24,12 @@ function updateVars() {
   mppic = document.getElementById("mprofilepic");
   menucont = document.getElementsByClassName("menucont");
   mll = document.getElementsByClassName("mllogo");
-  menubtn = document.getElementById("menubutton");
+  menubtn1 = document.getElementById("menubutton1");
+  menubtn2 = document.getElementById("menubutton2");
+  navbar = document.getElementById("navbar");
+  setTimeout(() => {
+    navbar.style.top = "2%";
+  }, 500);
 }
 
 function toggleDarkMode() {
@@ -36,6 +43,8 @@ function toggleDarkMode() {
     dppic.style.background = "white";
     mppic.style.borderColor = "white";
     mppic.style.background = "white";
+    menubtn1.style.filter = "invert(0)";
+    menubtn2.style.filter = "invert(0)";
     let i;
     for (i = 0; i < menucont.length; i++) {
       menucont[i].style.background = "#33095e";
@@ -57,6 +66,8 @@ function toggleDarkMode() {
     dppic.style.background = "#33095e";
     mppic.style.borderColor = "#33095e";
     mppic.style.background = "#33095e";
+    menubtn1.style.filter = "invert(1)";
+    menubtn2.style.filter = "invert(1)";
     let i;
     for (i = 0; i < menucont.length; i++) {
       menucont[i].style.background = "white";
@@ -74,11 +85,19 @@ function toggleDarkMode() {
 function toggleMenu() {
   if (menutoggle == false) {
     bfc.style.top = "2%";
-    menubtn.style.filter = "invert(0)";
+    navbar.style.top = "16%";
+    menubtn1.style.opacity = "0";
+    menubtn1.style.zIndex = "-3";
+    menubtn2.style.zIndex = "3";
+    menubtn2.style.opacity = "1";
     menutoggle = true;
   } else {
     bfc.style.top = "16%";
-    menubtn.style.filter = "invert(1)";
+    navbar.style.top = "2%";
+    menubtn1.style.zIndex = "3";
+    menubtn1.style.opacity = "1";
+    menubtn2.style.opacity = "0";
+    menubtn2.style.zIndex = "-3";
     menutoggle = false;
   }
 }

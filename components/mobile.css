@@ -23,26 +23,52 @@
   }
 
   
-  #menubutton {
-    position: fixed;
-    right: 8%;
-    bottom: 4%;
+  #menubutton1 {
+    position: absolute;
+    right: 3%;
+    bottom: 2%;
     max-height: 4vh;
     max-width: 10vw;
     border-radius: 50%;
     border: 2px solid white;
     box-sizing: border-box;
     background: black;
-    transition: filter 0.5s;
+    transition: 0.5s;
     filter: invert(1);
     z-index: 3;
   }
 
+  #menubutton2 {
+    position: absolute;
+    right: 3%;
+    bottom: 2%;
+    max-height: 4vh;
+    max-width: 10vw;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-sizing: border-box;
+    background: black;
+    transition: 0.5s;
+    filter: invert(1);
+    z-index: 3;
+  }
+
+  #menubuttoncvr {
+      opacity: 0;
+      z-index: 1;
+      position: absolute;
+        right: 3%;
+        bottom: 2%;
+        max-height: 4vh;
+        max-width: 10vw;
+
+  }
+
 
   #darkbutton {
-    position: fixed;
-    left: 8%;
-    bottom: 4%;
+    position: absolute;
+    left: 3%;
+    bottom: 2%;
     max-height: 4vh;
     max-width: 10vw;
     border-radius: 50%;
@@ -54,21 +80,22 @@
     z-index: 1;
   }
 
-  .navbar {
+  #navbar {
     display: flex;
     position: fixed;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     left: 5%;
-    top: 2%;
+    top: 16%;
     width: 90%;
-    height: 96%;
+    height: 82%;
     flex-wrap: nowrap;
     box-sizing: border-box;
     border-radius: 3vh;
     padding: 1vh 1vw;
     text-align: center;
+    transition: top 0.5s;
     }
 
   .namebar {
@@ -103,7 +130,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    height: 11.5%;
+    height: 13%;
     width: 100%;
     align-items: center;
 }
