@@ -12,7 +12,7 @@ var menutoggle,
   navbar,
   bfctop;
 window.onload = onloadFunc;
-window.onresize = windowDOMreset;
+// window.onresize = windowDOMreset;
 
 function onloadFunc() {
   menutoggle = false;
@@ -27,6 +27,10 @@ function onloadFunc() {
   menubtn1 = document.getElementById("menubutton1");
   menubtn2 = document.getElementById("menubutton2");
   navbar = document.getElementById("navbar");
+  if (localStorage.getItem('dmstore') == "true") {
+    toggleDarkMode();
+    localStorage.removeItem('dmstore');
+  }  
   setTimeout(() => {
     bfc.style.top = "16%";
   }, 100);
@@ -59,6 +63,7 @@ function toggleDarkMode() {
       mll[i].style.borderColor = "white";
     }
     dmtoggle = true;
+    localStorage.setItem('dmstore', 'true');
   } else {
     bfc.style.background = "white";
     bfc.style.color = "#0c0c0c";
@@ -82,6 +87,7 @@ function toggleDarkMode() {
       mll[i].style.borderColor = "#33095e";
     }
     dmtoggle = false;
+    localStorage.setItem('dmstore', 'false');
   }
 }
 
@@ -114,7 +120,7 @@ function pagetransition1() {
   }, 200);
   setTimeout(() => {
     window.location.href = "index.html";
-  }, 700);
+  }, 600);
 }
 
 function pagetransition2() {
@@ -126,7 +132,7 @@ function pagetransition2() {
   }, 200);
   setTimeout(() => {
     window.location.href = "/components/bio.html";
-  }, 700);
+  }, 600);
 }
 
 function pagetransition3() {
@@ -138,7 +144,7 @@ function pagetransition3() {
   }, 200);
   setTimeout(() => {
     window.location.href = "/components/resume.html";
-  }, 700);
+  }, 600);
 }
 
 function pagetransition4() {
@@ -150,7 +156,7 @@ function pagetransition4() {
   }, 200);
   setTimeout(() => {
     window.location.href = "/components/contact.html";
-  }, 700);
+  }, 600);
 }
 
 function pagetransition5() {
@@ -162,7 +168,7 @@ function pagetransition5() {
   }, 200);
   setTimeout(() => {
     window.location.href = "/components/blog.html";
-  }, 700);
+  }, 600);
 }
 
 // function windowDOMreset() {
