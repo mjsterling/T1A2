@@ -44,14 +44,14 @@ function onloadFunc() {
 }
 
 
-window.addEventListener('mousedown', (a) => {
-  y = a.clientY;
+window.addEventListener('mousedown', (e) => {
+  y = e.clientY;
   swiping = true;
   console.log(y);
 });
 
-window.addEventListener('mouseup', (c) => {
-  dy = c.clientY;
+window.addEventListener('mouseup', (e) => {
+  dy = e.clientY;
   console.log(dy);
   if (swiping == true) {
     if (dy > y && menutoggle == true) {
@@ -66,26 +66,27 @@ window.addEventListener('mouseup', (c) => {
   dy = 0;
 });
 
-window.addEventListener('touchdown', (a) => {
-  y = a.clientY;
+window.addEventListener('touchstart', (e) => {
+  y = e.touches[0].clientY;
+    console.log(y);
   swiping = true;
-  console.log(y);
 });
 
-window.addEventListener('touchup', (b) => {
-  dy = b.clientY;
+window.addEventListener('touchend', (e) => {
+  dy = e.changedTouches[0].clientY;
   console.log(dy);
-    if (swiping == true) {
-      if (dy > y  && menutoggle == true) {
-      toggleMenu();
-    }
-      if(dy < y  && menutoggle == false) {
-      toggleMenu();
+
+  if (swiping == true) {
+    if (dy > y && menutoggle == true) {
+    toggleMenu();
   }
-    }
-swiping = false;
-y = 0;
-dy = 0;
+    if(dy < y && menutoggle == false) {
+    toggleMenu();
+}
+  }
+  swiping = false;
+  y = 0;
+  dy = 0;
 });
 
 function toggleDarkMode() {
