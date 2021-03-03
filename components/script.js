@@ -28,11 +28,11 @@ function onloadFunc() {
   menubtn2 = document.getElementById("menubutton2");
   navbar = document.getElementById("navbar");
   setTimeout(() => {
-    navbar.style.top = "2%";
-  }, 200);
-  setTimeout(() => {
     bfc.style.top = "16%";
   }, 100);
+  setTimeout(() => {
+    navbar.style.top = "2%";
+  }, 200);
 }
 
 function toggleDarkMode() {
@@ -103,6 +103,66 @@ function toggleMenu() {
     menubtn2.style.zIndex = "-3";
     menutoggle = false;
   }
+}
+
+function pagetransition1() {
+  setTimeout(() => {
+    bfc.style.top = "-100%";
+  }, 100);
+  setTimeout(() => {
+    navbar.style.top = "-100%";
+  }, 200);
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 700);
+}
+
+function pagetransition2() {
+  setTimeout(() => {
+    bfc.style.top = "-100%";
+  }, 100);
+  setTimeout(() => {
+    navbar.style.top = "-100%";
+  }, 200);
+  setTimeout(() => {
+    window.location.href = "/components/bio.html";
+  }, 700);
+}
+
+function pagetransition3() {
+  setTimeout(() => {
+    bfc.style.top = "-100%";
+  }, 100);
+  setTimeout(() => {
+    navbar.style.top = "-100%";
+  }, 200);
+  setTimeout(() => {
+    window.location.href = "/components/resume.html";
+  }, 700);
+}
+
+function pagetransition4() {
+  setTimeout(() => {
+    bfc.style.top = "-100%";
+  }, 100);
+  setTimeout(() => {
+    navbar.style.top = "-100%";
+  }, 200);
+  setTimeout(() => {
+    window.location.href = "/components/contact.html";
+  }, 700);
+}
+
+function pagetransition5() {
+  setTimeout(() => {
+    bfc.style.top = "-100%";
+  }, 100);
+  setTimeout(() => {
+    navbar.style.top = "-100%";
+  }, 200);
+  setTimeout(() => {
+    window.location.href = "/components/blog.html";
+  }, 700);
 }
 
 // function windowDOMreset() {
