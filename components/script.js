@@ -123,35 +123,35 @@ function pagetransition1() {
   pagetransition();
   setTimeout(() => {
     window.location.href = "index.html";
-  }, 200);
+  }, 500);
 }
 
 function pagetransition2() {
   pagetransition();
   setTimeout(() => {
     window.location.href = "/components/bio.html";
-  }, 200);
+  }, 500);
 }
 
 function pagetransition3() {
   pagetransition();
   setTimeout(() => {
     window.location.href = "/components/resume.html";
-  }, 200);
+  }, 500);
 }
 
 function pagetransition4() {
   pagetransition();
   setTimeout(() => {
     window.location.href = "/components/projects.html";
-  }, 200);
+  }, 500);
 }
 
 function pagetransition5() {
   pagetransition();
   setTimeout(() => {
     window.location.href = "/components/blog.html";
-  }, 200);
+  }, 500);
 }
 
 // function windowDOMreset() {
