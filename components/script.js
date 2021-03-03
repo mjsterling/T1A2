@@ -110,64 +110,48 @@ function toggleMenu() {
   }
 }
 
-function pagetransition1() {
+function pagetransition() {
   setTimeout(() => {
     bfc.style.top = "-100%";
   }, 100);
   setTimeout(() => {
     navbar.style.top = "-100%";
   }, 200);
+}
+
+function pagetransition1() {
+  pagetransition();
   setTimeout(() => {
     window.location.href = "index.html";
-  }, 600);
+  }, 200);
 }
 
 function pagetransition2() {
-  setTimeout(() => {
-    bfc.style.top = "-100%";
-  }, 100);
-  setTimeout(() => {
-    navbar.style.top = "-100%";
-  }, 200);
+  pagetransition();
   setTimeout(() => {
     window.location.href = "/components/bio.html";
-  }, 600);
+  }, 200);
 }
 
 function pagetransition3() {
-  setTimeout(() => {
-    bfc.style.top = "-100%";
-  }, 100);
-  setTimeout(() => {
-    navbar.style.top = "-100%";
-  }, 200);
+  pagetransition();
   setTimeout(() => {
     window.location.href = "/components/resume.html";
-  }, 600);
+  }, 200);
 }
 
 function pagetransition4() {
+  pagetransition();
   setTimeout(() => {
-    bfc.style.top = "-100%";
-  }, 100);
-  setTimeout(() => {
-    navbar.style.top = "-100%";
+    window.location.href = "/components/projects.html";
   }, 200);
-  setTimeout(() => {
-    window.location.href = "/components/contact.html";
-  }, 600);
 }
 
 function pagetransition5() {
-  setTimeout(() => {
-    bfc.style.top = "-100%";
-  }, 100);
-  setTimeout(() => {
-    navbar.style.top = "-100%";
-  }, 200);
+  pagetransition();
   setTimeout(() => {
     window.location.href = "/components/blog.html";
-  }, 600);
+  }, 200);
 }
 
 // function windowDOMreset() {

@@ -22,7 +22,6 @@
     transition: border-color 0.5s, background-color 0.5s, color 0.5s;
   }
 
-  
   #menubutton1 {
     position: absolute;
     right: 3%;
@@ -54,16 +53,14 @@
   }
 
   #menubuttoncvr {
-      opacity: 0;
-      z-index: 1;
-      position: absolute;
-        right: 3%;
-        bottom: 2%;
-        max-height: 4vh;
-        max-width: 10vw;
-
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    right: 3%;
+    bottom: 2%;
+    max-height: 4vh;
+    max-width: 10vw;
   }
-
 
   #darkbutton {
     position: absolute;
@@ -96,44 +93,43 @@
     padding: 1vh 1vw;
     text-align: center;
     transition: top 0.5s;
-    }
+  }
 
   .namebar {
-        width: 100%;
-        height: 20%;
-        text-align: center;
-        font-family: "Poiret One";
-        font-weight: bold;
-    }
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-family: "Poiret One";
+    font-weight: bold;
+  }
 
-    #myname {
-        font-size: 4.7vh;
-        margin-top: 2.5vh;
-        text-shadow: 0 0 1px;
-        letter-spacing: 0.1vh;
-    }
+  #myname {
+    font-size: 4.7vh;
+    margin-top: 2.5vh;
+    text-shadow: 0 0 1px;
+    letter-spacing: 0.1vh;
+  }
 
-    .namebar p { 
-               margin: 0;
+  .namebar p {
+    margin: 0;
+  }
 
-    }
+  #mytitle {
+    margin-top: 0.5vh;
+    font-size: 2.5vh;
+    font-family: "Poiret One";
+    font-weight: bold;
+    letter-spacing: 0.06vh;
+  }
 
-    #mytitle {
-        margin-top: 0.5vh;
-        font-size: 2.5vh;
-        font-family: 'Poiret One';
-        font-weight: bold;
-        letter-spacing: 0.06vh;
-    }
-
-.navlinks {
+  .navlinks {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     height: 13%;
     width: 100%;
     align-items: center;
-}
+  }
 
   .pglinks {
     display: flex;
@@ -149,23 +145,23 @@
     box-sizing: border-box;
   }
 
-    .currentpg {
-        text-shadow: 0 0 2px;    }
+  .currentpg {
+    text-shadow: 0 0 2px;
+  }
 
-    .pglink {
-        box-sizing: border-box;
-        transition: color 0.5s;
-        text-align: center;
-    }
+  .pglink {
+    box-sizing: border-box;
+    transition: color 0.5s;
+    text-align: center;
+  }
 
-    .pglink:hover {
-        text-decoration: underline;
-    }
+  .pglink:hover {
+    text-decoration: underline;
+  }
 
-    .pglink:active {
-        text-shadow: 0 0 10px;
-    }
-
+  .pglink:active {
+    text-shadow: 0 0 10px;
+  }
 
   .medialinks {
     width: 40%;
@@ -188,7 +184,6 @@
     padding: 0;
     margin: auto 0;
   }
-
 
   #body-flex-container {
     position: fixed;
