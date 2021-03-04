@@ -16,7 +16,7 @@ var menutoggle,
   conticon;
 
 window.onload = onloadFunc;
-// window.onresize = windowDOMreset;
+window.onresize = windowDOMreset;
 
 function onloadFunc() {
   menutoggle = false;
@@ -33,61 +33,56 @@ function onloadFunc() {
   menubtn1 = document.getElementById("menubutton1");
   navbar = document.getElementById("navbar");
   conticon = document.getElementsByClassName("conticon");
-  if (localStorage.getItem('darkmode') == "true") {
+  if (localStorage.getItem("darkmode") == "true") {
     toggleDarkMode();
-  }  
+  }
 
-  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+  if (window.innerHeight / window.innerWidth < 0.5) {
     setTimeout(() => {
       bfc.style.top = "2%";
     }, 100);
     setTimeout(() => {
       navbar.style.top = "2%";
     }, 200);
+  } else {
+    setTimeout(() => {
+      bfc.style.top = "16%";
+    }, 100);
+    setTimeout(() => {
+      navbar.style.top = "2%";
+    }, 200);
   }
-
-  else {
-  setTimeout(() => {
-    bfc.style.top = "16%";
-  }, 100);
-  setTimeout(() => {
-    navbar.style.top = "2%";
-  }, 200);
-}
 }
 
-
-window.addEventListener('mousedown', (e) => {
-  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
-  x = e.clientX;
-  console.log("x =", x);
-  }
-  else {
+window.addEventListener("mousedown", (e) => {
+  if (window.innerHeight / window.innerWidth < 0.5) {
+    x = e.clientX;
+    console.log("x =", x);
+  } else {
     y = e.clientY;
     console.log("y =", y);
   }
 });
 
-window.addEventListener('mouseup', (e) => {
-  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
-      dx = e.clientX;
-      console.log("dx = ", dx);
-      if (x > dx && (x - dx) > 50 && menutoggle == false) {
-        toggleMenu();
-      }
-      if(dx > x && (dx - x) > 50 && menutoggle == true) {
-        toggleMenu();
-      }
+window.addEventListener("mouseup", (e) => {
+  if (window.innerHeight / window.innerWidth < 0.5) {
+    dx = e.clientX;
+    console.log("dx = ", dx);
+    if (x > dx && x - dx > 50 && menutoggle == false) {
+      toggleMenu();
     }
-    else {
-      dy = e.clientY;
-      console.log("dy = ", dy);
-      if (y > dy && (y - dy) > 50 && menutoggle == false) {
-        toggleMenu();
-      }
-      if(dy > y && (dy - y) > 50 && menutoggle == true) {
-        toggleMenu();
-      }
+    if (dx > x && dx - x > 50 && menutoggle == true) {
+      toggleMenu();
+    }
+  } else {
+    dy = e.clientY;
+    console.log("dy = ", dy);
+    if (y > dy && y - dy > 50 && menutoggle == false) {
+      toggleMenu();
+    }
+    if (dy > y && dy - y > 50 && menutoggle == true) {
+      toggleMenu();
+    }
   }
   x = 0;
   dx = 0;
@@ -95,36 +90,34 @@ window.addEventListener('mouseup', (e) => {
   dy = 0;
 });
 
-window.addEventListener('touchstart', (e) => {
-  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+window.addEventListener("touchstart", (e) => {
+  if (window.innerHeight / window.innerWidth < 0.5) {
     x = e.touches[0].clientX;
     console.log("x =", x);
-    }
-    else {
+  } else {
     y = e.touches[0].clientY;
     console.log("y =", y);
-    }
+  }
 });
 
-window.addEventListener('touchend', (e) => {
-  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+window.addEventListener("touchend", (e) => {
+  if (window.innerHeight / window.innerWidth < 0.5) {
     dx = e.changedTouches[0].clientX;
     console.log("dx = ", dx);
-    if (x > dx && (x - dx) > 50 && menutoggle == false) {
+    if (x > dx && x - dx > 50 && menutoggle == false) {
       toggleMenu();
     }
-    if(dx > x && (dx - x) > 50 && menutoggle == true) {
+    if (dx > x && dx - x > 50 && menutoggle == true) {
       toggleMenu();
     }
-  }
-  else {
-  dy = e.changedTouches[0].clientY;
-  console.log("dy =", dy);
+  } else {
+    dy = e.changedTouches[0].clientY;
+    console.log("dy =", dy);
 
-    if (y > dy && (y - dy) > 50 && menutoggle == false) {
-    toggleMenu();
-  }
-    if(dy > y && (dy - y) > 50 && menutoggle == true) {
+    if (y > dy && y - dy > 50 && menutoggle == false) {
+      toggleMenu();
+    }
+    if (dy > y && dy - y > 50 && menutoggle == true) {
       toggleMenu();
     }
   }
@@ -161,7 +154,7 @@ function toggleDarkMode() {
     }
 
     dmtoggle = true;
-    localStorage.setItem('darkmode', 'true');
+    localStorage.setItem("darkmode", "true");
   } else {
     bfc.style.background = "white";
     bfc.style.color = "#0c0c0c";
@@ -187,17 +180,16 @@ function toggleDarkMode() {
       conticon[i].style.filter = "invert(0)";
     }
     dmtoggle = false;
-    localStorage.removeItem ('darkmode')
+    localStorage.removeItem("darkmode");
   }
 }
 function toggleMenu() {
-  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+  if (window.innerHeight / window.innerWidth < 0.5) {
     lsToggleMenu();
-  }
-    else {
+  } else {
     ptToggleMenu();
-    }
   }
+}
 
 function ptToggleMenu() {
   if (menutoggle == false) {
@@ -271,33 +263,99 @@ function pagetransition5() {
   }, 500);
 }
 
-// function windowDOMreset() {
-//   if (window.innerWidth >= 769 && bfc.style.top !== "20%") {
-//     bfc.style.transition =
-//       "border-color 0.5s, background-color 0.5s, color 0.5s";
-//     bfc.style.top = "20%";
-//     bfc.style.height = "78%";
-//     setTimeout(() => {
-//       bfc.style.transition =
-//         "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s";
-//     }, 500);
-//     menubtn.style.filter = "invert(1)";
-//     menutoggle = false;
-//   }
+function windowDOMreset() {
+  if (window.innerWidth / window.innerHeight > 2 && bfc.style.top !== "2%") {
+    bfc.style.transition =
+      "border-color 0.5s, background-color 0.5s, color 0.5s";
+    navbar.style.transition =
+      "border-color 0.5s, background-color 0.5s, color 0.5s";
+    bfc.style.top = "2%";
+    bfc.style.left = "18%";
+    bfc.style.height = "96%";
+    navbar.style.top = "2%";
+    navbar.style.left = "2%";
+    navbar.style.height = "96%";
+    setTimeout(() => {
+      bfc.style.transition =
+        "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+      navbar.style.transition =
+        "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+    }, 500);
+    menubtn1.style.transform = "none";
+    menutoggle = false;
+  }
 
-//   if (
-//     window.innerWidth <= 768 &&
-//     menutoggle == false &&
-//     bfc.style.top !== "2%"
-//   ) {
-//     bfc.style.transition =
-//       "border-color 0.5s, background-color 0.5s, color 0.5s";
-//     bfc.style.top = "2%";
-//     setTimeout(() => {
-//       bfc.style.transition =
-//         "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s";
-//     }, 500);
-//     menubtn.style.filter = "invert(1)";
-//     menutoggle = false;
-//   }
-// }
+  if (
+    window.innerWidth / window.innerHeight < 2 &&
+    window.innerWidth / window.innerHeight > 1
+  ) {
+    bfc.style.transition =
+      "border-color 0.5s, background-color 0.5s, color 0.5s";
+    navbar.style.transition =
+      "border-color 0.5s, background-color 0.5s, color 0.5s";
+    bfc.style.top = "16%";
+    bfc.style.left = "18%";
+    bfc.style.height = "82%";
+    bfc.style.width = "80%";
+    navbar.style.left = "2%";
+    navbar.style.top = "2%";
+    navbar.style.height = "82%";
+    navbar.style.width = "80%";
+    menubtn1.style.transform = "none";
+    setTimeout(() => {
+      bfc.style.transition =
+        "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s";
+      navbar.style.transition =
+        "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, height 0.5s";
+    }, 500);
+    menutoggle = false;
+  }
+
+
+if (
+  window.innerWidth / window.innerHeight < 1 &&
+  window.innerWidth / window.innerHeight > 0.75
+) {
+  bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
+  navbar.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
+  bfc.style.top = "16%";
+  bfc.style.left = "15%";
+  bfc.style.width = "70%";
+  bfc.style.height = "82%";
+  navbar.style.top = "2%";
+  navbar.style.height = "82%";
+  navbar.style.width = "70%";
+  navbar.style.left = "15%";
+  setTimeout(() => {
+    bfc.style.transition =
+      "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+    navbar.style.transition =
+      "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+  }, 500);
+  menubtn1.style.transform = "none";
+  menutoggle = false;
+}
+
+if (
+  window.innerWidth / window.innerHeight < 0.75
+) {
+  bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
+  navbar.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
+  bfc.style.top = "16%";
+  bfc.style.left = "5%";
+  bfc.style.width = "90%";
+  bfc.style.height = "82%";
+  navbar.style.top = "2%";
+  navbar.style.height = "82%";
+  navbar.style.width = "90%";
+  navbar.style.left = "5%";
+  setTimeout(() => {
+    bfc.style.transition =
+      "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+    navbar.style.transition =
+      "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+  }, 500);
+  menubtn1.style.transform = "none";
+  menutoggle = false;
+}
+}

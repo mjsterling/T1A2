@@ -1,4 +1,4 @@
-@media (min-aspect-ratio: 5/9) and (max-aspect-ratio: 1/1) {
+@media (min-aspect-ratio: 3/4) and (max-aspect-ratio: 1/1) {
 
     #background {
       background-color: #0c0c0c;
@@ -24,6 +24,7 @@
     }
   
       #menubutton1 {
+        content: url(../assets/chevron.png);
       position: absolute;
       right: 47.5%;
       bottom: 2%;
