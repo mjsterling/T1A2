@@ -28,10 +28,15 @@
     position: absolute;
     right: 3%;
     bottom: 46%;
-    max-height: 6vh;
-    box-sizing: border-box;
     transition: filter 0.5s, transform 0.5s;
     z-index: 3;
+  }
+
+  .menubtn {
+    height: 6vh;
+    z-index: 3;
+    box-sizing: border-box;
+    transition: filter 0.5s, transform 0.5s;
   }
 
   #darkbutton {
@@ -242,11 +247,21 @@
     justify-content: space-around;
     align-items: center;
     font-family: 'Open Sans';
-    font-size: 4vh;
-    text-align: justify;
+    font-size: 3vh;
+    text-align: center;
     padding: 0 10%;
-    width: 50%;
     height: 80%;
+  }
+  .bodyarticle p {
+    font-size: 3.6vh;
+  }
+
+  .bodyarticle li {
+    font-size: 3.6vh;
+  }
+
+  .bodyarticle h3 {
+    font-size: 3.6vh;
   }
 
   .introanim {

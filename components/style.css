@@ -21,6 +21,16 @@ a {
   font-size: inherit;
 }
 
+ul {
+    padding: 0;
+    /* list-style-type: none; */
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -32,3 +42,7 @@ a {
 .dispnone {
     display: none;
 }
+
+.introanim p {
+    margin: 3vh 0;
+  }

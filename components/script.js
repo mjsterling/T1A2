@@ -13,6 +13,13 @@ var menutoggle,
   dx,
   y,
   dy,
+  flash,
+  nflash,
+  leftbtn,
+  rightbtn,
+  arrows,
+  ltoggle,
+  rtoggle,
   conticon;
 
 window.onload = onloadFunc;
@@ -21,6 +28,8 @@ window.onresize = windowDOMreset;
 function onloadFunc() {
   menutoggle = false;
   dmtoggle = false;
+  ltoggle = true;
+  rtoggle = true;
   y = 0;
   dy = 0;
   bfc = document.getElementById("body-flex-container");
@@ -33,10 +42,11 @@ function onloadFunc() {
   menubtn1 = document.getElementById("menubutton1");
   navbar = document.getElementById("navbar");
   conticon = document.getElementsByClassName("conticon");
+  arrows = document.getElementsByClassName("menubtn");
+
   if (localStorage.getItem("darkmode") == "true") {
     toggleDarkMode();
   }
-
   if (window.innerHeight / window.innerWidth < 0.5) {
     setTimeout(() => {
       bfc.style.top = "2%";
@@ -52,17 +62,26 @@ function onloadFunc() {
       navbar.style.top = "2%";
     }, 200);
   }
+
+  if (document.getElementsByClassName("flashcard") !== null) {
+    flash = document.getElementsByClassName("flashcard");
+    leftbtn = document.getElementById("leftbutton");
+    rightbtn = document.getElementById("rightbutton");
+    nflash = 0;
+    flash[nflash].style.left = "15%";
+    console.log(nflash);
+    rtogglef();
+    console.log(rtoggle);
+
+}
 }
 
 window.addEventListener("mousedown", (e) => {
-  if (window.innerHeight / window.innerWidth < 0.5) {
     x = e.clientX;
     console.log("x =", x);
-  } else {
     y = e.clientY;
     console.log("y =", y);
-  }
-});
+  });
 
 window.addEventListener("mouseup", (e) => {
   if (window.innerHeight / window.innerWidth < 0.5) {
@@ -91,29 +110,32 @@ window.addEventListener("mouseup", (e) => {
 });
 
 window.addEventListener("touchstart", (e) => {
-  if (window.innerHeight / window.innerWidth < 0.5) {
     x = e.touches[0].clientX;
     console.log("x =", x);
-  } else {
     y = e.touches[0].clientY;
     console.log("y =", y);
-  }
 });
 
 window.addEventListener("touchend", (e) => {
+  dx = e.changedTouches[0].clientX;
+  console.log("dx = ", dx);
+  dy = e.changedTouches[0].clientY;
+  console.log("dy =", dy);
   if (window.innerHeight / window.innerWidth < 0.5) {
-    dx = e.changedTouches[0].clientX;
-    console.log("dx = ", dx);
+
     if (x > dx && x - dx > 50 && menutoggle == false) {
       toggleMenu();
     }
     if (dx > x && dx - x > 50 && menutoggle == true) {
       toggleMenu();
     }
-  } else {
-    dy = e.changedTouches[0].clientY;
-    console.log("dy =", dy);
-
+  } else if (flash !== null) {
+    if (x > dx && x - dx > 50) {
+      flashLeft();
+    }
+    if (dx > x && dx - x > 50) {
+      flashRight();
+  }
     if (y > dy && y - dy > 50 && menutoggle == false) {
       toggleMenu();
     }
@@ -126,6 +148,70 @@ window.addEventListener("touchend", (e) => {
   y = 0;
   dy = 0;
 });
+
+function flashLeft() {
+  if (nflash <= 4) {
+  flash[nflash+1].style.left = "15%";
+  flash[nflash].style.left = "-65%";
+  ++nflash;
+  console.log(nflash);
+  if (rtoggle == false) {
+    rtogglef();
+  }
+  if (nflash == 4) {
+    ltogglef();
+  }
+}
+}
+
+
+function flashRight() {
+  if (nflash >= 0) {
+    flash[nflash - 1].style.left = "15%";
+  flash[nflash].style.left = "95%";
+  --nflash;
+  console.log(nflash);
+  }
+  if (nflash == 0) {
+    rtogglef();
+  }
+  if (ltoggle == false) {
+    ltogglef();
+  }
+}
+
+function ltogglef() {
+  if (ltoggle == true) {
+  leftbtn.style.opacity = "0";
+  setTimeout(() => {
+    leftbtn.style.left = "-10%";
+  }, 500);
+  ltoggle = false;
+}
+
+  else {
+    leftbtn.style.left = "7%";
+    leftbtn.style.opacity = "1";
+    ltoggle = true;
+  }
+}
+
+
+function rtogglef() {
+  if (rtoggle == true) {
+  rightbtn.style.opacity = "0";
+  setTimeout(() => {
+    rightbtn.style.left = "110%";
+  }, 500);
+  rtoggle = false;
+}
+
+  else {
+    rightbtn.style.left = "88%";
+    rightbtn.style.opacity = "1";
+    rtoggle = true;
+  }
+}
 
 function toggleDarkMode() {
   if (dmtoggle == false) {
@@ -151,6 +237,10 @@ function toggleDarkMode() {
     }
     for (i = 0; i < conticon.length; i++) {
       conticon[i].style.filter = "invert(1)";
+    }
+
+    for (i = 0; i < arrows.length; i++) {
+      arrows[i].style.filter = "invert(1)";
     }
 
     dmtoggle = true;
@@ -179,10 +269,15 @@ function toggleDarkMode() {
     for (i = 0; i < conticon.length; i++) {
       conticon[i].style.filter = "invert(0)";
     }
+
+    for (i = 0; i < arrows.length; i++) {
+      arrows[i].style.filter = "invert(0)";
+    }
     dmtoggle = false;
     localStorage.removeItem("darkmode");
   }
 }
+
 function toggleMenu() {
   if (window.innerHeight / window.innerWidth < 0.5) {
     lsToggleMenu();

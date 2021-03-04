@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="components/style.css" />
     <script type="text/javascript" src="components/script.js"></script>
-    <title>Matthew Sterling - Resum&eacute;</title>
+    <title>Matthew Sterling - Blog</title>
   </head>
   <div id="background"></div>
   <body id="body">
@@ -18,29 +18,29 @@
       class="menubtn" id="menubutton1"
         onclick="toggleMenu()"
       ></div>
+      <div
+      class="menubtn" id="rightbutton"
+        onclick="flashRight()"
+      ></div>
+      <div
+      class="menubtn" id="leftbutton"
+        onclick="flashLeft()"
+      ></div>
       <img src="assets/ppic.jpg" class="dispnone" id="mprofilepic">
-      <article class="bodyarticle">
-        <h3>2021 - Fast Track Boot Camp @ Coder Academy</h3>
-        <ul>
-          <li>
-            Acquired skills in HTML, CSS, and Javascript. Yet to learn Ruby,
-            React, node.js
-          </li>
-          <li>Made a portfolio website!</li>
-        </ul>
-        <h3>
-          2018-2020 - Resourcing Specialist @ Programmed
-        </h3>
-        <ul>
-          <li>Provided support to 160 field staff</li>
-          <li>
-            Digitised and modernised entire branch workflow and successfully
-            trained a technology-resistant team of 6 in use of digital
-            systems, which facilitated a seamless transition to working from home at
-            the outbreak of COVID-19.
-          </li>
-        </ul>
-      </div>
+      <article class="menucont flashcard">
+        Blog 1
+      </article>
+      <article class="menucont flashcard">
+        Blog 2
+      </article>
+      <article class="menucont flashcard">
+        Blog 3
+      </article>
+      <article class="menucont flashcard">
+        Blog 4
+      </article>
+      <article class="menucont flashcard">
+        Blog 5
       </article>
     </section>
     <nav id="navbar" class="menucont">
@@ -51,17 +51,17 @@
         onclick="toggleDarkMode()"
       />
       <section class="namebar">
-          <p id="myname">Resum&eacute;</p>
-          <p id="mytitle">A life condensed into 200 words.</p>
+          <p id="myname">Blog</p>
+          <p id="mytitle">Warning: contains incoherent musings.</p>
       </section>
       <section class="navlinks">
         <section id="dprofilepic"></section>
         <section class="pglinks">
           <div class="pglink" onclick="pagetransition1()">home</div>
           <div class="pglink" onclick="pagetransition2()">bio</div>
-          <div class="currentpg pglink" onclick="pagetransition3()">resum&eacute;</div>
+          <div class="pglink" onclick="pagetransition3()">resum&eacute;</div>
           <div class="pglink" onclick="pagetransition4()">projects</div>
-          <div class="pglink" onclick="pagetransition5()">blog</div>
+          <div class="currentpg pglink" onclick="pagetransition5()">blog</div>
         </section>
         <section id="phone"><a href="tel:+61421864667"><img src="assets/phone.png" class="conticon"><span class="underline" id="phoneno">0421&nbsp;864&nbsp;667</span></a></section>
         <section id="email"><a href="mailto:mjsterling93@gmail.com"><img src="assets/email.png" class="conticon"><span class="underline" id="emailaddress">mjsterling93@gmail.com</span></a></section>
