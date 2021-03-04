@@ -7,10 +7,12 @@
 @import "body-content.css";
 
 html {
-    overscroll-behavior: contain;
+    overscroll-behavior-y: none;
 }
+
 body {
     margin: 0;
+
 }
 
 p {
