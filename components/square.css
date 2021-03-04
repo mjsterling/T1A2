@@ -37,6 +37,23 @@
       transition: 0.5s;
     }
   
+    .flashcard {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-flow: column nowrap;
+      position: absolute;
+      left: 95%;
+      height: 80%;
+      width: 70%;
+      padding: 10%;
+      border-radius: 3vh;
+      transition: 1s;
+      text-align: center;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
   
     #darkbutton {
       position: absolute;
