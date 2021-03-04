@@ -6,6 +6,9 @@
 @import "landscapemob.css";
 @import "body-content.css";
 
+html {
+    overscroll-behavior: contain;
+}
 body {
     margin: 0;
 }
