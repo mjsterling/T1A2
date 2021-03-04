@@ -72,16 +72,15 @@ function onloadFunc() {
     console.log(nflash);
     rtogglef();
     console.log(rtoggle);
-
-}
+  }
 }
 
 window.addEventListener("mousedown", (e) => {
-    x = e.clientX;
-    console.log("x =", x);
-    y = e.clientY;
-    console.log("y =", y);
-  });
+  x = e.clientX;
+  console.log("x =", x);
+  y = e.clientY;
+  console.log("y =", y);
+});
 
 window.addEventListener("mouseup", (e) => {
   if (window.innerHeight / window.innerWidth < 0.5) {
@@ -110,10 +109,10 @@ window.addEventListener("mouseup", (e) => {
 });
 
 window.addEventListener("touchstart", (e) => {
-    x = e.touches[0].clientX;
-    console.log("x =", x);
-    y = e.touches[0].clientY;
-    console.log("y =", y);
+  x = e.touches[0].clientX;
+  console.log("x =", x);
+  y = e.touches[0].clientY;
+  console.log("y =", y);
 });
 
 window.addEventListener("touchend", (e) => {
@@ -122,7 +121,6 @@ window.addEventListener("touchend", (e) => {
   dy = e.changedTouches[0].clientY;
   console.log("dy =", dy);
   if (window.innerHeight / window.innerWidth < 0.5) {
-
     if (x > dx && x - dx > 50 && menutoggle == false) {
       toggleMenu();
     }
@@ -135,7 +133,7 @@ window.addEventListener("touchend", (e) => {
     }
     if (dx > x && dx - x > 50) {
       flashRight();
-  }
+    }
     if (y > dy && y - dy > 50 && menutoggle == false) {
       toggleMenu();
     }
@@ -151,26 +149,25 @@ window.addEventListener("touchend", (e) => {
 
 function flashLeft() {
   if (nflash <= 4) {
-  flash[nflash+1].style.left = "15%";
-  flash[nflash].style.left = "-65%";
-  ++nflash;
-  console.log(nflash);
-  if (rtoggle == false) {
-    rtogglef();
-  }
-  if (nflash == 4) {
-    ltogglef();
+    flash[nflash + 1].style.left = "15%";
+    flash[nflash].style.left = "-65%";
+    ++nflash;
+    console.log(nflash);
+    if (rtoggle == false) {
+      rtogglef();
+    }
+    if (nflash == 4) {
+      ltogglef();
+    }
   }
 }
-}
-
 
 function flashRight() {
   if (nflash >= 0) {
     flash[nflash - 1].style.left = "15%";
-  flash[nflash].style.left = "95%";
-  --nflash;
-  console.log(nflash);
+    flash[nflash].style.left = "95%";
+    --nflash;
+    console.log(nflash);
   }
   if (nflash == 0) {
     rtogglef();
@@ -182,31 +179,26 @@ function flashRight() {
 
 function ltogglef() {
   if (ltoggle == true) {
-  leftbtn.style.opacity = "0";
-  setTimeout(() => {
-    leftbtn.style.left = "-10%";
-  }, 500);
-  ltoggle = false;
-}
-
-  else {
+    leftbtn.style.opacity = "0";
+    setTimeout(() => {
+      leftbtn.style.left = "-10%";
+    }, 500);
+    ltoggle = false;
+  } else {
     leftbtn.style.left = "7%";
     leftbtn.style.opacity = "1";
     ltoggle = true;
   }
 }
 
-
 function rtogglef() {
   if (rtoggle == true) {
-  rightbtn.style.opacity = "0";
-  setTimeout(() => {
-    rightbtn.style.left = "110%";
-  }, 500);
-  rtoggle = false;
-}
-
-  else {
+    rightbtn.style.opacity = "0";
+    setTimeout(() => {
+      rightbtn.style.left = "110%";
+    }, 500);
+    rtoggle = false;
+  } else {
     rightbtn.style.left = "88%";
     rightbtn.style.opacity = "1";
     rtoggle = true;
@@ -406,51 +398,52 @@ function windowDOMreset() {
     menutoggle = false;
   }
 
-
-if (
-  window.innerWidth / window.innerHeight < 1 &&
-  window.innerWidth / window.innerHeight > 0.75
-) {
-  bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
-  navbar.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
-  bfc.style.top = "16%";
-  bfc.style.left = "15%";
-  bfc.style.width = "70%";
-  bfc.style.height = "82%";
-  navbar.style.top = "2%";
-  navbar.style.height = "82%";
-  navbar.style.width = "70%";
-  navbar.style.left = "15%";
-  setTimeout(() => {
+  if (
+    window.innerWidth / window.innerHeight < 1 &&
+    window.innerWidth / window.innerHeight > 0.75
+  ) {
     bfc.style.transition =
-      "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+      "border-color 0.5s, background-color 0.5s, color 0.5s";
     navbar.style.transition =
-      "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
-  }, 500);
-  menubtn1.style.transform = "none";
-  menutoggle = false;
-}
+      "border-color 0.5s, background-color 0.5s, color 0.5s";
+    bfc.style.top = "16%";
+    bfc.style.left = "15%";
+    bfc.style.width = "70%";
+    bfc.style.height = "82%";
+    navbar.style.top = "2%";
+    navbar.style.height = "82%";
+    navbar.style.width = "70%";
+    navbar.style.left = "15%";
+    setTimeout(() => {
+      bfc.style.transition =
+        "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+      navbar.style.transition =
+        "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+    }, 500);
+    menubtn1.style.transform = "none";
+    menutoggle = false;
+  }
 
-if (
-  window.innerWidth / window.innerHeight < 0.75
-) {
-  bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
-  navbar.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
-  bfc.style.top = "16%";
-  bfc.style.left = "5%";
-  bfc.style.width = "90%";
-  bfc.style.height = "82%";
-  navbar.style.top = "2%";
-  navbar.style.height = "82%";
-  navbar.style.width = "90%";
-  navbar.style.left = "5%";
-  setTimeout(() => {
+  if (window.innerWidth / window.innerHeight < 0.75) {
     bfc.style.transition =
-      "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+      "border-color 0.5s, background-color 0.5s, color 0.5s";
     navbar.style.transition =
-      "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
-  }, 500);
-  menubtn1.style.transform = "none";
-  menutoggle = false;
-}
+      "border-color 0.5s, background-color 0.5s, color 0.5s";
+    bfc.style.top = "16%";
+    bfc.style.left = "5%";
+    bfc.style.width = "90%";
+    bfc.style.height = "82%";
+    navbar.style.top = "2%";
+    navbar.style.height = "82%";
+    navbar.style.width = "90%";
+    navbar.style.left = "5%";
+    setTimeout(() => {
+      bfc.style.transition =
+        "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+      navbar.style.transition =
+        "border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s, left 0.5s";
+    }, 500);
+    menubtn1.style.transform = "none";
+    menutoggle = false;
+  }
 }
