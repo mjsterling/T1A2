@@ -236,6 +236,19 @@
     border-radius: 50%;
   }
 
+  .bodyarticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-size: 4vh;
+    text-align: justify;
+    padding: 0 10%;
+    width: 50%;
+    height: 80%;
+  }
+
   .introanim {
     display: flex;
     flex-direction: row;

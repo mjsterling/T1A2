@@ -238,28 +238,28 @@ function pagetransition1() {
 function pagetransition2() {
   pagetransition();
   setTimeout(() => {
-    window.location.href = "/components/bio.html";
+    window.location.href = "bio.html";
   }, 500);
 }
 
 function pagetransition3() {
   pagetransition();
   setTimeout(() => {
-    window.location.href = "/components/resume.html";
+    window.location.href = "resume.html";
   }, 500);
 }
 
 function pagetransition4() {
   pagetransition();
   setTimeout(() => {
-    window.location.href = "/components/projects.html";
+    window.location.href = "projects.html";
   }, 500);
 }
 
 function pagetransition5() {
   pagetransition();
   setTimeout(() => {
-    window.location.href = "/components/blog.html";
+    window.location.href = "blog.html";
   }, 500);
 }
 
