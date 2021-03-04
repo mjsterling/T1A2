@@ -2,7 +2,7 @@
 
   #background {
     background-color: #0c0c0c;
-    background-image: url("../assets/bgdesk.png");
+    background-image: url("../assets/bgdesk.webp");
     background-attachment: cover;
     background-repeat: no-repeat;
     position: fixed;
@@ -214,7 +214,7 @@
     overflow: hidden;
     left: 18%;
     top: 100%;
-    width: 8%;
+    width: 80%;
     height: 82%;
     transition: border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s;
     box-sizing: border-box;
