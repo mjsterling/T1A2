@@ -9,9 +9,11 @@ var menutoggle,
   mll,
   menubtn1,
   navbar,
-  dy,
+  x,
+  dx,
   y,
-  swiping;
+  dy,
+  conticon;
 
 window.onload = onloadFunc;
 // window.onresize = windowDOMreset;
@@ -29,11 +31,22 @@ function onloadFunc() {
   menucont = document.getElementsByClassName("menucont");
   mll = document.getElementsByClassName("mllogo");
   menubtn1 = document.getElementById("menubutton1");
-  menubtn2 = document.getElementById("menubutton2");
   navbar = document.getElementById("navbar");
+  conticon = document.getElementsByClassName("conticon");
   if (localStorage.getItem('darkmode') == "true") {
     toggleDarkMode();
   }  
+
+  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+    setTimeout(() => {
+      bfc.style.top = "2%";
+    }, 100);
+    setTimeout(() => {
+      navbar.style.top = "2%";
+    }, 200);
+  }
+
+  else {
   setTimeout(() => {
     bfc.style.top = "16%";
   }, 100);
@@ -41,49 +54,82 @@ function onloadFunc() {
     navbar.style.top = "2%";
   }, 200);
 }
+}
 
 
 window.addEventListener('mousedown', (e) => {
-  y = e.clientY;
-  swiping = true;
-  console.log(y);
+  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+  x = e.clientX;
+  console.log("x =", x);
+  }
+  else {
+    y = e.clientY;
+    console.log("y =", y);
+  }
 });
 
 window.addEventListener('mouseup', (e) => {
-  dy = e.clientY;
-  console.log(dy);
-  if (swiping == true) {
-    if (y > dy && (y - dy) > 50 && menutoggle == false) {
-    toggleMenu();
+  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+      dx = e.clientX;
+      console.log("dx = ", dx);
+      if (x > dx && (x - dx) > 50 && menutoggle == false) {
+        toggleMenu();
+      }
+      if(dx > x && (dx - x) > 50 && menutoggle == true) {
+        toggleMenu();
+      }
+    }
+    else {
+      dy = e.clientY;
+      console.log("dy = ", dy);
+      if (y > dy && (y - dy) > 50 && menutoggle == false) {
+        toggleMenu();
+      }
+      if(dy > y && (dy - y) > 50 && menutoggle == true) {
+        toggleMenu();
+      }
   }
-    if(dy > y && (dy - y) > 50 && menutoggle == true) {
-    toggleMenu();
-}
-  }
-  swiping = false;
+  x = 0;
+  dx = 0;
   y = 0;
   dy = 0;
 });
 
 window.addEventListener('touchstart', (e) => {
-  y = e.touches[0].clientY;
+  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+    x = e.touches[0].clientX;
+    console.log("x =", x);
+    }
+    else {
+    y = e.touches[0].clientY;
     console.log("y =", y);
-  swiping = true;
+    }
 });
 
 window.addEventListener('touchend', (e) => {
+  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+    dx = e.changedTouches[0].clientX;
+    console.log("dx = ", dx);
+    if (x > dx && (x - dx) > 50 && menutoggle == false) {
+      toggleMenu();
+    }
+    if(dx > x && (dx - x) > 50 && menutoggle == true) {
+      toggleMenu();
+    }
+  }
+  else {
   dy = e.changedTouches[0].clientY;
   console.log("dy =", dy);
 
-  if (swiping == true) {
     if (y > dy && (y - dy) > 50 && menutoggle == false) {
     toggleMenu();
   }
     if(dy > y && (dy - y) > 50 && menutoggle == true) {
-    toggleMenu();
-}
+      toggleMenu();
+    }
   }
-  swiping = false;
+  x = 0;
+  dx = 0;
   y = 0;
   dy = 0;
 });
@@ -110,6 +156,10 @@ function toggleDarkMode() {
       mll[i].style.background = "white";
       mll[i].style.borderColor = "white";
     }
+    for (i = 0; i < conticon.length; i++) {
+      conticon[i].style.filter = "invert(1)";
+    }
+
     dmtoggle = true;
     localStorage.setItem('darkmode', 'true');
   } else {
@@ -133,12 +183,23 @@ function toggleDarkMode() {
       mll[i].style.background = "#33095e";
       mll[i].style.borderColor = "#33095e";
     }
+    for (i = 0; i < conticon.length; i++) {
+      conticon[i].style.filter = "invert(0)";
+    }
     dmtoggle = false;
     localStorage.removeItem ('darkmode')
   }
 }
-
 function toggleMenu() {
+  if ( ( window.innerHeight / window.innerWidth ) < 0.5 ) {
+    lsToggleMenu();
+  }
+    else {
+    ptToggleMenu();
+    }
+  }
+
+function ptToggleMenu() {
   if (menutoggle == false) {
     bfc.style.top = "2%";
     navbar.style.top = "16%";
@@ -147,6 +208,20 @@ function toggleMenu() {
   } else {
     bfc.style.top = "16%";
     navbar.style.top = "2%";
+    menubtn1.style.transform = "none";
+    menutoggle = false;
+  }
+}
+
+function lsToggleMenu() {
+  if (menutoggle == false) {
+    bfc.style.left = "2%";
+    navbar.style.left = "18%";
+    menubtn1.style.transform = "rotateY(180deg)";
+    menutoggle = true;
+  } else {
+    bfc.style.left = "18%";
+    navbar.style.left = "2%";
     menubtn1.style.transform = "none";
     menutoggle = false;
   }

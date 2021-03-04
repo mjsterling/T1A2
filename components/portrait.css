@@ -1,4 +1,5 @@
-@media only screen and (max-width: 768px) {
+  @media (max-aspect-ratio: 5/9) {
+    
   #background {
     background-color: #0c0c0c;
     background-image: url("../assets/bgmob.png");
@@ -22,21 +23,6 @@
     transition: border-color 0.5s, background-color 0.5s, color 0.5s;
   }
 
-  /* #menubutton1 {
-    position: absolute;
-    right: 3%;
-    bottom: 2%;
-    max-height: 4vh;
-    max-width: 10vw;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-sizing: border-box;
-    background: black;
-    transition: 0.5s;
-    filter: invert(1);
-    z-index: 3;
-  } */
-
     #menubutton1 {
     position: absolute;
     right: 47.5%;
@@ -47,31 +33,6 @@
     z-index: 3;
   }
 
-  #menubutton2 {
-      display: none;
-    position: absolute;
-    right: 3%;
-    bottom: 2%;
-    max-height: 4vh;
-    max-width: 10vw;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-sizing: border-box;
-    background: black;
-    transition: 0.5s;
-    filter: invert(1);
-    z-index: 3;
-  }
-
-  #menubuttoncvr {
-    opacity: 0;
-    z-index: 1;
-    position: absolute;
-    right: 3%;
-    bottom: 2%;
-    max-height: 4vh;
-    max-width: 10vw;
-  }
 
   #darkbutton {
     position: absolute;
@@ -196,6 +157,37 @@
     margin: auto 0;
   }
 
+  #phone {
+    position: absolute;
+    bottom: 1%;
+    left: 3%;
+    transition: filter 0.5s;
+  }
+
+  #phoneno {
+    display: none;
+  }
+
+  #email {
+    position: absolute;
+    bottom: 1%;
+    right: 3%;
+    transition: filter 0.5s;
+  }
+
+  #emailaddress {
+  display: none;
+  }
+
+  .conticon {
+    max-width: 4vh;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: white;
+    padding: 3px;
+  }
+
   #body-flex-container {
     position: fixed;
     background: white;
@@ -223,7 +215,6 @@
   }
 
   #mprofilepic {
-    content: url(../assets/ppic.jpg);
     max-width: 35vw;
     max-height: 35vh;
     transition: border-color 0.5s, background-color 0.5s, color 0.5s;
@@ -239,8 +230,9 @@
     justify-content: flex-start;
     font-family: "Cutive Mono";
     text-align: justify;
-    font-size: 4.5vw;
+    font-size: 4.6vw;
     width: 100%;
     height: 50%;
   }
+
 }

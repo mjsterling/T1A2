@@ -1,0 +1,259 @@
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 2/1) {
+
+  #background {
+    background-color: #0c0c0c;
+    background-image: url("../assets/bgdesk.png");
+    background-attachment: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    filter: invert(1);
+    transition: filter 0.5s;
+    border: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .menucont {
+    background: white;
+    color: #33095e;
+    border: 2px solid;
+    border-color: #33095e;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+  }
+
+    #menubutton1 {
+    position: absolute;
+    right: 47.5%;
+    bottom: 2%;
+    max-width: 5vw;
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 3;
+  }
+
+
+  #darkbutton {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    max-height: 4vh;
+    max-width: 10vw;
+    border-radius: 50%;
+    transition: filter 0.5s;
+    box-sizing: border-box;
+    background: black;
+    border: 2px solid white;
+    filter: invert(1);
+    z-index: 1;
+  }
+
+  #navbar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    left: 2%;
+    top: 100%;
+    width: 80%;
+    height: 82%;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    border-radius: 3vh;
+    padding: 1vh 1vw;
+    text-align: center;
+    transition: top 0.5s, border-color 0.5s, background-color 0.5s, color 0.5s;
+  }
+
+  .namebar {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-family: "Poiret One";
+    font-weight: bold;
+  }
+
+  #myname {
+    font-size: 4.7vh;
+    margin-top: 2vh;
+    text-shadow: 0 0 1px;
+    letter-spacing: 0.1vh;
+  }
+
+  .namebar p {
+    margin: 0;
+  }
+
+  #mytitle {
+    margin-top: 0.5vh;
+    font-size: 2.5vh;
+    font-family: "Poiret One";
+    font-weight: bold;
+    letter-spacing: 0.06vh;
+  }
+
+  .navlinks {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 13%;
+    width: 100%;
+    align-items: center;
+  }
+
+  .pglinks {
+    position: absolute;
+    left: 2%;
+    bottom: 20%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Poiret One";
+    text-decoration: none;
+    font-size: 4vh;
+    font-weight: bold;
+    width: 16%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .currentpg {
+    text-shadow: 0 0 2px;
+  }
+
+  .pglink {
+    box-sizing: border-box;
+    transition: color 0.5s;
+    text-align: center;
+  }
+
+  .pglink:hover {
+    text-decoration: underline;
+  }
+
+  .pglink:active {
+    text-shadow: 0 0 10px;
+  }
+
+  .medialinks {
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+    width: 16%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .mllogo {
+    max-height: 4vh;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #33095e;
+    background: #33095e;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+    padding: 0;
+    margin: auto 0;
+  }
+
+  #phone {
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    transition: filter 0.5s;
+  }
+
+  #phoneno {
+    font-family: 'Open Sans';
+    font-size: 3vh;
+    position: absolute;
+    bottom: 15%;
+  }
+
+  #email {
+    position: absolute;
+    bottom: 5%;
+    right: 38%;
+    transition: filter 0.5s;
+  }
+
+  #emailaddress {
+    font-family: 'Open Sans';
+    font-size: 3vh;
+    position: absolute;
+    bottom: 20%;
+  }
+
+  .conticon {
+    max-height: 4vh;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: white;
+    padding: 3px;
+    margin-right: 0.5vw;
+  }
+
+  #body-flex-container {
+    position: fixed;
+    background: white;
+    color: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    right: 2%;
+    top: 100%;
+    width: 80%;
+    height: 82%;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: #33095e;
+    border-radius: 3vh;
+    z-index: 1;
+    padding: 0 5%;
+  }
+
+  #mprofilepic {
+    display: none;
+  }
+
+  #dprofilepic {
+    content: url(../assets/ppic.jpg); 
+    position: absolute;
+    left: 4%;
+    top: 16%;
+    max-width: 10vw;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+    box-sizing: border-box;
+    border: 3px solid #33095e;
+    background-color: #33095e;
+    border-radius: 50%;
+  }
+
+  .introanim {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Cutive Mono";
+    text-align: justify;
+    font-size: 4vh;
+    width: 100%;
+    height: 100%;
+  }
+
+  #menubutton1 {
+    max-width: 3vw;
+  }
+}
+

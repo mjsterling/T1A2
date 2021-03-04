@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Cutive+Mono&family=Nanum+Myeongjo&family=Poiret+One&display=swap");
 
-@import "mobile.css";
-@import "desktop.css";
+@import "portrait.css";
+@import "square.css";
+@import "landscape.css";
+@import "landscapemob.css";
 @import "body-content.css";
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 a {
