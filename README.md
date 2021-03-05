@@ -6,9 +6,8 @@
 ### 2. [Functionality / Features]((##Functionality/Features))
 ### 3. [Sitemap](##Sitemap)
 ### 4. [Screenshots](##Screenshots)
-### 5. [Target Audience](##Audience)
-### 6. [Tech stack (e.g. html, css, deployment platform, etc)](##Stack)
-<br>
+### 5. [Target Audience](##Target&nbsp;Audience)
+### 6. [Tech stack (e.g. html, css, deployment platform, etc)](##Tech&nbsp;Stack)
 
 ## Purpose
 
@@ -21,8 +20,25 @@ The website consists of five HTML documents interlinked by a navigation bar. In 
 
 The site also features:
 - Click-to-call and click-to-email buttons;
-- 100% resizable responsiveness within an approximate aspect ratio range of 1/3 to 8/3;
-- An optional dark mode that uses `localStorage` to persist between pages;
+- Links to Github, LinkedIn and Twitter;
+- 100% responsiveness within an approximate aspect ratio range of 1/3 to 8/3;
+- An optional dark mode that uses `localStorage` to persist between pages and sessions.
+
+## Sitemap
+
+The site has a single-level horizontal structure which enables ease of navigation. Each page is accessible from each other page.
+
+### Home <-> Bio <-> Resum&eacute; <-> Projects <-> Blog
+
+## Screenshots
+
+## Target&nbsp;Audience
+
+This site is intended for use by industry recruiters and the general public - I will be creating a QR code for it to put on matching-themed business cards, as well as a link to it on my LinkedIn page.
+
+## Tech&nbsp;Stack
+
+The site was built using HTML, CSS and JavaScript, and deployed using Netlify.
 
 
 ### &copy; Matthew Sterling 2021
