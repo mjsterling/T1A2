@@ -1,88 +1,62 @@
-.intro1 {
+/* line by line intro anim */
+
+.term {
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+}
+.line {
   overflow: hidden;
   width: 0;
   white-space: nowrap;
   border-right: 0.2em solid transparent;
+}
+#line1 {
   animation: typing 1s steps(20, end), cursor 0.5s step-end 2;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
-
-.term2 {
-  overflow: hidden;
-  width: 0;
-  white-space: nowrap;
+#term2 {
   animation: typing 0s steps(1, end);
-  animation-fill-mode: forwards;
   animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
-.intro2 {
-  overflow: hidden;
-  width: 0;
-  white-space: nowrap;
-  border-right: 0.2em solid transparent;
+#line2 {
   animation: typing 1s steps(20, end), cursor 0.5s step-end 2;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
 }
-
-.term3 {
-  overflow: hidden;
-  width: 0;
-  white-space: nowrap;
+#term3 {
   animation: typing 0s steps(1, end);
-  animation-fill-mode: forwards;
   animation-delay: 4s;
+  animation-fill-mode: forwards;
 }
-
-.intro3 {
-  overflow: hidden;
-  width: 0;
-  white-space: nowrap;
-  border-right: 0.2em solid transparent;
+#line3 {
   animation: typing 1s steps(20, end), cursor 0.5s step-end 2;
   animation-delay: 4.5s;
   animation-fill-mode: forwards;
 }
-
-.term4 {
-  overflow: hidden;
-  width: 0;
-  white-space: nowrap;
+#term4 {
   animation: typing 0s steps(1, end);
-  animation-fill-mode: forwards;
   animation-delay: 5.5s;
   opacity: 0;
+  animation-fill-mode: forwards;
 }
-
-.intro4 {
-  overflow: hidden;
-  width: 0;
-  white-space: nowrap;
-  border-right: 0.2em solid transparent;
+#line4 {
   animation: typing 1s steps(20, end), cursor 0.5s step-end 2;
   animation-delay: 5.5s;
   animation-fill-mode: forwards;
 }
-.term5 {
-  overflow: hidden;
-  width: 0;
-  white-space: nowrap;
+#term5 {
   animation: typing 0s steps(1, end);
-  animation-fill-mode: forwards;
   animation-delay: 7s;
+  animation-fill-mode: forwards;
 }
-
-.intro5 {
-  overflow: hidden;
-  width: 0;
-  white-space: nowrap;
-  border-right: 0.2em solid transparent;
+#line5 {
   animation: typing 1s steps(20, end), cursor 0.5s step-end 2;
   animation-delay: 7.5s;
   animation-fill-mode: forwards;
 }
-
 /* typing effect */
 @keyframes typing {
   from {
@@ -92,7 +66,6 @@
     width: 100%;
   }
 }
-
 /*cursor blink effect
    (only works if transparent border set on anim target) */
 @keyframes cursor {
@@ -103,61 +76,4 @@
   50% {
     border-color: inherit;
   }
-}
-
-/******************** other pages ***********************/
-
-/************ contact form **************/
-/* #contact {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  font-size: 2vh;
-}
-
-form input {
-  height: 4vh;
-  font-size: 2vh;
-}
-
-#conmessage {
-  height: 12vh;
-}
-
-#cv {
-  display: flex;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-} */
-
-li {
-  font-size: 2vh;
-}
-h2 {
-  font-size: 3vh;
-}
-h3 {
-  font-size: 2.5vh;
-}
-
-#submit {
-  color: white;
-  background: #33095e;
-  height: 10%;
-  width: 40%;
-  border: 3px solid #33095e;
-  border-radius: 2vh;
-}
-
-#submit:hover {
-  color: #33095e;
-  background: white;
 }
