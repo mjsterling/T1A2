@@ -31,7 +31,7 @@
   }
 
   .arrowbtn {
-    width: 3vw;
+    width: 4vh;
     z-index: 3;
     box-sizing: border-box;
     transition: filter 0.5s, transform 0.5s;

@@ -26,8 +26,7 @@
     #menubutton1 {
     content: url('../assets/chevronleft.png');
     position: absolute;
-    right: 3%;
-    bottom: 46%;
+    right: 1%;
     transition: filter 0.5s, transform 0.5s;
     z-index: 3;
   }
@@ -37,6 +36,20 @@
     z-index: 3;
     box-sizing: border-box;
     transition: filter 0.5s, transform 0.5s;
+  }
+
+  #leftbutton {
+    content: url(../assets/chevronleft.png);
+    position: absolute;
+    left: 7%;
+    height: 4vh;
+  }
+
+  #rightbutton {
+    content: url(../assets/chevronright.png);
+    position: absolute;
+    left: 88%;
+    height: 4vh;
   }
 
   #darkbutton {
@@ -218,6 +231,24 @@
     border-radius: 3vh;
     z-index: 1;
     padding: 0 5%;
+  }
+
+  .flashcard {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    position: absolute;
+    left: 95%;
+    height: 80%;
+    width: 70%;
+    padding: 10%;
+    border-radius: 3vh;
+    transition: 1s;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   #dprofilepic {
