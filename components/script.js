@@ -72,6 +72,7 @@ function onloadFunc() {
   flash = document.getElementsByClassName("flashcard");
   console.log(flash);
   if (flash.length > 0) {
+    // $("#recursioncontainer").load("index.html");
     btnleft = document.getElementById("btnleft");
     btnright = document.getElementById("btnright");
     flash[flashid].style.left = "15%";

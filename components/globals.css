@@ -104,6 +104,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: auto;
+  font-family: 'Poiret One';
 }
 footer {
   position: fixed;
@@ -223,6 +224,21 @@ p {
   border: 3px solid #33095e;
   background-color: #33095e;
   border-radius: 50%;
+}
+#recursioncontainer {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  height: 90%;
+  border: 2px solid;
+  border-radius: 3vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#recursioncontainer > * {
+  transform: scale(0.2);
 }
 ul {
   padding: 0;
