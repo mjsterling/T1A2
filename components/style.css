@@ -1,53 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Cutive+Mono&family=Nanum+Myeongjo&family=Poiret+One&display=swap");
 
+@import "globals.css";
 @import "portrait.css";
 @import "square.css";
 @import "landscape.css";
 @import "landscapemob.css";
 @import "body-content.css";
-
-html {
-    overscroll-behavior-y: none;
-}
-
-body {
-    margin: 0;
-
-}
-
-p {
-    margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-  font-family: inherit;
-  font-size: inherit;
-}
-
-ul {
-    padding: 0;
-    /* list-style-type: none; */
-    text-align: left;
-}
-
-h2 {
-    text-align: left;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-.dispnone {
-    display: none;
-}
-
-.introanim p {
-    margin: 3vh 0;
-  }

@@ -1,291 +1,107 @@
 @media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 2/1) {
-
   #background {
-    background-color: #0c0c0c;
     background-image: url("../assets/bgdesk.webp");
-    background-attachment: cover;
-    background-repeat: no-repeat;
-    position: fixed;
-    filter: invert(1);
-    transition: filter 0.5s;
-    border: none;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
   }
-
-  .menucont {
-    background: white;
-    color: #33095e;
-    border: 2px solid;
-    border-color: #33095e;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+  .bodyarticle {
+    padding: 10%;
+    height: 80%;
   }
-
-    #menubutton1 {
+  .bodyarticle p {
+    font-size: 3.6vh;
+  }
+  .bodyarticle li, .bodyarticle h3 {
+    font-size: 2.8vh;
+  }
+  #bodyflexcontainer {
+    flex-direction: column;
+    left: 18%;
+    width: 80%;
+    height: 82%;
+  }
+  .btnarrow {
+    width: 4vh;
+  }
+  #btndark {
+    right: 3%;
+    top: 2%;
+  }
+  #btnmenu {
     content: url(../assets/chevron.png);
     position: absolute;
     right: 47.5%;
     bottom: 2%;
   }
-
-  .arrowbtn {
-    width: 4vh;
-    z-index: 3;
-    box-sizing: border-box;
-    transition: filter 0.5s, transform 0.5s;
-    cursor: pointer;
-
+  .btnround {
+    max-height: 4vh;
   }
-
-  #leftbutton {
-    content: url(../assets/chevronleft.png);
+  #email {
+    bottom: 5%;
+    right: 38%;
+  }
+  #emailaddress {
+    font-family: "Open Sans";
+    font-size: 2vw;
     position: absolute;
-    left: 7%;
+    margin-left: 1vw;
   }
-
-  #rightbutton {
-    content: url(../assets/chevronright.png);
-    position: absolute;
-    left: 88%;
-  }
-
-
-  #darkbutton {
-    position: absolute;
-    right: 3%;
-    top: 2%;
-    z-index: 1;
-  }
-
-  #navbar {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    left: 2%;
-    top: 100%;
-    width: 80%;
-    height: 82%;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-    border-radius: 3vh;
-    padding: 1vh 1vw;
-    text-align: center;
-    transition: top 0.5s, border-color 0.5s, background-color 0.5s, color 0.5s;
-  }
-
-  .namebar {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    font-family: "Poiret One";
-    font-weight: bold;
-  }
-
-  .flashcard {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-flow: column nowrap;
-    position: absolute;
-    left: 95%;
-    height: 80%;
-    width: 70%;
-    padding: 10%;
-    border-radius: 3vh;
-    transition: 1s;
-    text-align: center;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  #myname {
-    font-size: 4.7vh;
-    margin-top: 2vh;
-    text-shadow: 0 0 1px;
-    letter-spacing: 0.1vh;
-  }
-
-  .namebar p {
-    margin: 0;
-  }
-
-  #mytitle {
-    margin-top: 0.5vh;
-    font-size: 2.5vh;
-    font-family: "Poiret One";
-    font-weight: bold;
-    letter-spacing: 0.06vh;
-  }
-
-  .navlinks {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    height: 13%;
-    width: 100%;
-    align-items: center;
-  }
-
-  .pglinks {
-    position: absolute;
-    left: 2%;
-    bottom: 20%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: "Poiret One";
-    text-decoration: none;
+  .introanim {
     font-size: 4vh;
-    font-weight: bold;
-    width: 16%;
-    text-align: center;
-    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+    align-items: center;
   }
-
-  .currentpg {
-    text-shadow: 0 0 2px;
-  }
-
-  .pglink {
-    box-sizing: border-box;
-    transition: color 0.5s;
-    text-align: center;
-    margin: 0.5vh 0;
-    cursor: pointer;
-
-  }
-
-  .pglink:hover {
-    text-decoration: underline;
-  }
-
-  .pglink:active {
-    text-shadow: 0 0 10px;
-  }
-
   .medialinks {
     position: absolute;
     left: 2%;
     bottom: 5%;
     width: 16%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-    padding: 0;
   }
-
   .mllogo {
     max-height: 4vh;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border: 2px solid #33095e;
-    background: #33095e;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
-    padding: 0;
-    margin: auto 0;
   }
-
-  #phone {
-    position: absolute;
-    bottom: 5%;
-    left: 30%;
-    transition: filter 0.5s;
+  #myname {
+    font-size: 4.7vh;
+    margin-top: 2vh;
   }
-
-  #phoneno {
-    font-family: 'Open Sans';
-    font-size: 2vw;
-    position: absolute;
-    margin-left: 1vw;
+  #mytitle {
+    margin-top: 0.5vh;
+    font-size: 2.5vh;
   }
-
-  #email {
-    position: absolute;
-    bottom: 5%;
-    right: 38%;
-    transition: filter 0.5s;
+  .namebar {
+    width: 100%;
+    height: 20%;
   }
-
-  #emailaddress {
-    font-family: 'Open Sans';
-    font-size: 2vw;
-    position: absolute;
-    margin-left: 1vw;
-
-  }
-
-  .roundbtn {
-    max-height: 4vh;
-    border: 2px solid black;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: white;
-    padding: 3px;
-    transition: filter 0.5s;
-  }
-
-  #body-flex-container {
-    cursor: move;
+  #navbar {
     position: fixed;
-    background: white;
-    color: #0c0c0c;
-    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow: hidden;
-    left: 18%;
-    top: 100%;
+    align-items: flex-start;
+    left: 2%;
     width: 80%;
     height: 82%;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s;
-    box-sizing: border-box;
-    border: 2px solid;
-    border-color: #33095e;
-    border-radius: 3vh;
-    z-index: 1;
-    padding: 0 5%;
   }
-
-  .bodyarticle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Open Sans';
-    font-size: 3vh;
-    text-align: center;
-    padding: 10%;
-    height: 80%;
+  .pglinks {
+    flex-flow: column wrap;
+    font-size: 4vh;
+    position: absolute;
+    left: 2%;
+    bottom: 20%;
+    width: 16%;
   }
-
-  .bodyarticle p {
-    font-size: 3.6vh;
+  .pglink {
+    margin: 0.5vh 0;
   }
-
-  .bodyarticle li {
-    font-size: 2.8vh;
+  #phone {
+    bottom: 5%;
+    left: 30%;
   }
-
-  .bodyarticle h3 {
-    font-size: 2.8vh;
+  #phoneno {
+    font-family: "Open Sans";
+    font-size: 2vw;
+    position: absolute;
+    margin-left: 1vw;
   }
-
-  #mprofilepic {
-    display: none;
-  }
-
-  #dprofilepic {
-    content: url(../assets/ppic.jpg); 
+  #picprofiled {
+    content: url(../assets/ppic.jpg);
     position: absolute;
     left: 4%;
     top: 16%;
@@ -296,17 +112,7 @@
     background-color: #33095e;
     border-radius: 50%;
   }
-
-  .introanim {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: "Cutive Mono";
-    text-align: justify;
-    font-size: 4vh;
-    width: 100%;
-    height: 100%;
+  #picprofilem {
+    display: none;
   }
 }
-

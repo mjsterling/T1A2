@@ -1,294 +1,90 @@
-  @media (max-aspect-ratio: 3/4) {
-    
+@media (max-aspect-ratio: 3/4) {
   #background {
-    background-color: #0c0c0c;
     background-image: url("../assets/bgmob.png");
-    background-attachment: cover;
-    background-repeat: no-repeat;
-    position: fixed;
-    filter: invert(1);
-    transition: filter 0.5s;
-    border: none;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
   }
-
-  .menucont {
-    background: white;
-    color: #33095e;
-    border: 2px solid;
-    border-color: #33095e;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
-  }
-
-    #menubutton1 {
-    content: url('../assets/chevron.png');
-    position: absolute;
-    right: 47.5%;
-    bottom: 2%;
-
-  }
-
-  #leftbutton {
-    content: url(../assets/chevronleft.png);
-    position: absolute;
-    left: 7%;
-  }
-
-  #rightbutton {
-    content: url(../assets/chevronright.png);
-    position: absolute;
-    left: 88%;
-  }
-
-  .arrowbtn {
-    width: 5vw;
-    z-index: 3;
-    box-sizing: border-box;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-
-
-  #darkbutton {
-    position: absolute;
-    right: 3%;
-    top: 2%;
-    z-index: 1;
-  }
-
-  #navbar {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    left: 5%;
-    top: 100%;
-    width: 90%;
-    height: 82%;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-    border-radius: 3vh;
-    padding: 1vh 1vw;
-    text-align: center;
-    transition: top 0.5s, border-color 0.5s, background-color 0.5s, color 0.5s;
-    background: #fff;
-  }
-
-  .namebar {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    font-family: "Poiret One";
-    font-weight: bold;
-  }
-
-  #myname {
-    font-size: 4.8vh;
-    margin-top: 2vh;
-    text-shadow: 0 0 1px;
-    letter-spacing: 0.1vh;
-  }
-
-  .namebar p {
-    margin: 0;
-  }
-
-  #mytitle {
-    margin-top: 0.5vh;
-    font-size: 2.5vh;
-    font-family: "Poiret One";
-    font-weight: bold;
-    letter-spacing: 0.06vh;
-  }
-
-  .navlinks {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    height: 13%;
-    width: 100%;
-    align-items: center;
-  }
-
-  .pglinks {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: "Poiret One";
-    text-decoration: none;
-    font-size: 5vw;
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  .currentpg {
-    text-shadow: 0 0 2px;
-  }
-
-  .pglink {
-    box-sizing: border-box;
-    transition: color 0.5s;
-    text-align: center;
-    cursor: pointer;
-  }
-
-  .pglink:hover {
-    text-decoration: underline;
-  }
-
-  .pglink:active {
-    text-shadow: 0 0 10px;
-  }
-
-  .medialinks {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-    padding: 0;
-  }
-
-  .mllogo {
-    max-height: 4vh;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border: 2px solid #33095e;
-    background: #33095e;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
-    padding: 0;
-    margin: auto 0;
-  }
-
-  #phone {
-    position: absolute;
-    bottom: 1%;
-    left: 3%;
-    transition: filter 0.5s;
-  }
-
-  #phoneno {
-    display: none;
-  }
-
-  #email {
-    position: absolute;
-    bottom: 1%;
-    right: 3%;
-    transition: filter 0.5s;
-  }
-
-  #emailaddress {
-  display: none;
-  }
-
-  .roundbtn {
-    max-width: 4vh;
-    border: 2px solid black;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: white;
-    padding: 3px;
-    transition: filter 0.5s;
-  }
-
-  #body-flex-container {
-    cursor: move;
-    position: fixed;
-    background: white;
-    color: #0c0c0c;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow: hidden;
-    top: 100%;
-    height: 82%;
-    left: 5%;
-    width: 90%;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s, top 0.5s;
-    box-sizing: border-box;
-    border: 2px solid;
-    border-color: #33095e;
-    border-radius: 3vh;
-    z-index: 1;
-    padding: 0 5%;
-  }
-
   .bodyarticle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Open Sans';
-    text-align: center;
     padding: 0 10%;
     height: 60%;
   }
-
-  .bodyarticle p {
+  .bodyarticle p, .bodyarticle li, .bodyarticle h3 {
     font-size: 2.2vh;
   }
-
-  .bodyarticle li {
-    font-size: 2.2vh;
+  #bodyflexcontainer {
+    flex-direction: column;
+    height: 82%;
+    left: 5%;
+    width: 90%;
   }
-
-  .bodyarticle h3 {
-    font-size: 2.2vh;
+  .btnarrow {
+    width: 5vw;
   }
-
-  .flashcard {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-flow: column nowrap;
+  #btndark {
+    right: 3%;
+    top: 2%;
+  }
+  #btnmenu {
+    content: url("../assets/chevron.png");
     position: absolute;
-    left: 95%;
-    height: 80%;
-    width: 70%;
-    padding: 10%;
-    border-radius: 3vh;
-    transition: 1s;
-    text-align: center;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
+    right: 47.5%;
+    bottom: 2%;
   }
-
-  #dprofilepic {
+  .btnround {
+    max-width: 4vh;
+  }
+  #email {
+    bottom: 1%;
+    right: 3%;
+  }
+  #emailaddress {
     display: none;
   }
-
-  #mprofilepic {
-    max-width: 35vw;
-    max-height: 35vh;
-    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
-    box-sizing: border-box;
-    border: 3px solid #33095e;
-    background-color: #33095e;
-    border-radius: 50%;
-  }
-
   .introanim {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    font-family: "Cutive Mono";
-    text-align: justify;
     font-size: 4.6vw;
     width: 100%;
     height: 50%;
   }
-
-
+  .medialinks {
+    width: 40%;
+  }
+  .mllogo {
+    max-height: 4vh;
+  }
+  #myname {
+    font-size: 4.8vh;
+    margin-top: 2vh;
+  }
+  #mytitle {
+    margin-top: 0.5vh;
+    font-size: 2.5vh;
+  }
+  .namebar {
+    width: 100%;
+    height: 20%;
+  }
+  #navbar {
+    flex-flow: column wrap;
+    align-items: center;
+    left: 5%;
+    width: 90%;
+    height: 82%;
+  }
+  .pglinks {
+    flex-flow: row wrap;
+    font-size: 5vw;
+    width: 100%;
+  }
+  #phone {
+    bottom: 1%;
+    left: 3%;
+  }
+  #phoneno {
+    display: none;
+  }
+  #picprofiled {
+    display: none;
+  }
+  #picprofilem {
+    max-width: 35vw;
+    max-height: 35vh;
+    }
 }

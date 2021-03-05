@@ -37,14 +37,14 @@ function onloadFunc() {
   dmtoggle = false;
   ltoggle = true;
   rtoggle = true;
-  bfc = document.getElementById("body-flex-container");
-  db = document.getElementById("darkbutton");
+  bfc = document.getElementById("bodyflexcontainer");
+  db = document.getElementById("btndark");
   bkg = document.getElementById("background");
-  dppic = document.getElementById("dprofilepic");
-  mppic = document.getElementById("mprofilepic");
+  dppic = document.getElementById("picprofiled");
+  mppic = document.getElementById("picprofilem");
   menucont = document.getElementsByClassName("menucont");
   mll = document.getElementsByClassName("mllogo");
-  menubtn1 = document.getElementById("menubutton1");
+  menubtn1 = document.getElementById("btnmenu");
   navbar = document.getElementById("navbar");
   invertbtn = document.getElementsByClassName("invertbtn");
 
@@ -76,8 +76,8 @@ function onloadFunc() {
     flash = document.getElementsByClassName("flashcard");
     console.log(flash);
     if (flash.length > 0) {
-    leftbtn = document.getElementById("leftbutton");
-    rightbtn = document.getElementById("rightbutton");
+    leftbtn = document.getElementById("btnleft");
+    rightbtn = document.getElementById("btnright");
     flash[flashid].style.left = "15%";
     console.log(flashid);
     rtogglef();
