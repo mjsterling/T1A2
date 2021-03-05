@@ -9,7 +9,8 @@
   .bodyarticle p {
     font-size: 3.6vh;
   }
-  .bodyarticle li, .bodyarticle h3 {
+  .bodyarticle li,
+  .bodyarticle h3 {
     font-size: 2.8vh;
   }
   #bodyflexcontainer {

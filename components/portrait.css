@@ -6,7 +6,9 @@
     padding: 0 10%;
     height: 60%;
   }
-  .bodyarticle p, .bodyarticle li, .bodyarticle h3 {
+  .bodyarticle p,
+  .bodyarticle li,
+  .bodyarticle h3 {
     font-size: 2.2vh;
   }
   #bodyflexcontainer {
@@ -86,5 +88,5 @@
   #picprofilem {
     max-width: 35vw;
     max-height: 35vh;
-    }
+  }
 }
