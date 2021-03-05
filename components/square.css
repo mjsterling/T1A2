@@ -35,6 +35,8 @@
       z-index: 3;
       box-sizing: border-box;
       transition: 0.5s;
+      cursor: pointer;
+
     }
 
     #leftbutton {
@@ -150,6 +152,8 @@
       box-sizing: border-box;
       transition: color 0.5s;
       text-align: center;
+      cursor: pointer;
+
     }
   
     .pglink:hover {
@@ -215,6 +219,8 @@
     }
   
     #body-flex-container {
+      cursor: move;
+
       position: fixed;
       background: white;
       color: #0c0c0c;

@@ -35,6 +35,8 @@
     z-index: 3;
     box-sizing: border-box;
     transition: filter 0.5s, transform 0.5s;
+    cursor: pointer;
+
   }
 
   #leftbutton {
@@ -155,6 +157,8 @@
     transition: color 0.5s;
     text-align: center;
     margin: 0.5vh 0;
+    cursor: pointer;
+
   }
 
   .pglink:hover {
@@ -199,10 +203,9 @@
 
   #phoneno {
     font-family: 'Open Sans';
-    font-size: 3vh;
+    font-size: 2vw;
     position: absolute;
-    bottom: 15%;
-    margin-left: 0.5vw;
+    margin-left: 1vw;
   }
 
   #email {
@@ -214,10 +217,9 @@
 
   #emailaddress {
     font-family: 'Open Sans';
-    font-size: 3vh;
+    font-size: 2vw;
     position: absolute;
-    bottom: 20%;
-    margin-left: 0.5vw;
+    margin-left: 1vw;
 
   }
 
@@ -232,6 +234,7 @@
   }
 
   #body-flex-container {
+    cursor: move;
     position: fixed;
     background: white;
     color: #0c0c0c;

@@ -101,6 +101,7 @@ window.addEventListener("mouseup", (e) => {
   console.log("dy = ", dy);
 
   if (aspectRatio >= 2) {
+      //if mobile landscape toggle menu
 
     if (x > dx && x - dx > 50 && menutoggle == false) {
       toggleMenu();
@@ -109,7 +110,8 @@ window.addEventListener("mouseup", (e) => {
       toggleMenu();
     }
   } 
-  
+    //if flashcards exist move them
+
   if (flash.length > 0) {
     if (x > dx && x - dx > 50) {
       flashLeft();
@@ -118,6 +120,8 @@ window.addEventListener("mouseup", (e) => {
       flashRight();
     }
   }
+    if(aspectRatio < 2) {
+  //non landmob menu toggle
 
     if (y > dy && y - dy > 50 && menutoggle == false) {
       toggleMenu();
@@ -125,6 +129,7 @@ window.addEventListener("mouseup", (e) => {
     if (dy > y && dy - y > 50 && menutoggle == true) {
       toggleMenu();
     }
+  }
   x = 0;
   dx = 0;
   y = 0;
