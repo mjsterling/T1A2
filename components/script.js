@@ -77,8 +77,8 @@ function onloadFunc() {
     btnright = document.getElementById("btnright");
     flash[flashid].style.left = "15%";
     console.log(flashid);
-    togrf();
-    console.log(togr);
+    toglf();
+    console.log(togl);
   }
 }
 
@@ -187,11 +187,11 @@ function flashLeft() {
     flash[flashid].style.left = "-65%";
     ++flashid;
     console.log(flashid);
-    if (togr == false) {
-      togrf();
+    if (togl == false) {
+      toglf();
     }
     if (flashid == 4) {
-      toglf();
+      togrf();
     }
   }
 }
@@ -204,10 +204,10 @@ function flashRight() {
     console.log(flashid);
   }
   if (flashid == 0) {
-    togrf();
-  }
-  if (togl == false) {
     toglf();
+  }
+  if (togr == false) {
+    togrf();
   }
 }
 
