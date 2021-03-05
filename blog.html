@@ -15,15 +15,15 @@
   <body id="body">
     <section id="body-flex-container">
       <div
-      class="menubtn" id="menubutton1"
+      class="invertbtn arrowbtn" id="menubutton1"
         onclick="toggleMenu()"
       ></div>
       <div
-      class="menubtn" id="rightbutton"
+      class="invertbtn arrowbtn" id="rightbutton"
         onclick="flashRight()"
       ></div>
       <div
-      class="menubtn" id="leftbutton"
+      class="invertbtn arrowbtn" id="leftbutton"
         onclick="flashLeft()"
       ></div>
       <img src="assets/ppic.jpg" class="dispnone" id="mprofilepic">
@@ -46,6 +46,7 @@
     <nav id="navbar" class="menucont">
       <input
         id="darkbutton"
+        class="invertbtn roundbtn"
         type="image"
         src="assets/lightmodeicon.webp"
         onclick="toggleDarkMode()"
@@ -57,14 +58,14 @@
       <section class="navlinks">
         <section id="dprofilepic"></section>
         <section class="pglinks">
-          <div class="pglink" onclick="pagetransition1()">home</div>
-          <div class="pglink" onclick="pagetransition2()">bio</div>
-          <div class="pglink" onclick="pagetransition3()">resum&eacute;</div>
-          <div class="pglink" onclick="pagetransition4()">projects</div>
-          <div class="currentpg pglink" onclick="pagetransition5()">blog</div>
+          <div class="pglink" onclick="pagetransition('index.html')">home</div>
+          <div class="pglink" onclick="pagetransition('bio.html')">bio</div>
+          <div class="pglink" onclick="pagetransition('resume.html')">resum&eacute;</div>
+          <div class="pglink" onclick="pagetransition('projects.html')">projects</div>
+          <div class="currentpg pglink" onclick="pagetransition('blog.html')">blog</div>
         </section>
-        <section id="phone"><a href="tel:+61421864667"><img src="assets/phone.png" class="conticon"><span class="underline" id="phoneno">0421&nbsp;864&nbsp;667</span></a></section>
-        <section id="email"><a href="mailto:mjsterling93@gmail.com"><img src="assets/email.png" class="conticon"><span class="underline" id="emailaddress">mjsterling93@gmail.com</span></a></section>
+        <section id="phone"><a href="tel:+61421864667"><img src="assets/phone.png" class="invertbtn roundbtn"><span class="underline" id="phoneno">0421&nbsp;864&nbsp;667</span></a></section>
+        <section id="email"><a href="mailto:mjsterling93@gmail.com"><img src="assets/email.png" class="invertbtn roundbtn"><span class="underline" id="emailaddress">mjsterling93@gmail.com</span></a></section>
         <section class="medialinks">
           <a href="https://twitter.com/mjsterling93"
             ><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"

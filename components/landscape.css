@@ -30,11 +30,23 @@
     bottom: 2%;
   }
 
-  .menubtn {
+  .arrowbtn {
     width: 3vw;
     z-index: 3;
     box-sizing: border-box;
     transition: filter 0.5s, transform 0.5s;
+  }
+
+  #leftbutton {
+    content: url(../assets/chevronleft.png);
+    position: absolute;
+    left: 7%;
+  }
+
+  #rightbutton {
+    content: url(../assets/chevronright.png);
+    position: absolute;
+    left: 88%;
   }
 
 
@@ -42,14 +54,6 @@
     position: absolute;
     right: 3%;
     top: 2%;
-    max-height: 4vh;
-    max-width: 10vw;
-    border-radius: 50%;
-    transition: filter 0.5s;
-    box-sizing: border-box;
-    background: black;
-    border: 2px solid white;
-    filter: invert(1);
     z-index: 1;
   }
 
@@ -198,6 +202,7 @@
     font-size: 3vh;
     position: absolute;
     bottom: 15%;
+    margin-left: 0.5vw;
   }
 
   #email {
@@ -212,16 +217,18 @@
     font-size: 3vh;
     position: absolute;
     bottom: 20%;
+    margin-left: 0.5vw;
+
   }
 
-  .conticon {
+  .roundbtn {
     max-height: 4vh;
     border: 2px solid black;
     box-sizing: border-box;
     border-radius: 50%;
     background: white;
     padding: 3px;
-    margin-right: 0.5vw;
+    transition: filter 0.5s;
   }
 
   #body-flex-container {

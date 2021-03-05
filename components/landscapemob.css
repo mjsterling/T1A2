@@ -32,7 +32,7 @@
     z-index: 3;
   }
 
-  .menubtn {
+  .arrowbtn {
     height: 6vh;
     z-index: 3;
     box-sizing: border-box;
@@ -43,13 +43,6 @@
     position: absolute;
     left: 3%;
     bottom: 5%;
-    max-height: 6vh;
-    border-radius: 50%;
-    transition: filter 0.5s;
-    box-sizing: border-box;
-    background: black;
-    border: 2px solid white;
-    filter: invert(1);
     z-index: 1;
   }
 
@@ -194,14 +187,14 @@
     display: none;
   }
 
-  .conticon {
+  .roundbtn {
     max-height: 6vh;
     border: 2px solid black;
     box-sizing: border-box;
     border-radius: 50%;
     background: white;
     padding: 3px;
-    margin-right: 0.5vw;
+    transition: filter 0.5s;
   }
 
   #body-flex-container {

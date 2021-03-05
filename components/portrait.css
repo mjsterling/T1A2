@@ -35,17 +35,15 @@
     content: url(../assets/chevronleft.png);
     position: absolute;
     left: 7%;
-    width: 5vw;
   }
 
   #rightbutton {
     content: url(../assets/chevronright.png);
     position: absolute;
     left: 88%;
-    width: 5vw;
   }
 
-  .menubtn {
+  .arrowbtn {
     width: 5vw;
     z-index: 3;
     box-sizing: border-box;
@@ -57,14 +55,6 @@
     position: absolute;
     right: 3%;
     top: 2%;
-    max-height: 4vh;
-    max-width: 10vw;
-    border-radius: 50%;
-    transition: filter 0.5s;
-    box-sizing: border-box;
-    background: black;
-    border: 2px solid white;
-    filter: invert(1);
     z-index: 1;
   }
 
@@ -199,13 +189,14 @@
   display: none;
   }
 
-  .conticon {
+  .roundbtn {
     max-width: 4vh;
     border: 2px solid black;
     box-sizing: border-box;
     border-radius: 50%;
     background: white;
     padding: 3px;
+    transition: filter 0.5s;
   }
 
   #body-flex-container {
