@@ -1,15 +1,14 @@
 // declare global vars
 
-var menutoggle,
-  dmtoggle,
+var togmenu,
+  togdrk,
   bfc,
-  db,
   bkg,
-  dppic,
-  mppic,
+  picd,
+  picm,
   menucont,
   mll,
-  menubtn1,
+  btnmenu,
   navbar,
   x = 0,
   dx = 0,
@@ -17,34 +16,31 @@ var menutoggle,
   dy = 0,
   flash,
   flashid = 0,
-  leftbtn,
-  rightbtn,
-  ltoggle,
-  rtoggle,
+  btnleft,
+  btnright,
+  togl,
+  togr,
   invertbtn,
   aspectRatio;
-
 
 //execute on page load
 
 window.onload = onloadFunc;
 
 function onloadFunc() {
-
   // assign elements to vars after page loads to avoid throwing null every 2 seconds
 
-  menutoggle = false;
-  dmtoggle = false;
-  ltoggle = true;
-  rtoggle = true;
   bfc = document.getElementById("bodyflexcontainer");
-  db = document.getElementById("btndark");
   bkg = document.getElementById("background");
-  dppic = document.getElementById("picprofiled");
-  mppic = document.getElementById("picprofilem");
+  togdrk = false;
+  togl = true;
+  togmenu = false;
+  togr = true;
+  picd = document.getElementById("picprofiled");
+  picm = document.getElementById("picprofilem");
   menucont = document.getElementsByClassName("menucont");
   mll = document.getElementsByClassName("mllogo");
-  menubtn1 = document.getElementById("btnmenu");
+  btnmenu = document.getElementById("btnmenu");
   navbar = document.getElementById("navbar");
   invertbtn = document.getElementsByClassName("invertbtn");
 
@@ -73,16 +69,16 @@ function onloadFunc() {
   }
 
   // check if flashcards exist on projects/blog page, assign vars, slide in first card
-    flash = document.getElementsByClassName("flashcard");
-    console.log(flash);
-    if (flash.length > 0) {
-    leftbtn = document.getElementById("btnleft");
-    rightbtn = document.getElementById("btnright");
+  flash = document.getElementsByClassName("flashcard");
+  console.log(flash);
+  if (flash.length > 0) {
+    btnleft = document.getElementById("btnleft");
+    btnright = document.getElementById("btnright");
     flash[flashid].style.left = "15%";
     console.log(flashid);
-    rtogglef();
-    console.log(rtoggle);
-    }
+    togrf();
+    console.log(togr);
+  }
 }
 
 //drag and swipe listeners
@@ -101,16 +97,16 @@ window.addEventListener("mouseup", (e) => {
   console.log("dy = ", dy);
 
   if (aspectRatio >= 2) {
-      //if mobile landscape toggle menu
+    //if mobile landscape toggle menu
 
-    if (x > dx && x - dx > 50 && menutoggle == false) {
+    if (x > dx && x - dx > 50 && togmenu == false) {
       toggleMenu();
     }
-    if (dx > x && dx - x > 50 && menutoggle == true) {
+    if (dx > x && dx - x > 50 && togmenu == true) {
       toggleMenu();
     }
-  } 
-    //if flashcards exist move them
+  }
+  //if flashcards exist move them
 
   if (flash.length > 0) {
     if (x > dx && x - dx > 50) {
@@ -120,13 +116,13 @@ window.addEventListener("mouseup", (e) => {
       flashRight();
     }
   }
-    if(aspectRatio < 2) {
-  //non landmob menu toggle
+  if (aspectRatio < 2) {
+    //non landmob menu toggle
 
-    if (y > dy && y - dy > 50 && menutoggle == false) {
+    if (y > dy && y - dy > 50 && togmenu == false) {
       toggleMenu();
     }
-    if (dy > y && dy - y > 50 && menutoggle == true) {
+    if (dy > y && dy - y > 50 && togmenu == true) {
       toggleMenu();
     }
   }
@@ -150,13 +146,13 @@ window.addEventListener("touchend", (e) => {
   console.log("dy =", dy);
   //if mobile landscape toggle menu
   if (aspectRatio >= 2) {
-    if (x > dx && x - dx > 50 && menutoggle == false) {
+    if (x > dx && x - dx > 50 && togmenu == false) {
       toggleMenu();
     }
-    if (dx > x && dx - x > 50 && menutoggle == true) {
+    if (dx > x && dx - x > 50 && togmenu == true) {
       toggleMenu();
     }
-  } 
+  }
   //if flashcards exist move them
   if (flash.length > 0) {
     if (x > dx && x - dx > 50 && flashid < 4) {
@@ -169,10 +165,10 @@ window.addEventListener("touchend", (e) => {
 
   //non landmob menu toggle
   if (aspectRatio < 2) {
-    if (y > dy && y - dy > 50 && menutoggle == false) {
+    if (y > dy && y - dy > 50 && togmenu == false) {
       toggleMenu();
     }
-    if (dy > y && dy - y > 50 && menutoggle == true) {
+    if (dy > y && dy - y > 50 && togmenu == true) {
       toggleMenu();
     }
   }
@@ -190,11 +186,11 @@ function flashLeft() {
     flash[flashid].style.left = "-65%";
     ++flashid;
     console.log(flashid);
-    if (rtoggle == false) {
-      rtogglef();
+    if (togr == false) {
+      togrf();
     }
     if (flashid == 4) {
-      ltogglef();
+      toglf();
     }
   }
 }
@@ -207,47 +203,47 @@ function flashRight() {
     console.log(flashid);
   }
   if (flashid == 0) {
-    rtogglef();
+    togrf();
   }
-  if (ltoggle == false) {
-    ltogglef();
+  if (togl == false) {
+    toglf();
   }
 }
 
 // disable left/right buttons at top/bottom of flashcard stack
 
-function ltogglef() {
-  if (ltoggle == true) {
-    leftbtn.style.left = "-10%";
-    ltoggle = false;
+function toglf() {
+  if (togl == true) {
+    btnleft.style.left = "-10%";
+    togl = false;
   } else {
-    leftbtn.style.left = "7%";
-    ltoggle = true;
+    btnleft.style.left = "7%";
+    togl = true;
   }
 }
 
-function rtogglef() {
-  if (rtoggle == true) {
-    rightbtn.style.left = "110%";
-    rtoggle = false;
+function togrf() {
+  if (togr == true) {
+    btnright.style.left = "110%";
+    togr = false;
   } else {
-    rightbtn.style.left = "88%";
-    rtoggle = true;
+    btnright.style.left = "88%";
+    togr = true;
   }
 }
 
 //toggle dark mode
 
 function toggleDarkMode() {
-  if (dmtoggle == false) {
+  if (togdrk == false) {
     bfc.style.color = "white";
     bfc.style.background = "#0c0c0c";
     bfc.style.borderColor = "white";
     bkg.style.filter = "invert(0)";
-    dppic.style.borderColor = "white";
-    dppic.style.background = "white";
-    mppic.style.borderColor = "white";
-    mppic.style.background = "white";
+    picd.style.borderColor = "white";
+    picd.style.background = "white";
+    picm.style.borderColor = "white";
+    picm.style.background = "white";
     let i;
     for (i = 0; i < menucont.length; i++) {
       menucont[i].style.background = "#33095e";
@@ -262,17 +258,17 @@ function toggleDarkMode() {
       invertbtn[i].style.filter = "invert(1)";
     }
 
-    dmtoggle = true;
+    togdrk = true;
     localStorage.setItem("darkmode", "true");
   } else {
     bfc.style.background = "white";
     bfc.style.color = "#0c0c0c";
     bfc.style.borderColor = "#33095e";
     bkg.style.filter = "invert(1)";
-    dppic.style.borderColor = "#33095e";
-    dppic.style.background = "#33095e";
-    mppic.style.borderColor = "#33095e";
-    mppic.style.background = "#33095e";
+    picd.style.borderColor = "#33095e";
+    picd.style.background = "#33095e";
+    picm.style.borderColor = "#33095e";
+    picm.style.background = "#33095e";
     let i;
     for (i = 0; i < menucont.length; i++) {
       menucont[i].style.background = "white";
@@ -286,7 +282,7 @@ function toggleDarkMode() {
     for (i = 0; i < invertbtn.length; i++) {
       invertbtn[i].style.filter = "invert(0)";
     }
-    dmtoggle = false;
+    togdrk = false;
     localStorage.removeItem("darkmode");
   }
 }
@@ -295,37 +291,37 @@ function toggleDarkMode() {
 
 function toggleMenu() {
   if (aspectRatio >= 2) {
-    lsToggleMenu();
+    lstoggleMenu();
   } else {
-    ptToggleMenu();
+    pttoggleMenu();
   }
 }
 
-function ptToggleMenu() {
-  if (menutoggle == false) {
+function pttoggleMenu() {
+  if (togmenu == false) {
     bfc.style.top = "2%";
     navbar.style.top = "16%";
-    menubtn1.style.transform = "rotateX(180deg)";
-    menutoggle = true;
+    btnmenu.style.transform = "rotateX(180deg)";
+    togmenu = true;
   } else {
     bfc.style.top = "16%";
     navbar.style.top = "2%";
-    menubtn1.style.transform = "none";
-    menutoggle = false;
+    btnmenu.style.transform = "none";
+    togmenu = false;
   }
 }
 
-function lsToggleMenu() {
-  if (menutoggle == false) {
+function lstoggleMenu() {
+  if (togmenu == false) {
     bfc.style.left = "2%";
     navbar.style.left = "18%";
-    menubtn1.style.transform = "rotateY(180deg)";
-    menutoggle = true;
+    btnmenu.style.transform = "rotateY(180deg)";
+    togmenu = true;
   } else {
     bfc.style.left = "18%";
     navbar.style.left = "2%";
-    menubtn1.style.transform = "none";
-    menutoggle = false;
+    btnmenu.style.transform = "none";
+    togmenu = false;
   }
 }
 
@@ -350,10 +346,9 @@ window.onresize = windowDOMreset;
 function windowDOMreset() {
   aspectRatio = window.innerWidth / window.innerHeight;
   console.log("aspectratio = ", aspectRatio);
-  bfc.style.transition =
-  "border-color 0.5s, background-color 0.5s, color 0.5s";
-navbar.style.transition =
-  "border-color 0.5s, background-color 0.5s, color 0.5s";
+  bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
+  navbar.style.transition =
+    "border-color 0.5s, background-color 0.5s, color 0.5s";
   if (aspectRatio >= 2 && bfc.style.top !== "2%") {
     bfc.style.top = "2%";
     bfc.style.left = "18%";
@@ -361,14 +356,11 @@ navbar.style.transition =
     navbar.style.top = "2%";
     navbar.style.left = "2%";
     navbar.style.height = "96%";
-    menubtn1.style.transform = "none";
-    menutoggle = false;
+    btnmenu.style.transform = "none";
+    togmenu = false;
   }
 
-  if (
-    aspectRatio < 2 &&
-    aspectRatio >= 1
-  ) {
+  if (aspectRatio < 2 && aspectRatio >= 1) {
     bfc.style.top = "16%";
     bfc.style.left = "18%";
     bfc.style.height = "82%";
@@ -377,14 +369,11 @@ navbar.style.transition =
     navbar.style.top = "2%";
     navbar.style.height = "82%";
     navbar.style.width = "80%";
-    menubtn1.style.transform = "none";
-    menutoggle = false;
+    btnmenu.style.transform = "none";
+    togmenu = false;
   }
 
-  if (
-    aspectRatio < 1 &&
-    aspectRatio > 0.75
-  ) {
+  if (aspectRatio < 1 && aspectRatio > 0.75) {
     bfc.style.top = "16%";
     bfc.style.left = "15%";
     bfc.style.width = "70%";
@@ -393,8 +382,8 @@ navbar.style.transition =
     navbar.style.height = "82%";
     navbar.style.width = "70%";
     navbar.style.left = "15%";
-    menubtn1.style.transform = "none";
-    menutoggle = false;
+    btnmenu.style.transform = "none";
+    togmenu = false;
   }
 
   if (aspectRatio <= 0.75) {
@@ -406,8 +395,8 @@ navbar.style.transition =
     navbar.style.height = "82%";
     navbar.style.width = "90%";
     navbar.style.left = "5%";
-    menubtn1.style.transform = "none";
-    menutoggle = false;
+    btnmenu.style.transform = "none";
+    togmenu = false;
   }
   setTimeout(() => {
     bfc.style.transition =
