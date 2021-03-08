@@ -79,15 +79,15 @@ body {
   padding: 3px;
   transition: filter 0.5s;
 }
+#contact {
+  display: flex;
+  flex-flow: row nowrap;
+}
 .currentpg {
   text-shadow: 0 0 2px;
 }
 .dispnone {
   display: none;
-}
-#email {
-  position: absolute;
-  transition: filter 0.5s;
 }
 .flashcard {
   display: flex;
@@ -127,7 +127,6 @@ h2 {
   justify-content: flex-start;
   font-family: "Cutive Mono";
   text-align: justify;
-  font-size: 4.6vw;
   width: 100%;
   height: 50%;
 }
@@ -220,9 +219,6 @@ p {
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
-}
-#phone {
-  position: absolute;
 }
 #picprofilem {
   transition: border-color 0.5s, background-color 0.5s, color 0.5s;

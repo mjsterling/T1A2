@@ -24,11 +24,15 @@ The site also features:
 - 100% responsiveness within an approximate aspect ratio range of 1/3 to 8/3;
 - An optional dark mode that uses `localStorage` to persist between pages and sessions.
 
+I drew my initial inspiration from the links on https://www.sliderrevolution.com/design/web-developer-portfolio-examples/.
+
 ## Sitemap
 
 The site has a single-level horizontal structure which enables ease of navigation. Each page is accessible from each other page.
 
-### Home <-> Bio <-> Resum&eacute; <-> Projects <-> Blog
+Project and blog components are embedded directly inside the projects.html and blog.html pages to simplify the structure.
+
+### index.html <-> bio.html <-> resume.html <-> projects.html <-> blog.html
 
 ## Screenshots
 
@@ -39,6 +43,5 @@ This site is intended for use by industry recruiters and the general public - I 
 ## Tech&nbsp;Stack
 
 The site was built using HTML, CSS and JavaScript, and deployed using Netlify.
-
 
 ### &copy; Matthew Sterling 2021

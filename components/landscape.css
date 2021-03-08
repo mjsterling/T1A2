@@ -15,6 +15,7 @@
   }
   #bodyflexcontainer {
     flex-direction: column;
+    align-items: center;
     left: 18%;
     width: 80%;
     height: 82%;
@@ -35,9 +36,12 @@
   .btnround {
     max-height: 4vh;
   }
-  #email {
+  #contact {
+    position: absolute;
+    width: 70%;
+    justify-content: space-evenly;
     bottom: 5%;
-    right: 38%;
+    left: 10%;
   }
   #emailaddress {
     font-family: "Open Sans";
@@ -46,7 +50,7 @@
     margin-left: 1vw;
   }
   .introanim {
-    font-size: 4vh;
+    font-size: 3.8vh;
     width: 60%;
     height: 100%;
     align-items: center;

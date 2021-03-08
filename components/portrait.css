@@ -33,9 +33,12 @@
   .btnround {
     max-width: 4vh;
   }
-  #email {
-    bottom: 1%;
-    right: 3%;
+  #contact {
+    position: absolute;
+    width: 94%;
+    justify-content: space-between;
+    bottom: 1vh;
+    left: 3%;
   }
   #emailaddress {
     display: none;
@@ -74,10 +77,6 @@
     flex-flow: row wrap;
     font-size: 5vw;
     width: 100%;
-  }
-  #phone {
-    bottom: 1%;
-    left: 3%;
   }
   #phoneno {
     display: none;

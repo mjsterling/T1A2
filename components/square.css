@@ -35,11 +35,12 @@
   .btnround {
     max-width: 4vh;
   }
-  #email {
+  #contact {
     position: absolute;
-    bottom: 1%;
-    right: 3%;
-    transition: filter 0.5s;
+    width: 94%;
+    justify-content: space-between;
+    bottom: 1vh;
+    left: 3%;
   }
   #emailaddress {
     display: none;
@@ -80,14 +81,9 @@
     font-size: 3.5vw;
     width: 100%;
   }
-  #phone {
-    bottom: 1%;
-    left: 3%;
-  }
   #phoneno {
     display: none;
   }
-
   #picprofiled {
     display: none;
   }
