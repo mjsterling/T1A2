@@ -351,7 +351,7 @@ function windowDOMreset() {
   bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
   navbar.style.transition =
     "border-color 0.5s, background-color 0.5s, color 0.5s";
-  if (aspectRatio >= 2 && bfc.style.top !== "2%") {
+  if (aspectRatio >= 2) {
     bfc.style.top = "2%";
     bfc.style.left = "18%";
     bfc.style.height = "96%";
