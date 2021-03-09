@@ -175,6 +175,36 @@ window.addEventListener("touchend", (e) => {
   dy = 0;
 });
 
+// arrow key navigation
+window.onkeydown = (n) => {
+
+  //up and down non-landmob
+  aspectRatio = window.innerWidth / window.innerHeight;
+  if (n.keyCode == 38 && aspectRatio < 1.75 && togmenu == false)
+  {
+    pttoggleMenu();
+  }
+  if (n.keyCode == 40 && aspectRatio < 1.75 && togmenu == true) {
+    pttoggleMenu();
+  }
+  //left and right landmob
+  if (n.keyCode == 37 && aspectRatio >= 1.75 && togmenu == false)
+  {
+    lstoggleMenu();
+  }
+  if (n.keyCode == 39 && aspectRatio >= 1.75 && togmenu == true) {
+    lstoggleMenu();
+}
+
+  //left and right flashcards
+  if (n.keyCode == 37 && flash.length > 0) {
+    flashRight();
+  }
+  if (n.keyCode == 39 && flash.length > 0) {
+    flashLeft();
+  }
+}
+
 // slide/click left and right to switch between flashcards
 
 function flashLeft() {
