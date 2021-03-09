@@ -200,7 +200,6 @@ p {
 }
 .pglink {
   box-sizing: border-box;
-  transition: color 0.5s;
   text-align: center;
   cursor: pointer;
 }

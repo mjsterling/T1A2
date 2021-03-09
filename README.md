@@ -7,7 +7,7 @@
 ### 3. [Sitemap](##Sitemap)
 ### 4. [Screenshots](##Screenshots)
 ### 5. [Target Audience](##Target&nbsp;Audience)
-### 6. [Tech stack (e.g. html, css, deployment platform, etc)](##Tech&nbsp;Stack)
+### 6. [Tech Stack](##Tech&nbsp;Stack)
 
 ## Purpose
 
@@ -24,15 +24,13 @@ The site also features:
 - 100% responsiveness within an approximate aspect ratio range of 1/3 to 8/3;
 - An optional dark mode that uses `localStorage` to persist between pages and sessions.
 
-I drew my initial inspiration from the links on https://www.sliderrevolution.com/design/web-developer-portfolio-examples/.
-
 ## Sitemap
 
 The site has a single-level horizontal structure which enables ease of navigation. Each page is accessible from each other page.
 
 Project and blog components are embedded directly inside the projects.html and blog.html pages to simplify the structure.
 
-### index.html <-> bio.html <-> resume.html <-> projects.html <-> blog.html
+![Sitemap](./assets/sitemap.png)
 
 ## Screenshots
 

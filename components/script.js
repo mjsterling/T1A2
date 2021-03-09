@@ -23,12 +23,9 @@ var togmenu,
   invertbtn,
   aspectRatio;
 
-//execute on page load
+// assign elements to vars after page loads to avoid throwing null every 2 seconds
 
-window.onload = onloadFunc;
-
-function onloadFunc() {
-  // assign elements to vars after page loads to avoid throwing null every 2 seconds
+window.onload = () => {
 
   bfc = document.getElementById("bodyflexcontainer");
   bkg = document.getElementById("background");
@@ -52,7 +49,7 @@ function onloadFunc() {
   //page load slide-in animation
   aspectRatio = window.innerWidth / window.innerHeight;
   console.log("aspectRatio = ", aspectRatio);
-  if (aspectRatio >= 2) {
+  if (aspectRatio >= 1.75) {
     setTimeout(() => {
       bfc.style.top = "2%";
     }, 100);
@@ -72,7 +69,6 @@ function onloadFunc() {
   flash = document.getElementsByClassName("flashcard");
   console.log(flash);
   if (flash.length > 0) {
-    // $("#recursioncontainer").load("index.html");
     btnleft = document.getElementById("btnleft");
     btnright = document.getElementById("btnright");
     flash[flashid].style.left = "15%";
@@ -97,7 +93,7 @@ window.addEventListener("mouseup", (e) => {
   dy = e.clientY;
   console.log("dy = ", dy);
 
-  if (aspectRatio >= 2) {
+  if (aspectRatio >= 1.75) {
     //if mobile landscape toggle menu
 
     if (x > dx && x - dx > 50 && togmenu == false) {
@@ -117,7 +113,7 @@ window.addEventListener("mouseup", (e) => {
       flashRight();
     }
   }
-  if (aspectRatio < 2) {
+  if (aspectRatio < 1.75) {
     //non landmob menu toggle
 
     if (y > dy && y - dy > 50 && togmenu == false) {
@@ -146,7 +142,7 @@ window.addEventListener("touchend", (e) => {
   dy = e.changedTouches[0].clientY;
   console.log("dy =", dy);
   //if mobile landscape toggle menu
-  if (aspectRatio >= 2) {
+  if (aspectRatio >= 1.75) {
     if (x > dx && x - dx > 50 && togmenu == false) {
       toggleMenu();
     }
@@ -165,7 +161,7 @@ window.addEventListener("touchend", (e) => {
   }
 
   //non landmob menu toggle
-  if (aspectRatio < 2) {
+  if (aspectRatio < 1.75) {
     if (y > dy && y - dy > 50 && togmenu == false) {
       toggleMenu();
     }
@@ -179,7 +175,7 @@ window.addEventListener("touchend", (e) => {
   dy = 0;
 });
 
-//slide/click left and right to switch between flashcards
+// slide/click left and right to switch between flashcards
 
 function flashLeft() {
   if (flashid <= 4) {
@@ -291,7 +287,7 @@ function toggleDarkMode() {
 //toggle menu on click/swipe
 
 function toggleMenu() {
-  if (aspectRatio >= 2) {
+  if (aspectRatio >= 1.75) {
     lstoggleMenu();
   } else {
     pttoggleMenu();
@@ -350,7 +346,7 @@ function windowDOMreset() {
   bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
   navbar.style.transition =
     "border-color 0.5s, background-color 0.5s, color 0.5s";
-  if (aspectRatio >= 2) {
+  if (aspectRatio >= 1.75) {
     bfc.style.top = "2%";
     bfc.style.left = "18%";
     bfc.style.height = "96%";
@@ -363,7 +359,7 @@ function windowDOMreset() {
     togmenu = false;
   }
 
-  if (aspectRatio < 2 && aspectRatio >= 1) {
+  if (aspectRatio < 1.75 && aspectRatio >= 1) {
     bfc.style.top = "16%";
     bfc.style.left = "18%";
     bfc.style.height = "82%";
