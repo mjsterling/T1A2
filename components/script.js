@@ -340,9 +340,10 @@ function pagetransition(page) {
   }, 500);
 }
 
-// check window size on resize and set elements to their correct positions for each window size
+// check window size on resize/orientation change and set elements to their correct positions for each window size
 
 window.onresize = windowDOMreset;
+window.onorientationchange = windowDOMreset;
 
 function windowDOMreset() {
   aspectRatio = window.innerWidth / window.innerHeight;
