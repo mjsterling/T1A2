@@ -343,7 +343,7 @@ function pagetransition(page) {
 // check window size on resize/orientation change and set elements to their correct positions for each window size
 
 window.onresize = windowDOMreset;
-window.onorientationchange = windowDOMreset;
+window.addEventListener("orientationchange", windowDOMreset());
 
 function windowDOMreset() {
   aspectRatio = window.innerWidth / window.innerHeight;
