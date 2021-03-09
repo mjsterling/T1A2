@@ -343,7 +343,6 @@ function pagetransition(page) {
 // check window size on resize/orientation change and set elements to their correct positions for each window size
 
 window.onresize = windowDOMreset;
-window.addEventListener("orientationchange", windowDOMreset());
 
 function windowDOMreset() {
   aspectRatio = window.innerWidth / window.innerHeight;
@@ -355,9 +354,11 @@ function windowDOMreset() {
     bfc.style.top = "2%";
     bfc.style.left = "18%";
     bfc.style.height = "96%";
+    bfc.style.width = "80%";
     navbar.style.top = "2%";
     navbar.style.left = "2%";
     navbar.style.height = "96%";
+    navbar.style.width = "80%";
     btnmenu.style.transform = "none";
     togmenu = false;
   }
