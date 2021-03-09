@@ -14,34 +14,19 @@
   <div id="background"></div>
   <body id="body">
     <section id="bodyflexcontainer">
+      <div class="invertbtn btnarrow" id="btnmenu" onclick="toggleMenu()"></div>
       <div
-      class="invertbtn btnarrow" id="btnmenu"
-        onclick="toggleMenu()"
-      ></div>
-      <div
-      class="invertbtn btnarrow" id="btnright"
+        class="invertbtn btnarrow"
+        id="btnright"
         onclick="flashRight()"
       ></div>
-      <div
-      class="invertbtn btnarrow" id="btnleft"
-        onclick="flashLeft()"
-      ></div>
-      <img src="assets/ppic.jpg" class="dispnone" id="picprofilem">
-      <article class="menucont flashcard">
-        Blog 1
-      </article>
-      <article class="menucont flashcard">
-        Blog 2
-      </article>
-      <article class="menucont flashcard">
-        Blog 3
-      </article>
-      <article class="menucont flashcard">
-        Blog 4
-      </article>
-      <article class="menucont flashcard">
-        Blog 5
-      </article>
+      <div class="invertbtn btnarrow" id="btnleft" onclick="flashLeft()"></div>
+      <img src="assets/ppic.jpg" class="dispnone" id="picprofilem" />
+      <article class="menucont flashcard">Blog 1</article>
+      <article class="menucont flashcard">Blog 2</article>
+      <article class="menucont flashcard">Blog 3</article>
+      <article class="menucont flashcard">Blog 4</article>
+      <article class="menucont flashcard">Blog 5</article>
     </section>
     <nav id="navbar" class="menucont">
       <input
@@ -52,20 +37,44 @@
         onclick="toggleDarkMode()"
       />
       <section class="namebar">
-          <p id="myname">Blog</p>
-          <p id="mytitle">Warning: contains incoherent musings.</p>
+        <p id="myname">Blog</p>
+        <p id="mytitle">Warning: contains incoherent musings.</p>
       </section>
       <section class="navlinks">
         <section id="picprofiled"></section>
         <section class="pglinks">
           <div class="pglink" onclick="pagetransition('index.html')">home</div>
           <div class="pglink" onclick="pagetransition('bio.html')">bio</div>
-          <div class="pglink" onclick="pagetransition('resume.html')">resum&eacute;</div>
-          <div class="pglink" onclick="pagetransition('projects.html')">projects</div>
-          <div class="currentpg pglink" onclick="pagetransition('blog.html')">blog</div>
+          <div class="pglink" onclick="pagetransition('resume.html')">
+            resum&eacute;
+          </div>
+          <div class="pglink" onclick="pagetransition('projects.html')">
+            projects
+          </div>
+          <div class="currentpg pglink" onclick="pagetransition('blog.html')">
+            blog
+          </div>
         </section>
-        <section id="phone"><a href="tel:+61421864667"><img src="assets/phone.png" class="invertbtn btnround"><span class="underline" id="phoneno">0421&nbsp;864&nbsp;667</span></a></section>
-        <section id="email"><a href="mailto:mjsterling93@gmail.com"><img src="assets/email.png" class="invertbtn btnround"><span class="underline" id="emailaddress">mjsterling93@gmail.com</span></a></section>
+        <section id="contact">
+          <section id="phone">
+            <a href="tel:+61421864667"
+              ><img src="assets/phone.png" class="invertbtn btnround" /><span
+                class="underline"
+                id="phoneno"
+                >0421&nbsp;864&nbsp;667</span
+              ></a
+            >
+          </section>
+          <section id="email">
+            <a href="mailto:mjsterling93@gmail.com"
+              ><img src="assets/email.png" class="invertbtn btnround" /><span
+                class="underline"
+                id="emailaddress"
+                >mjsterling93@gmail.com</span
+              ></a
+            >
+          </section>
+        </section>
         <section class="medialinks">
           <a href="https://twitter.com/mjsterling93"
             ><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"
