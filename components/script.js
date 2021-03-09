@@ -24,7 +24,6 @@ var togmenu,
   aspectRatio;
 
 // assign elements to vars after page loads to avoid throwing null every 2 seconds
-
 window.onload = () => {
 
   bfc = document.getElementById("bodyflexcontainer");
@@ -48,7 +47,7 @@ window.onload = () => {
 
   //page load slide-in animation
   aspectRatio = window.innerWidth / window.innerHeight;
-  console.log("aspectRatio = ", aspectRatio);
+  console.log("aspectRatio:", aspectRatio);
   if (aspectRatio >= 1.75) {
     setTimeout(() => {
       bfc.style.top = "2%";
@@ -67,14 +66,12 @@ window.onload = () => {
 
   // check if flashcards exist on projects/blog page, assign vars, slide in first card
   flash = document.getElementsByClassName("flashcard");
-  console.log(flash);
   if (flash.length > 0) {
     btnleft = document.getElementById("btnleft");
     btnright = document.getElementById("btnright");
     flash[flashid].style.left = "15%";
-    console.log(flashid);
+    console.log("flashid:", flashid);
     toglf();
-    console.log(togl);
   }
 }
 
@@ -82,16 +79,16 @@ window.onload = () => {
 
 window.addEventListener("mousedown", (e) => {
   x = e.clientX;
-  console.log("x =", x);
+  console.log("x:", x);
   y = e.clientY;
-  console.log("y =", y);
+  console.log("y:", y);
 });
 
 window.addEventListener("mouseup", (e) => {
   dx = e.clientX;
-  console.log("dx = ", dx);
+  console.log("dx:", dx);
   dy = e.clientY;
-  console.log("dy = ", dy);
+  console.log("dy:", dy);
 
   if (aspectRatio >= 1.75) {
     //if mobile landscape toggle menu
@@ -131,16 +128,16 @@ window.addEventListener("mouseup", (e) => {
 
 window.addEventListener("touchstart", (e) => {
   x = e.touches[0].clientX;
-  console.log("x =", x);
+  console.log("x:", x);
   y = e.touches[0].clientY;
-  console.log("y =", y);
+  console.log("y:", y);
 });
 
 window.addEventListener("touchend", (e) => {
   dx = e.changedTouches[0].clientX;
-  console.log("dx = ", dx);
+  console.log("dx: ", dx);
   dy = e.changedTouches[0].clientY;
-  console.log("dy =", dy);
+  console.log("dy:", dy);
   //if mobile landscape toggle menu
   if (aspectRatio >= 1.75) {
     if (x > dx && x - dx > 50 && togmenu == false) {
@@ -177,6 +174,7 @@ window.addEventListener("touchend", (e) => {
 
 // arrow key navigation
 window.onkeydown = (n) => {
+  console.log("n.keyCode:", n.keyCode);
 
   //up and down non-landmob
   aspectRatio = window.innerWidth / window.innerHeight;
@@ -187,6 +185,7 @@ window.onkeydown = (n) => {
   if (n.keyCode == 40 && aspectRatio < 1.75 && togmenu == true) {
     pttoggleMenu();
   }
+
   //left and right landmob
   if (n.keyCode == 37 && aspectRatio >= 1.75 && togmenu == false)
   {
@@ -203,16 +202,33 @@ window.onkeydown = (n) => {
   if (n.keyCode == 39 && flash.length > 0) {
     flashLeft();
   }
+
+  //1-5 page nav
+  if (n.keyCode == 49) {
+    pagetransition("index.html");
+  }
+  if (n.keyCode == 50) {
+    pagetransition("bio.html");
+  }
+  if (n.keyCode == 51) {
+    pagetransition("resume.html");
+  }
+  if (n.keyCode == 52) {
+    pagetransition("projects.html");
+  }
+  if (n.keyCode == 53) {
+    pagetransition("blog.html");
+  }
 }
 
 // slide/click left and right to switch between flashcards
 
 function flashLeft() {
-  if (flashid <= 4) {
+  if (flashid < 4) {
     flash[flashid + 1].style.left = "15%";
     flash[flashid].style.left = "-65%";
     ++flashid;
-    console.log(flashid);
+    console.log("flashid:", flashid);
     if (togl == false) {
       toglf();
     }
@@ -223,11 +239,11 @@ function flashLeft() {
 }
 
 function flashRight() {
-  if (flashid >= 0) {
+  if (flashid > 0) {
     flash[flashid - 1].style.left = "15%";
     flash[flashid].style.left = "95%";
     --flashid;
-    console.log(flashid);
+    console.log("flashid:", flashid);
   }
   if (flashid == 0) {
     toglf();
@@ -372,7 +388,7 @@ window.onresize = windowDOMreset;
 
 function windowDOMreset() {
   aspectRatio = window.innerWidth / window.innerHeight;
-  console.log("aspectratio = ", aspectRatio);
+  console.log("aspectRatio:", aspectRatio);
   bfc.style.transition = "border-color 0.5s, background-color 0.5s, color 0.5s";
   navbar.style.transition =
     "border-color 0.5s, background-color 0.5s, color 0.5s";
