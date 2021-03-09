@@ -25,7 +25,6 @@ var togmenu,
 
 // assign elements to vars after page loads to avoid throwing null every 2 seconds
 window.onload = () => {
-
   bfc = document.getElementById("bodyflexcontainer");
   bkg = document.getElementById("background");
   togdrk = false;
@@ -73,7 +72,7 @@ window.onload = () => {
     console.log("flashid:", flashid);
     toglf();
   }
-}
+};
 
 //drag and swipe listeners
 
@@ -178,8 +177,7 @@ window.onkeydown = (n) => {
 
   //up and down non-landmob
   aspectRatio = window.innerWidth / window.innerHeight;
-  if (n.keyCode == 38 && aspectRatio < 1.75 && togmenu == false)
-  {
+  if (n.keyCode == 38 && aspectRatio < 1.75 && togmenu == false) {
     pttoggleMenu();
   }
   if (n.keyCode == 40 && aspectRatio < 1.75 && togmenu == true) {
@@ -187,13 +185,12 @@ window.onkeydown = (n) => {
   }
 
   //left and right landmob
-  if (n.keyCode == 37 && aspectRatio >= 1.75 && togmenu == false)
-  {
+  if (n.keyCode == 37 && aspectRatio >= 1.75 && togmenu == false) {
     lstoggleMenu();
   }
   if (n.keyCode == 39 && aspectRatio >= 1.75 && togmenu == true) {
     lstoggleMenu();
-}
+  }
 
   //left and right flashcards
   if (n.keyCode == 37 && flash.length > 0) {
@@ -219,7 +216,7 @@ window.onkeydown = (n) => {
   if (n.keyCode == 53) {
     pagetransition("blog.html");
   }
-}
+};
 
 // slide/click left and right to switch between flashcards
 
@@ -228,13 +225,14 @@ function flashLeft() {
     flash[flashid + 1].style.left = "15%";
     flash[flashid].style.left = "-65%";
     ++flashid;
-    console.log("flashid:", flashid);
-    if (togl == false) {
-      toglf();
-    }
-    if (flashid == 4) {
+    console.log("flashid:", flashid, "flashLeft");
+    if (flashid == 4 && togr == true) {
       togrf();
     }
+    if (flashid == 1 && togl == false) {
+      toglf();
+    }
+
   }
 }
 
@@ -243,13 +241,13 @@ function flashRight() {
     flash[flashid - 1].style.left = "15%";
     flash[flashid].style.left = "95%";
     --flashid;
-    console.log("flashid:", flashid);
-  }
-  if (flashid == 0) {
-    toglf();
-  }
-  if (togr == false) {
-    togrf();
+    console.log("flashid:", flashid, "flashRight");
+    if (flashid == 0 && togl == true) {
+      toglf();
+    }
+    if (flashid == 3 && togr == false) {
+      togrf();
+    }
   }
 }
 
