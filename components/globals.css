@@ -4,7 +4,6 @@ a {
   font-family: inherit;
   font-size: inherit;
 }
-
 #background {
   background-color: #0c0c0c;
   background-attachment: cover;
@@ -56,6 +55,7 @@ body {
   box-sizing: border-box;
   transition: filter 0.5s, transform 0.5s;
   cursor: pointer;
+  border-radius: 50%;
 }
 #btndark {
   position: absolute;
@@ -78,20 +78,25 @@ body {
   background: white;
   padding: 3px;
   transition: filter 0.5s;
+  color: #ffd000;
+}
+.btnround:hover {
+  box-shadow: 0 0 10px;
 }
 #contact {
   display: flex;
   flex-flow: row nowrap;
   z-index: 1;
 }
-.cta {
+#cta {
   color: #ffd000;
   cursor: pointer;
+  transition: color 0.5s;
 }
-.cta:hover {
+#cta:hover {
   text-decoration: underline;
 }
-.cta:active {
+#cta:active {
   text-shadow: 0 0 10px;
 }
 .currentpg {
@@ -169,6 +174,10 @@ h2 {
   transition: border-color 0.5s, background-color 0.5s, color 0.5s;
   padding: 0;
   margin: auto 0;
+  color: #ffd000;
+}
+.mllogo:hover {
+  box-shadow: 0 0 10px;
 }
 #myname {
   text-shadow: 0 0 1px;
@@ -216,7 +225,7 @@ p {
   cursor: pointer;
 }
 .pglink:hover {
-  text-decoration: underline;
+  color: #ffd000;
 }
 .pglink:active {
   text-shadow: 0 0 10px;

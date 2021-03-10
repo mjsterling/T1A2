@@ -297,6 +297,7 @@ function toggleDarkMode() {
     }
     for (i = 0; i < invertbtn.length; i++) {
       invertbtn[i].style.filter = "invert(1)";
+      invertbtn[i].style.color = "#002fff";
     }
 
     togdrk = true;
@@ -322,6 +323,7 @@ function toggleDarkMode() {
     }
     for (i = 0; i < invertbtn.length; i++) {
       invertbtn[i].style.filter = "invert(0)";
+      invertbtn[i].style.color = "#ffd000";
     }
     togdrk = false;
     localStorage.removeItem("darkmode");

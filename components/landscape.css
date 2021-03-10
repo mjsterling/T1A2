@@ -49,6 +49,12 @@
     position: absolute;
     margin-left: 1vw;
   }
+  #emailaddress:hover {
+    color: #ffd000;
+  }
+  #emailaddress:active {
+    text-shadow: 0 0 10px;
+  }
   .introanim {
     font-size: 3.8vh;
     width: 60%;
@@ -105,6 +111,13 @@
     position: absolute;
     margin-left: 1vw;
   }
+  #phoneno:active {
+    text-shadow: 0 0 10px;
+  } 
+  #phoneno:hover {
+    color: #ffd000;
+  }
+
   #picprofiled {
     content: url(../assets/ppic.jpg);
     position: absolute;
