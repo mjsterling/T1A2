@@ -76,7 +76,7 @@ body {
   box-sizing: border-box;
   border-radius: 50%;
   background: white;
-  padding: 3px;
+  padding: 2px;
   transition: filter 0.5s;
   color: #ffd000;
 }
@@ -255,7 +255,6 @@ color: #ffd000;}
   border: 2px solid;
   border-radius: 3vh;
   overflow: hidden;
-  z-index: 1;
 }
 ul {
   padding: 0;
