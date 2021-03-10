@@ -93,11 +93,11 @@ body {
   cursor: pointer;
   transition: color 0.5s;
 }
-#cta:hover {
-  text-decoration: underline;
-}
 #cta:active {
   text-shadow: 0 0 10px;
+}
+#cta:hover {
+  text-decoration: underline;
 }
 .currentpg {
   text-shadow: 0 0 2px;
@@ -225,8 +225,7 @@ p {
   cursor: pointer;
 }
 .pglink:hover {
-  color: #ffd000;
-}
+color: #ffd000;}
 .pglink:active {
   text-shadow: 0 0 10px;
 }
