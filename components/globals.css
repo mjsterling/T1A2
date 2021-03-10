@@ -84,6 +84,16 @@ body {
   flex-flow: row nowrap;
   z-index: 1;
 }
+.cta {
+  color: #ffd000;
+  cursor: pointer;
+}
+.cta:hover {
+  text-decoration: underline;
+}
+.cta:active {
+  text-shadow: 0 0 10px;
+}
 .currentpg {
   text-shadow: 0 0 2px;
 }
