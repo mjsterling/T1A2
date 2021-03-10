@@ -82,6 +82,7 @@ body {
 #contact {
   display: flex;
   flex-flow: row nowrap;
+  z-index: 1;
 }
 .currentpg {
   text-shadow: 0 0 2px;
@@ -141,6 +142,7 @@ h2 {
   flex-wrap: nowrap;
   box-sizing: border-box;
   padding: 0;
+  z-index: 2;
 }
 .menucont {
   background: white;
