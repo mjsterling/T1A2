@@ -72,104 +72,109 @@ window.onload = () => {
     console.log("flashid:", flashid);
     toglf();
   }
+
+  //drag and swipe listeners
+  bfc.addEventListener("mousedown", (e) => {
+    x = e.clientX;
+    console.log("x:", x);
+    y = e.clientY;
+    console.log("y:", y);
+  });
+  
+  bfc.addEventListener("mouseup", (e) => {
+    dx = e.clientX;
+    console.log("dx:", dx);
+    dy = e.clientY;
+    console.log("dy:", dy);
+  
+    if (aspectRatio >= 1.75) {
+      //if mobile landscape toggle menu
+  
+      if (x > dx && x - dx > 50 && togmenu == false) {
+        toggleMenu();
+      }
+      if (dx > x && dx - x > 50 && togmenu == true) {
+        toggleMenu();
+      }
+    }
+    //if flashcards exist move them
+  
+    if (flash.length > 0) {
+      if (x > dx && x - dx > 50) {
+        flashLeft();
+      }
+      if (dx > x && dx - x > 50) {
+        flashRight();
+      }
+    }
+    if (aspectRatio < 1.75) {
+      //non landmob menu toggle
+  
+      if (y > dy && y - dy > 50 && togmenu == false) {
+        toggleMenu();
+      }
+      if (dy > y && dy - y > 50 && togmenu == true) {
+        toggleMenu();
+      }
+    }
+    x = 0;
+    dx = 0;
+    y = 0;
+    dy = 0;
+  });
+
+  bfc.addEventListener("touchstart", (e) => {
+    x = e.touches[0].clientX;
+    console.log("x:", x);
+    y = e.touches[0].clientY;
+    console.log("y:", y);
+  });
+  
+  bfc.addEventListener("touchend", (e) => {
+    dx = e.changedTouches[0].clientX;
+    console.log("dx: ", dx);
+    dy = e.changedTouches[0].clientY;
+    console.log("dy:", dy);
+    //if mobile landscape toggle menu
+    if (aspectRatio >= 1.75) {
+      if (x > dx && x - dx > 50 && togmenu == false) {
+        toggleMenu();
+      }
+      if (dx > x && dx - x > 50 && togmenu == true) {
+        toggleMenu();
+      }
+    }
+    //if flashcards exist move them
+    if (flash.length > 0) {
+      if (x > dx && x - dx > 50 && flashid < 4) {
+        flashLeft();
+      }
+      if (dx > x && dx - x > 50 && flashid > 0) {
+        flashRight();
+      }
+    }
+  
+    //non landmob menu toggle
+    if (aspectRatio < 1.75) {
+      if (y > dy && y - dy > 50 && togmenu == false) {
+        toggleMenu();
+      }
+      if (dy > y && dy - y > 50 && togmenu == true) {
+        toggleMenu();
+      }
+    }
+    x = 0;
+    dx = 0;
+    y = 0;
+    dy = 0;
+  });
 };
 
-//drag and swipe listeners
 
-window.addEventListener("mousedown", (e) => {
-  x = e.clientX;
-  console.log("x:", x);
-  y = e.clientY;
-  console.log("y:", y);
-});
 
-window.addEventListener("mouseup", (e) => {
-  dx = e.clientX;
-  console.log("dx:", dx);
-  dy = e.clientY;
-  console.log("dy:", dy);
 
-  if (aspectRatio >= 1.75) {
-    //if mobile landscape toggle menu
 
-    if (x > dx && x - dx > 50 && togmenu == false) {
-      toggleMenu();
-    }
-    if (dx > x && dx - x > 50 && togmenu == true) {
-      toggleMenu();
-    }
-  }
-  //if flashcards exist move them
 
-  if (flash.length > 0) {
-    if (x > dx && x - dx > 50) {
-      flashLeft();
-    }
-    if (dx > x && dx - x > 50) {
-      flashRight();
-    }
-  }
-  if (aspectRatio < 1.75) {
-    //non landmob menu toggle
-
-    if (y > dy && y - dy > 50 && togmenu == false) {
-      toggleMenu();
-    }
-    if (dy > y && dy - y > 50 && togmenu == true) {
-      toggleMenu();
-    }
-  }
-  x = 0;
-  dx = 0;
-  y = 0;
-  dy = 0;
-});
-
-window.addEventListener("touchstart", (e) => {
-  x = e.touches[0].clientX;
-  console.log("x:", x);
-  y = e.touches[0].clientY;
-  console.log("y:", y);
-});
-
-window.addEventListener("touchend", (e) => {
-  dx = e.changedTouches[0].clientX;
-  console.log("dx: ", dx);
-  dy = e.changedTouches[0].clientY;
-  console.log("dy:", dy);
-  //if mobile landscape toggle menu
-  if (aspectRatio >= 1.75) {
-    if (x > dx && x - dx > 50 && togmenu == false) {
-      toggleMenu();
-    }
-    if (dx > x && dx - x > 50 && togmenu == true) {
-      toggleMenu();
-    }
-  }
-  //if flashcards exist move them
-  if (flash.length > 0) {
-    if (x > dx && x - dx > 50 && flashid < 4) {
-      flashLeft();
-    }
-    if (dx > x && dx - x > 50 && flashid > 0) {
-      flashRight();
-    }
-  }
-
-  //non landmob menu toggle
-  if (aspectRatio < 1.75) {
-    if (y > dy && y - dy > 50 && togmenu == false) {
-      toggleMenu();
-    }
-    if (dy > y && dy - y > 50 && togmenu == true) {
-      toggleMenu();
-    }
-  }
-  x = 0;
-  dx = 0;
-  y = 0;
-  dy = 0;
-});
 
 // arrow key navigation
 window.onkeydown = (n) => {
