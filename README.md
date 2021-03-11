@@ -8,6 +8,7 @@
 ### 4. [Screenshots](##Screenshots)
 ### 5. [Target Audience](##Target&nbsp;Audience)
 ### 6. [Tech Stack](##Tech&nbsp;Stack)
+### 7. [Links](##Links)
 
 ## Purpose
 
@@ -30,9 +31,33 @@ The site has a single-level horizontal structure which enables ease of navigatio
 
 Project and blog components are embedded directly inside the projects.html and blog.html pages to simplify the structure.
 
-![Sitemap](./assets/sitemap.png)
+![Sitemap](./docs/sitemap.png)
 
 ## Screenshots
+
+### Mobile (portrait):
+
+![Mobile 1](./docs/ssmob1.png)
+![Mobile 2](./docs/ssmob2.png)
+
+### Tablet:
+
+![Tablet 1](./docs/sstab1.png)
+
+### Desktop:
+
+![Desktop 1](./docs/ssdesk1.png)
+![Desktop 2](./docs/ssdesk2.png)
+
+### Mobile (landscape):
+
+![Landmob 1](./docs/sslmob1.png)
+![Landmob 2](./docs/sslmob2.png)
+
+### Other pages:
+
+![Projects](./docs/ssproj.png)
+![Blog](./docs/ssblog.png)
 
 ## Target&nbsp;Audience
 
@@ -41,5 +66,9 @@ This site is intended for use by industry recruiters and the general public - I 
 ## Tech&nbsp;Stack
 
 The site was built using HTML, CSS and JavaScript, and deployed using Netlify.
+
+## Links
+
+Website is hosted at https://matthew-sterling.netlify.app
 
 ### &copy; Matthew Sterling 2021
