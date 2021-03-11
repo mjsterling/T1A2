@@ -170,12 +170,6 @@ window.onload = () => {
   });
 };
 
-
-
-
-
-
-
 // arrow key navigation
 window.onkeydown = (n) => {
   console.log("n.keyCode:", n.keyCode);

@@ -13,6 +13,7 @@
   </head>
   <div id="background"></div>
   <body id="body">
+    <!-- body content -->
     <section id="bodyflexcontainer">
       <div class="invertbtn btnarrow" id="btnmenu" onclick="toggleMenu()"></div>
       <img src="assets/ppic.jpg" id="picprofilem" />
@@ -29,7 +30,8 @@
         </p>
       </article>
     </section>
-    <nav id="navbar" class="menucont">
+    <!-- back card -->
+    <section id="navbar" class="menucont">
       <input
         id="btndark"
         class="invertbtn btnround"
@@ -37,17 +39,19 @@
         src="assets/lightmodeicon.webp"
         onclick="toggleDarkMode()"
       />
+      <!-- page header -->
       <header class="namebar">
-        <p id="myname">About Me</p>
-        <p id="mytitle">An insight into my world!</p>
+        <p id="myname">Matthew Sterling</p>
+        <p id="mytitle">Student full-stack developer</p>
       </header>
+      <!-- nav bar -->
       <section class="navlinks">
         <section id="picprofiled"></section>
-        <section class="pglinks">
-          <div class="pglink" onclick="pagetransition('index.html')">home</div>
-          <div class="currentpg pglink" onclick="pagetransition('bio.html')">
-            bio
+        <nav class="pglinks">
+          <div class="pglink" onclick="pagetransition('index.html')">
+            home
           </div>
+          <div class="currentpg pglink" onclick="pagetransition('bio.html')">bio</div>
           <div class="pglink" onclick="pagetransition('resume.html')">
             resum&eacute;
           </div>
@@ -55,40 +59,52 @@
             projects
           </div>
           <div class="pglink" onclick="pagetransition('blog.html')">blog</div>
+      </nav>
+      <!-- contact details -->
+      <nav id="contact">
+        <section id="phone">
+          <a href="tel:+61421864667"
+            ><img
+              src="assets/phone.png"
+              class="invertbtn btnround"
+              alt="Click to call"
+            /><span class="underline" id="phoneno"
+              >0421&nbsp;864&nbsp;667</span
+            ></a
+          >
         </section>
-        <section id="contact">
-          <section id="phone">
-            <a href="tel:+61421864667"
-              ><img src="assets/phone.png" alt="Click to call" class="invertbtn btnround" /><span
-                class="underline"
-                id="phoneno"
-                >0421&nbsp;864&nbsp;667</span
-              ></a
-            >
-          </section>
-          <section id="email">
-            <a href="mailto:mjsterling93@gmail.com"
-              ><img src="assets/email.png" alt="Click to email" class="invertbtn btnround" /><span
-                class="underline"
-                id="emailaddress"
-                >mjsterling93@gmail.com</span
-              ></a
-            >
-          </section>
+        <section id="email">
+          <a href="mailto:mjsterling93@gmail.com"
+            ><img
+              src="assets/email.png"
+              class="invertbtn btnround"
+              alt="Click to email"
+            /><span class="underline" id="emailaddress"
+              >mjsterling93@gmail.com</span
+            ></a
+          >
         </section>
-        <section class="medialinks">
-          <a href="https://twitter.com/mjsterling93"
-            ><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"
-          /></a>
-          <a href="https://www.linkedin.com/in/matthew-sterling-dev"
-            ><img class="mllogo" src="assets/linkedinlogo.png" alt="LinkedIn"
-          /></a>
-          <a href="https://github.com/mjsterling"
-            ><img class="mllogo" src="assets/githublogo.webp" alt="Github"
-          /></a>
-        </section>
+      </nav>
+      <!-- social links -->
+      <nav class="medialinks">
+        <a href="https://twitter.com/mjsterling93"
+          ><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"
+        /></a>
+        <a href="https://www.linkedin.com/in/matthew-sterling-dev"
+          ><img class="mllogo" src="assets/linkedinlogo.png" alt="LinkedIn"
+        /></a>
+        <a href="https://github.com/mjsterling"
+          ><img class="mllogo" src="assets/githublogo.webp" alt="Github"
+        /></a>
+        </nav>
       </section>
-      <footer>&copy; Matthew Sterling 2021. All rights reserved.</footer>
-    </nav>
+    </section>
+    <footer>
+      <span>
+        &copy; Matthew Sterling 2021. Icons from
+        <a class="underline" href="https://icons8.com/">icons8</a>. Photos from
+        <a href="https://unsplash.com/" class="underline">Unsplash.</a>
+      </span>
+    </footer>
   </body>
 </html>

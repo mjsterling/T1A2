@@ -13,12 +13,10 @@
   </head>
   <div id="background"></div>
   <body id="body">
+    <!-- body content -->
     <section id="bodyflexcontainer">
-      <div
-      class="invertbtn btnarrow" id="btnmenu"
-        onclick="toggleMenu()"
-      ></div>
-      <img src="assets/ppic.jpg" class="dispnone" id="picprofilem">
+      <div class="invertbtn btnarrow" id="btnmenu" onclick="toggleMenu()"></div>
+      <img src="assets/ppic.jpg" class="dispnone" id="picprofilem" />
       <article class="bodyarticle">
         <h3>2021 - Fast Track Boot Camp @ Coder Academy</h3>
         <ul>
@@ -28,22 +26,24 @@
           </li>
           <li>Made a portfolio website!</li>
         </ul>
-        <h3>
-          2018-2020 - Resourcing Specialist @ Programmed
-        </h3>
+        <h3>2018-2020 - Resourcing Specialist @ Programmed</h3>
         <ul>
           <li>Provided support to 160 field staff</li>
           <li>
             Digitised and modernised entire branch workflow and successfully
-            trained a technology-resistant team of 6 in use of digital
-            systems, which facilitated a seamless transition to working from home at
-            the outbreak of COVID-19.
+            trained a technology-resistant team of 6 in use of digital systems,
+            which facilitated a seamless transition to working from home at the
+            outbreak of COVID-19.
           </li>
         </ul>
-      </div>
+        <h3>
+          Download my full resum&eacute;
+          <a class="underline" href="assets/resume.pdf">here</a>.
+        </h3>
       </article>
     </section>
-    <nav id="navbar" class="menucont">
+    <!-- back card -->
+    <section id="navbar" class="menucont">
       <input
         id="btndark"
         class="invertbtn btnround"
@@ -51,51 +51,72 @@
         src="assets/lightmodeicon.webp"
         onclick="toggleDarkMode()"
       />
+      <!-- page header -->
       <header class="namebar">
-          <p id="myname">Resum&eacute;</p>
-          <p id="mytitle">A life condensed into 200 words.</p>
+        <p id="myname">Matthew Sterling</p>
+        <p id="mytitle">Student full-stack developer</p>
       </header>
+      <!-- nav bar -->
       <section class="navlinks">
-        <section id="picprofiled" alt="Profile picture"></section>
-        <section class="pglinks">
-          <div class="pglink" onclick="pagetransition('index.html')">home</div>
+        <section id="picprofiled"></section>
+        <nav class="pglinks">
+          <div class="pglink" onclick="pagetransition('index.html')">
+            home
+          </div>
           <div class="pglink" onclick="pagetransition('bio.html')">bio</div>
-          <div class="currentpg pglink" onclick="pagetransition('resume.html')">resum&eacute;</div>
-          <div class="pglink" onclick="pagetransition('projects.html')">projects</div>
+          <div class="currentpg pglink" onclick="pagetransition('resume.html')">
+            resum&eacute;
+          </div>
+          <div class="pglink" onclick="pagetransition('projects.html')">
+            projects
+          </div>
           <div class="pglink" onclick="pagetransition('blog.html')">blog</div>
+      </nav>
+      <!-- contact details -->
+      <nav id="contact">
+        <section id="phone">
+          <a href="tel:+61421864667"
+            ><img
+              src="assets/phone.png"
+              class="invertbtn btnround"
+              alt="Click to call"
+            /><span class="underline" id="phoneno"
+              >0421&nbsp;864&nbsp;667</span
+            ></a
+          >
         </section>
-        <section id="contact">
-          <section id="phone">
-            <a href="tel:+61421864667"
-              ><img src="assets/phone.png" alt="Click to call" class="invertbtn btnround" /><span
-                class="underline"
-                id="phoneno"
-                >0421&nbsp;864&nbsp;667</span
-              ></a
-            >
-          </section>
-          <section id="email">
-            <a href="mailto:mjsterling93@gmail.com"
-              ><img src="assets/email.png" alt="Click to email" class="invertbtn btnround" /><span
-                class="underline"
-                id="emailaddress"
-                >mjsterling93@gmail.com</span
-              ></a
-            >
-          </section>
-        </section>        <section class="medialinks">
-          <a href="https://twitter.com/mjsterling93"
-            ><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"
-          /></a>
-          <a href="https://www.linkedin.com/in/matthew-sterling-dev"
-            ><img class="mllogo" src="assets/linkedinlogo.png" alt="LinkedIn"
-          /></a>
-          <a href="https://github.com/mjsterling"
-            ><img class="mllogo" src="assets/githublogo.webp" alt="Github"
-          /></a>
+        <section id="email">
+          <a href="mailto:mjsterling93@gmail.com"
+            ><img
+              src="assets/email.png"
+              class="invertbtn btnround"
+              alt="Click to email"
+            /><span class="underline" id="emailaddress"
+              >mjsterling93@gmail.com</span
+            ></a
+          >
         </section>
+      </nav>
+      <!-- social links -->
+      <nav class="medialinks">
+        <a href="https://twitter.com/mjsterling93"
+          ><img class="mllogo" src="assets/twitterlogo.png" alt="Twitter"
+        /></a>
+        <a href="https://www.linkedin.com/in/matthew-sterling-dev"
+          ><img class="mllogo" src="assets/linkedinlogo.png" alt="LinkedIn"
+        /></a>
+        <a href="https://github.com/mjsterling"
+          ><img class="mllogo" src="assets/githublogo.webp" alt="Github"
+        /></a>
+        </nav>
       </section>
-      <footer>&copy; Matthew Sterling 2021. All rights reserved.</footer>
-    </nav>
+    </section>
+    <footer>
+      <span>
+        &copy; Matthew Sterling 2021. Icons from
+        <a class="underline" href="https://icons8.com/">icons8</a>. Photos from
+        <a href="https://unsplash.com/" class="underline">Unsplash.</a>
+      </span>
+    </footer>
   </body>
 </html>

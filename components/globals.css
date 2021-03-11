@@ -26,10 +26,25 @@ a {
   border: 2px solid;
   border-radius: 3vh;
   overflow: hidden;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 .blogcontainer p {
-  padding: 5%;
+  padding: 2% 5%;
+}
+.blogimg {
+  height: 25vh;
+  width: 25vh;
+  border-radius: 50%;
+  border: 2px solid;
+}
+.blogimgcont {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.blogimgcont p {
+  font-size: 1.2vh;
 }
 body {
   margin: 0;
@@ -42,6 +57,7 @@ body {
   font-family: "Open Sans";
   text-align: center;
 }
+/* body content */
 #bodyflexcontainer {
   cursor: move;
   position: fixed;
@@ -97,6 +113,7 @@ body {
 .btnround:hover {
   box-shadow: 0 0 10px;
 }
+/* contact details */
 #contact {
   display: flex;
   flex-flow: row nowrap;
@@ -163,6 +180,7 @@ h2 {
 .introanim p {
   margin: 3vh 0;
 }
+/* social links */
 .medialinks {
   display: flex;
   flex-direction: row;
@@ -202,6 +220,7 @@ h2 {
   font-weight: bold;
   letter-spacing: 0.06vh;
 }
+/* page header */
 .namebar {
   text-align: center;
   font-family: "Poiret One";
@@ -210,6 +229,7 @@ h2 {
 .namebar p {
   margin: 0;
 }
+/* back card */
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -233,13 +253,15 @@ h2 {
 p {
   margin: 0;
 }
+/* navbar */
 .pglink {
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;
 }
 .pglink:hover {
-color: #ffd000;}
+  color: #ffd000;
+}
 .pglink:active {
   text-shadow: 0 0 10px;
 }

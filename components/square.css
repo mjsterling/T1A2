@@ -7,12 +7,13 @@
     height: 50%;
   }
   .bodyarticle p {
-    font-size: 2.5vh;
+    font-size: 2.2vh;
   }
   .bodyarticle li,
   .bodyarticle h3 {
-    font-size: 2.4vh;
+    font-size: 2.2vh;
   }
+  /* body content */
   #bodyflexcontainer {
     flex-direction: column;
     height: 82%;
@@ -50,6 +51,7 @@
     width: 100%;
     height: 50%;
   }
+  /* social links */
   .medialinks {
     width: 40%;
   }
@@ -64,10 +66,12 @@
     margin-top: 0.5vh;
     font-size: 2.5vh;
   }
+  /* page header */
   .namebar {
     width: 100%;
     height: 20%;
   }
+  /* back card */
   #navbar {
     position: fixed;
     flex-direction: column;
@@ -76,6 +80,7 @@
     width: 70%;
     height: 82%;
   }
+  /* navbar */
   .pglinks {
     flex-flow: row wrap;
     font-size: 3.5vw;
