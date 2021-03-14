@@ -1,0 +1,541 @@
+commit 42feb346a1692178d490a95b1b5b547b6a329dd7
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 11 13:47:45 2021 +1100
+
+    added SRI
+
+commit f47ef78b50bce39b8f9f1016403e35b03b26f040
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 11 13:32:51 2021 +1100
+
+    preparing folders for submission
+
+commit 15f07bc1b69010d1ffbf2979051c2dad6212424a
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 11 13:08:37 2021 +1100
+
+    updated semantics and added comments
+    added blog images
+
+commit a85eaa6b2b787539c0728790abf0a1c74c3efbfd
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 17:00:05 2021 +1100
+
+    changed event listener to bfc
+
+commit c319a18ecf411d0a668a09cc486c71742b28d7f6
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 16:50:25 2021 +1100
+
+    adjusted scrollbar in blog posts to be not ugly
+
+commit 6d550759f109b792b2898ece7a26f076eb2b2f1c
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:44:35 2021 +1100
+
+    fixed broken l/r buttons on blog?
+
+commit 54b587894be10c140569d29e100bbbd8fe0336ca
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:42:24 2021 +1100
+
+    gave up on blue box removal.
+
+commit 732451ddee1e47d6a6a3e4b22e2120fcb8b88c7c
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:38:13 2021 +1100
+
+    blue box removal v4
+
+commit 2ff2a3d210c8636b3795906bba8afe9e03b94cd6
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:36:08 2021 +1100
+
+    blue box removal v3
+
+commit adce747e7cfa9af2f77399449103a95bcf7cda18
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:34:11 2021 +1100
+
+    blue box removal v2
+
+commit bfc889789467cd09ed731f1f938c4d83e6f981d9
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:33:01 2021 +1100
+
+    test removal of blue onclick from chrome
+
+commit 39ecf9f7732711c98ccbecccb870f558f0a1abf8
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:26:29 2021 +1100
+
+    fixed zindex issue on recursion container
+
+commit e5e8f8e3f61e4327a3a72aadc319509cb258dfd3
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:20:26 2021 +1100
+
+    adjusted link behaviour
+
+commit 817b1394d5aa1afd7cd48343a1737bf5fe56fef3
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 15:09:52 2021 +1100
+
+    added hover shadows to buttons
+
+commit b2277f802949ff8f14ea878271ec2c1387ba945e
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 14:05:08 2021 +1100
+
+    added some alt text, changed cta to yellow
+
+commit a62a5ec4dbe95589de809040900fd007c29faea6
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 13:33:33 2021 +1100
+
+    honey i shrunk the images
+
+commit 87897975aba187d6401883083b4b0c119d26d575
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 10 12:36:12 2021 +1100
+
+    added z-indexes to fix broken links in portrait
+
+commit 7baa2af52b35f759c552bd6c9ab378d26619b817
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 16:15:33 2021 +1100
+
+    fixed l/r arrow toggle issue
+
+commit 5455b77dc56d901af66dc929710df93adfb6b1cd
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 16:00:33 2021 +1100
+
+    fixed console log issues
+
+commit 3345a7a7112f8f465a00e499213cc266800afad6
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 15:41:35 2021 +1100
+
+    added simple arrow key navigation
+
+commit 235d689290d37efb453ba9175c62ad0039a4fc57
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 15:21:05 2021 +1100
+
+    used correct aspect fraction this time.
+    8/5 <> 1.75. mate.
+
+commit fe40b5a8385ec7de0ed3beb32dbc414df8c70932
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 15:17:03 2021 +1100
+
+    landmob breakpoint changed to 1.75
+
+commit 225946aef15d63bebcfbdce08d6cd0e700567a3f
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 11:48:46 2021 +1100
+
+    added width scaling to resize for landmob
+
+commit 3548bc4ae328db90a49e887fd4d1e963cd45bdd5
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 11:36:32 2021 +1100
+
+    testing removal of viewport from html
+
+commit c23273965b48f4d51e949603db4c6f366256ff39
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 11:29:10 2021 +1100
+
+    removed condition for dom reset
+
+commit d295856bdb50476503be6da38e1afe0b3ab56282
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 11:27:33 2021 +1100
+
+    android resize bugfix?
+
+commit 3fb80bdb34860c55b4729b1ce6f85a905a5ca3eb
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 11:22:01 2021 +1100
+
+    changed window to screen for orientation test
+
+commit 3cb9d08237aa3f340cf8e00a8417552127e50565
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 11:15:12 2021 +1100
+
+    testing new orientation detection on android
+
+commit e816a2b362be5a52cd8051b63492daec96d1d277
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 11:09:24 2021 +1100
+
+    added orientationchange listener to fix landmob issue
+
+commit d11fd3f40ff7bd938acdae657b8bbbac21f188b2
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 11:03:02 2021 +1100
+
+    added contact div to all pages
+
+commit eeeb3991e5ddabd0614f0dcae83d29fbaa66c0ca
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 9 10:58:59 2021 +1100
+
+    fixed scaling issue of contact buttons
+
+commit de8eeb7f739b95d8c669fcc255281869b18c4c62
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 20:20:06 2021 +1100
+
+    fixed flashcard font size for recursion
+
+commit 2b0b2611f9a3db8e698812eef7fa84155022a07f
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 20:14:52 2021 +1100
+
+    reversed left and right arrows...
+    credit to my anti-idiot device
+
+commit caee1348024346a447962d8ee3d6cc0cb35ae9b6
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 19:45:42 2021 +1100
+
+    added recursive iframe to project 1
+
+commit ef5ad8c2b9a95975f2d8c18482915477a499246c
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 19:22:05 2021 +1100
+
+    fixed linkedin url
+
+commit 2338cff113bdc89404f2bcbd292688789f6a3589
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 18:44:37 2021 +1100
+
+    mostly done readme. fixed footer sliding issue
+
+commit b236e3d4153864edc1269bcf168ec09e884b24bd
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 18:14:06 2021 +1100
+
+    added copyright footer, started on readme
+
+commit 5f687f2931f3d60f5df8ee971627b51d86e2fed9
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 17:29:12 2021 +1100
+
+    zut alors! j'ai raté un!
+    en redécouvrant le "body-content.css"...
+    je l'ai déchiré et l'ai fait renaitre. j'ai presque fini!
+
+commit df023f7d03b84c93ea196d3a4e0ef2e6b80ba080
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 17:13:20 2021 +1100
+
+    ran prettier
+
+commit 68446f671d018ca46631e9028488cdbc80156f8a
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 17:11:56 2021 +1100
+
+    SERIOUSLY cleaned up css duplication and format
+
+commit 43c8c71f60b500bd20c2c89610450f2d354073a6
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 15:32:51 2021 +1100
+
+    added move cursor on bfc. fixed script slightly
+
+commit 55fac9afc8ae5c164f9d8d32f5a281af3b4dcc51
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 13:49:26 2021 +1100
+
+    fixed arrows on landmob and redefined some classes
+
+commit b78e341dd518133df898576bd4b2a0aa3e45dbb5
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Mar 5 13:14:35 2021 +1100
+
+    significantly simplified button code using classes
+
+commit 3b8724c646c6137a9180ccc4a5c8bd1f672d33a7
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 20:54:43 2021 +1100
+
+    testing overscroll again
+
+commit a8d75f501cf1a2182ebcfb1b4756585012f8f520
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 20:46:12 2021 +1100
+
+    testing overscroll contain on chrome
+
+commit c65da25e984bf042f69e7f7920d17b80a316fb2b
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 20:41:17 2021 +1100
+
+    flash cards now in every except landmob 2
+     (commit fail)
+
+commit 418a012191615250ba69765f462d69c296766e10
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 20:40:29 2021 +1100
+
+    flash cards now in every except landmob
+
+commit ccddd960a0c1fec6ebde6a636eae16650e7a3be2
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 20:23:27 2021 +1100
+
+    shell complete, css on portrait covers all pages.
+
+commit 4df6f59dd3562f7542e9966b199fff604c686ff8
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 17:27:35 2021 +1100
+
+    bio added
+
+commit da662675dcd36753ec10400844155730de5efecd
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 16:30:06 2021 +1100
+
+    background changed to webp for compression
+
+commit 75a3102bc36be30ae2a151b967aa851cb8959bcd
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 16:23:15 2021 +1100
+
+    SITE NOW FULLY RESPONSIVE!
+
+commit baf8f1e2b01b1e2860a610ce898150a5bddf86d7
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 15:04:35 2021 +1100
+
+    site now fully responsive
+    
+    just need to fix js window DOM scaling
+
+commit 5427ac2ab57ab856fcc02bb1f8cdc41657ada610
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 00:23:00 2021 +1100
+
+    fixed navbar transition
+
+commit 9c998475cbe0228a570b737806ee70b58284a88d
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Thu Mar 4 00:11:36 2021 +1100
+
+    replaced menu buttons with arrow.
+
+commit 476e91ea4d0d7332ce398e41d67d1ac99270f0e3
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 23:41:35 2021 +1100
+
+    added delta check for swipes
+
+commit 5b7e8886e468141482fbf981c170a8b0a6cfff46
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 23:24:19 2021 +1100
+
+    swiping now works. finally.
+
+commit a5e7aed29623b43f2995defc32fec96d65d45b75
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 23:09:41 2021 +1100
+
+    added swipe? maybe?
+
+commit c6636dd6879d4c12e9bd810c67e0c523ebc17048
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 21:52:37 2021 +1100
+
+    changed load delay to 500
+
+commit f42922ec293c697774617f6f30d8a8a9b1ad5e70
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 21:51:13 2021 +1100
+
+    moved title up 0.5vh
+
+commit f7d922d5493480c6361747729be5e212c66cf8ea
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 21:50:07 2021 +1100
+
+    testing load times for page transitions
+
+commit 13c467413e3aa55666993c760ef3f954911d5922
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 21:41:46 2021 +1100
+
+    fixed localstorage syntax error
+
+commit 59f5d874583f3bb46ec0484ca795b23a2baa7e40
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 21:29:07 2021 +1100
+
+    made dark mode persist between pages with js store
+
+commit 5284db991f930b6704e816095fa4b1c2752fe68d
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 21:01:21 2021 +1100
+
+    added transition animations
+
+commit b99f78f06a08c57eb5a19e8de3c1f2e64d033911
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 20:51:07 2021 +1100
+
+    fixed menu button and added slide in
+
+commit ab7a73545819ab28976562374ce5d82bd985c06d
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 20:39:42 2021 +1100
+
+    changed static nav card to sliding
+
+commit 24e8fe445ae7e3b96d49c3384447a9d3cc032735
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 19:38:10 2021 +1100
+
+    final fix on mob portrait design.
+
+commit 8968ece94bb0f098ebf363cd4967b5ea90c84352
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 19:27:44 2021 +1100
+
+    altered html, added extra link, made it fit
+
+commit d72232af5aadeb7e91b46bd790ec458997939e23
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 18:45:54 2021 +1100
+
+    another minor font change
+
+commit b07cd0f168119d4d97f0e73c8e464df39993c462
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 18:42:13 2021 +1100
+
+    adjusted font sizing and weight
+
+commit e3437f181457cc0182b13b8462082b9d18f24499
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 18:20:04 2021 +1100
+
+    changed link pos slightly
+
+commit cf951742a76ccb10fa55873740ebd7ba365d4772
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 18:08:02 2021 +1100
+
+    redesigned mobile to greatly simplify code
+
+commit 030b0b8f6e22683bd9ce0941f84930f59f72a535
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Wed Mar 3 15:22:06 2021 +1100
+
+    desktop scaling implemented
+
+commit c52892d4a1497a61d651708622483f0d87b8f188
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 15:54:54 2021 +1100
+
+    fixed mllogo borders and spacing
+
+commit 574e72252be1a46c349964273ff482392a440190
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 15:18:06 2021 +1100
+
+    altered light mode colour scheme
+
+commit e156808b9e2f7ffdde265c6094b0a5601259511d
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 14:59:56 2021 +1100
+
+    major changes, fixed most display issues
+
+commit 1fb57e803389e3b440a787031cbd1ef9c209bee4
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 10:49:05 2021 +1100
+
+    fixed purple showing blue on mob
+
+commit 9283916bf06b553922cce7718ed2129ea10fca22
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 10:39:08 2021 +1100
+
+    hopefully fixed chrome issue
+
+commit 9ae1433eff357c399780ee5c04462a6741c10a96
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 02:27:31 2021 +1100
+
+    still trying to fix vw issue
+
+commit f9471fcb29e1cc7b15f9675edfb92bd039890300
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 02:21:00 2021 +1100
+
+    trying to fix mob render still
+
+commit 3bccecca7a72107228c20bb79138566f9adf796b
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 02:10:48 2021 +1100
+
+    aligned nav to top to combat chrome mob issue
+
+commit b8d8d37ed70161b83a05efba538d19f084f6be0d
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 01:46:34 2021 +1100
+
+    altered colour scheme
+
+commit b1b73ef1c03234568916348cc16faeb553abe398
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 00:59:00 2021 +1100
+
+    further testing
+
+commit a9ea47510b4ca70bef32f73b4d4963b388b20613
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 00:52:00 2021 +1100
+
+    altered colours. fixed menu overlay.
+
+commit f118ba0ce37fa1f5f34b8a9544aabf2935804663
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Tue Mar 2 00:19:31 2021 +1100
+
+    major alterations to mobile UI, still no desktop
+
+commit 526c1343b75964ef80568d2f38a0912b5fc820db
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Mon Mar 1 14:57:31 2021 +1100
+
+    redesigned UI ground up for mob first
+
+commit fda7c72a61483b8a285ac024d7ad3b5162a90c05
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Sat Feb 27 17:21:39 2021 +1100
+
+    minor alterations and content additions
+
+commit 49848c7b11eee54e4f4f40fd16c357da362864f4
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Feb 26 17:17:35 2021 +1100
+
+    minor changes to border spacing, done for the day
+
+commit 58a8b9029378a15188eb3917534c302b3dbdb277
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Feb 26 16:38:27 2021 +1100
+
+    intro page completed, dark mode enabled
+
+commit 6caf8329910d5936106a3eabe940d3d3e40d3c49
+Author: Matthew Sterling <mjsterling93@gmail.com>
+Date:   Fri Feb 26 13:58:55 2021 +1100
+
+    initial commit, menu bar completed
